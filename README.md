@@ -1,1 +1,21 @@
 # Namaste React 🚀
+
+# Parcel
+
+- Dev Build
+- Local Server
+- HMR = Hot Module Replacement
+- File Watching Algorithm: written in c++
+- Caching - Faster Builds
+- Image optimization
+- Minification
+- Bundling
+- Compress
+- Consistent Hashing
+- Code splitting
+- Differential bundling
+- Diagnostic
+- Error Handling
+- HTTPs
+- Tree shaking - remove unused code.
+- Different dev and prod bundles
