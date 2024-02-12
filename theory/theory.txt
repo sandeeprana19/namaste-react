@@ -1,244 +1,248 @@
+Episode-01 | Inception
+
 1. Define Emmet?
-A. An Emmet basically generate code for us inside vs code. For example, if we write html:5 then it will give us basic html skelton.
+A. An Emmet basically generate code for us inside vs code. For example, if we write HTML:5 then it will give us basic HTML skelton.
 
 2. What is CDN? Why do we use CDN?
-A. CDN are Content Delivery Network which is a group of servers that are spread out geographically & connected to each other. For example, we can say that cdn are the website where react has been hosted & we're pulling react into our project.
+A. CDN are Content Delivery Network which is a group of servers that are spread out geographically and connected to each other. For example, we can say that CDN are the website where react has been hosted and we are pulling react into our project.
 Content Delivery Network(CDN) are used by almost all websites and application to serve content to users. They offer several benefits, including:
-i. Faster load times: CDN use a group of servers in different locations to load data faster. Users load pages from the server closet to them, which decreases load times.
-ii. Scalability: CDN make it easier & cheaper to deliver content to users far from a company's headquarters & main servers. This helps businesses scale new markets & expand their audience.
-iii. Lower bandwidth costs: CDNs use caching & other optimizations to reduce the data a server needs to provide. This lower bandwidth usage & hosting costs.
+i. Faster load times: CDN use a group of servers in different locations to load data faster. Users load pages from the server closest to them, which decreases load times.
+ii. Scalability: CDN make it easier and cheaper to deliver content to users far from a company's headquarters and main servers. This helps businesses scale new markets and expand their audience.
+iii. Lower bandwidth costs: CDNs use caching and other optimizations to reduce the data a server needs to provide. This lower bandwidth usage and hosting costs.
 iv. Improved SEO: Search engines rank faster websites higher than slower websites with high bounce rates.
 v. Affordable infrastructure: CDNs cut down the cost of investing in an infrastructure needed to maintain the speed of the site all around the world.
 
-Other benefits of CDN include: Improved reliability, cost saving, Resilience against cyber attacks, improved security, global coverage.
+Other benefits of CDN include: Improved reliability, cost saving, resilience against cyber attacks, improved security and global coverage.
 
 3. What are the ways to inject react into the project?
 A. The following are the two ways to inject react into the project:
 1. By using react CDN is the first way of injecting react into the project.
 2. By using npm install react.
 
-4. Define crossorigin attribute which we see in script tag of react cdn?
-A. Cross-Origin Resource Sharing(CORS) is an HTTP feature that allows a web application to access resources from another domain.
+4. Define crossorigin attribute which we see in script tag of react CDN?
+A. Cross-Origin Resource Sharing(CORS) is an http feature that allows a web application to access resources from another DOMain.
 
 5. What is React?
 A. Definitions:
 - React is a javascript library for building user interfaces. It is declarative, efficient and flexible. React makes it easy to create interactive UI by using a component-based approach.
 or
-- React is a javascript package. It is some piece of javascript code & it is hosted over npm also.
+- React is a javascript package. It is some piece of javascript code and it is hosted over npm also.
 
-6. What we're doing when we're importing the react files as cdn links?
-A. We're importing the react code into our project & this is how we get react into our project.
+6. What we are doing when we are importing the react files as CDN links?
+A. We are importing the react code into our project and this is how we get react into our project.
 
-7. What happened when we got react into our project using cdn link?
-A. As soon as we injected the react code into our project we'll get something amazing behind the scene like if we go to the console & try to write react in browser dev tool console then we'll see we got the react & it is coming from the react which we injected using the cdn link. And now, the react is available for us to use so now we can use react into our code. And it gives us lots of important functions or methods that we're going to use. This is nothing but some piece of javascript code that facebook engineers wrote & give to us right. We have just directly imported it & injected react into our project.
+7. What happened when we got react into our project using CDN link?
+A. As soon as we injected the react code into our project we will get something amazing behind the scene like if we go to the console and try to write react in browser dev tool console then we will see we got the react and it is coming from the react which we injected using the CDN link. And now, the react is available for us to use so now we can use react into our code. And it gives us lots of important functions or methods that we are going to use. This is nothing but some piece of javascript code that facebook engineers wrote and give to us right. We have just directly imported it and injected react into our project.
 
-8. What is the second file in the react cdn link which we're importing isn't it is react which is something known as react-dom.development.js? Why there are two files we're importing as a react cdn link?
-A. The first file is react.development.js which is the core file of react or the core react algorithms which is written inside it & the second file is react-dom.development.js which we need to modify the DOM(Document Object Model). That's why we have injected the two files.
+8. What is the second file in the react CDN link which we are importing is not it is react which is something known as react-DOM.development.js? Why there are two files we are importing as a react CDN link?
+A. The first file is react.development.js which is the core file of react or the core react algorithms which is written inside it and the second file is react-DOM.development.js which we need to modify the DOM(Document Object Model). That is why we have injected the two files.
 
-9. Why did react made different files for both of react cdn files? Couldn't we have just one file & club everything up?
-A. No! We can't club everything into one file because see rect doesn't only works on browsers. React also works on mobile phones as react native & there is something known as react 3d & there are different type of places where react is used. So there are different functions or methods which are being used inside react native or browser or different places. That's is why, there are two files. So the main file this react.development.js is the core react thing & the other one is kind of like a bridge between this react & browser so it like react dom which is like bridge to connect to the dom.
+9. Why did react made different files for both of react CDN files? Could not we have just one file and club everything up?
+A. No! We can not club everything into one file because see rect does not only works on browsers. React also works on mobile phones as react native and there is something known as react 3d and there are different type of places where react is used. So there are different functions or methods which are being used inside react native or browser or different places. That is why, there are two files. So the main file this react.development.js is the core react thing and the other one is kind of like a bridge between this react and browser so it like react DOM which is like bridge to connect to the DOM.
 
 10. How can we create h1 tag inside react?
 A. In react, we use something known as React.createElement() but the API is little different than javascript. So this createElement() takes three arguments:
-i. The first argument is what tag we need to create. Suppose we want h1 tag then we'll write h1 in the first argument.
+i. The first argument is what tag we need to create. Suppose we want h1 tag then we will write h1 in the first argument.
 ii. The second argument is an object so let give it an empty object for now.
-iii. The third argument is what we have to pur inside that h1 tag. Let's say: 'Hello World from React!'.
+iii. The third argument is what we have to put inside that h1 tag. Let's say: 'Hello World from React!'.
 
-11. How do we put created h1 tag which is being stored inside const heading inside div id "root" as a children?
-A. First of all, we need to tell react what is the root where we need to render stuff up so we need to create a root inside react. First of all, react wants to have a root where it can do all the dom stuff or dom manipulation. So we have something known as createReact now see creating an element is a core thing of react so it comes form react which is indeed coming from first library which we imported into index.html. But now, creating a root and rendering something inside it then it is the job of react-dom so we'll use ReactDOM.createRoot() & this is how we create root inside react. And then we'll pass document.getElementById('root') as an argument of createRoot(). Now, we have created a root for our react library. Now, whatever we'll do we just render the heading inside the react. So we just have to write root.render(heading).
+11. How do we put h1 tag inside div id "root" as a children?
+A. First of all, we need to tell react what is the root where we need to render stuff up so we need to create a root inside react. First of all, react wants to have a root where it can do all the DOM stuff or DOM manipulation. So we have something known as createRoot() now see creating an element is a core thing of react so it comes form react which is indeed coming from first library which we imported into index.html. But now, creating a root and rendering something inside it then it is the job of react-DOM so we will use ReactDOM.createRoot() and this is how we create root inside react. And then we will pass document.getElementById('root') as an argument of createRoot(). Now, we have created a root for our react library. Now, whatever we will do we just render the heading inside the react. So we just have to write root.render(heading).
 
 12. Is it good practice to put react code inside index.html file?
-A. No! We have to create App.js file & put all our react code inside it & then we'll inject it to our app by passing App.js file path to src attribute of script tag.
+A. No! We have to create App.js file and put all our react code inside it and then we will inject it to our app by passing App.js file path to src attribute of script tag.
 
 13. What is object which we pass to createElement method as second argument?
-A. An object is basically a place where we'll give attribute to our tag. Suppose if our h1 tag needs to have an id so we'll pass id as key & "heading" as value. Sometime when we create a html we have to give some id or class or something like that right. So this is how this object use ot give this attributes to a h1 tag or any tags.
+A. An object is basically a place where we will give attribute to our tag. Suppose if our h1 tag needs to have an id so we will pass id as key and "heading" as value. Sometime when we create a HTML we have to give some id or class or something like that right. So this is how this object use to give this attributes to a h1 tag or any tags.
 
-14. What is React.createElement? What is it given to us? What is const heading where we stores React.createElement()?
-A. The const heading is an object so this is a react element at the end of day. And heading is basically react element i.e. react h1 element. React element is nothing but a normal javascript object. So when we console heading we'll find an object is printed where we'll find type property having value h1 and it has something known as props have children plus attribute we pass in to React.createElement(). Props are second & third argument we passed to React.createElement(). So third argument is children which will go inside of h1 tag & second argument are attribute & they all are come inside props.
+14. What is React.createElement()? What is it given to us? What is const heading where we stores React.createElement()?
+A. The const heading is an object so this is a react element at the end of day. And heading is basically react element i.e. react h1 element. React element is nothing but a normal javascript object. So when we console heading we will find an object is printed where we will find type property having value h1 and it has something known as props have children plus attribute we pass in to React.createElement(). Props are second and third argument we passed to React.createElement(). So third argument is children which will go inside of h1 tag and second argument are attribute and they all are come inside props.
 
 15. Define root.render(heading)?
-A. The root.render(heading) function job is basically to take heading object creates that h1 tag which browser understands & put that h1 tag inside the root element that we put inside createRoot() function as an argument.
+A. The root.render(heading) function job is basically to take heading object creates that h1 tag which browser understands and put that h1 tag inside the root element that we put inside createRoot() function as an argument.
 
 16. How does ReactElement works?
-A. ReactElement(Object) => HTMl(Browser understands).
+A. ReactElement(Object) => HTML(Browser understands).
 
-17. Does the order of injected react cdn links & App.js files matters or not? If yes, then why?
-A. Yes! The order of injected react cdn links & App.js files matters & if we put App.js file before react cdn links the browser will throw an error on console like react isn't defined. That means react cdn link should be before App.js file. So the order of those files always in sequence when they are imported. So alway we have to keep react cdn links files before App.js because the code inside App.js is using react.
+17. Does the order of injected react CDN links and App.js files matters or not? If yes, then why?
+A. Yes! The order of injected react CDN links and App.js files matters and if we put App.js file before react CDN links the browser will throw an error on console like react is not defined. That means react CDN link should be before App.js file. So the order of those files always in sequence when they are imported. So alway we have to keep react CDN links files before App.js because the code inside App.js is using react.
 
 18. What happen if we put App.js file inside head tag in react?
 A. If we put App.js inside the head tag in react, our application will not work as expected. This is because App.js is the main component of our react application, and it is responsible for rendering the entire user interface. If we put it inside head tag, it will not be able to render anything, and our application will be blank. The correct place to put App.js is in the body tag, after the opening body tag. This will ensure that it is rendered correctly and that our application works as expected.
 
-19. What is difference between react.development.js and react.production.js cdn links?
+19. What is difference between react.development.js and react.production.js CDN links?
 A. The main difference between react.development.js and react.production.js is that react.development.js is used for development purpose while react.production.js is used for production purposes.
 
-20. Suppose we already have "<h1>Akshay is here!</h1>" inside div id root & we're rendering parent element inside div id root then what will happen to h1 tag where will it go? Or parent will come below h1 tag?
-A. The "<h1>Akshay is here!</h1>" will be replaced by parent. For some milliseconds that h1 tag will be visible but then it will be replaced by that parent basically that root.render(parent) is replacing that h1 tag. So whatever we'll have inside div id root what will happen is if we refresh our page everything whatever is there inside div id root are getting replaced by whatever we're passing inside root.render() function as an argument.
+20. Suppose we already have "<h1>Akshay is here!</h1>" inside div id "root" and we are rendering parent element inside div id "root" then what will happen to h1 tag where will it go? Or parent will come below h1 tag?
+A. The "<h1>Akshay is here!</h1>" will be replaced by parent. For some milliseconds that h1 tag will be visible but then it will be replaced by that parent basically that root.render(parent) is replacing that h1 tag. So whatever we will have inside div id "root" what will happen is if we refresh our page everything whatever is there inside div id "root" are getting replaced by whatever we are passing inside root.render() function as an argument.
 
-21. How "<h1>Akshay is here!</h1>" is rendering for the very first time & then it is getting by root.render(parent)?
-A. First of all, when the browser reads our html so it will print "Akshay is here!" on the browser but as soon as it goes to script it will load react into our app then it load react dom into our app & then it will load App.js code line by line & when it will reach to time root.render(parent) it will just render our parent inside our root by replacing everything inside root with whatever we're passing in from react.
+21. How "<h1>Akshay is here!</h1>" is rendering for the very first time and then it is getting by root.render(parent)?
+A. First of all, when the browser reads our HTML so it will print "Akshay is here!" on the browser but as soon as it goes to script it will load react into our app then it load react DOM into our app and then it will load App.js code line by line and when it will reach to time root.render(parent) it will just render our parent inside our root by replacing everything inside root with whatever we are passing in from react.
 
-22. What if we have some more thing on top of suppose we have a h1 tag on top of root div itself right we can have it right like "<h1>Hello Top of Root</h1>" & what if we have h1 tag below our div id root like "<h1>Hello Below of Root</h1>"? Will top & below h1 tag will get replaced?
-A. "Hello Top of Root" & "Hello Below of Root" stays same that means react is only working inside our div id root because as we know we have defined root as div id & everything that are render is render inside root element & the other portion of html works the same. This is why we called react as a library also.
+22. What if we have some more thing on top of suppose we have a h1 tag on top of root div itself right we can have it right like "<h1>Hello Top of Root</h1>" and what if we have h1 tag below our div id "root" like "<h1>Hello Below of Root</h1>"? Will top and below h1 tag will get replaced?
+A. "Hello Top of Root" and "Hello Below of Root" stays same that means react is only working inside our div id "root" because as we know we have defined root as div id and everything that are render is render inside root element and the other portion of HTML works the same. This is why we called react as a library also.
 
-23. Difference between library & framework?
+23. Difference between library and framework?
 A. A library is a collection of pre-written code that can be used to perform specific tasks. On the other hand, a framework is a set of pre-written code that provides a structure for developing software applications.
 
 24. Why we called react as a library?
-A. We called react as a library because react can be applied to a small portion of our page itself like react can only work on header or react can work in footer also or react can only work in sidebar also or react only works in the place whatever we make the root as & we had the root as div id root. Suppose if we have header & if we create root as our header so now the react is only working inside the header div & everything inside header div will be replaced by whatever we'll pass in by root.render().
-So this is why, react is library as it can work independently in a small portion of our app as well. It isn't a full fledged framework.
+A. We called react as a library because react can be applied to a small portion of our page itself like react can only work on header or react can work in footer also or react can only work in sidebar also or react only works in the place whatever we make the root as and we had the root as div id "root". Suppose if we have header and if we create root as our header so now the react is only working inside the header div and everything inside header div will be replaced by whatever we will pass in by root.render().
+So this is why, react is library as it can work independently in a small portion of our app as well. It is not a full fledged framework.
+
+Episode-02 | Igniting Our App:
 
 25. How to make local project as git repository?
 A. By writing "git init" we make local project as git repository.
 
-26. What is the default branch in github & how can we change it to main?
-A. Master branch is the default branch in github & by writing git branch -M main we can change default master branch to main branch.
+26. What is the default branch in github and how can we change it to main?
+A. Master branch is the default branch in github and by writing git branch -M main we can change default master branch to main branch.
 
 27. Is it good to create README.md file?
-A. Yes! It's good to create README.md file.
+A. Yes! It is good to create README.md file.
 
 28. How do we push all the local project code to github for the very first time?
-A. First of all, we need to do "git add ." which will add all local project files & then we'll do git commit -m "episode-01" & then copy git remote add origin... from github & pass it to terminal to configure remote branch into local project & now we need to push all the code to remote by writing git push origin main. And if we do this, it will push all our local code or changes to our remote repository.
+A. First of all, we need to do "git add ." which will add all local project files and then we will do git commit -m "episode-01" and then copy git remote add origin... from github and pass it to terminal to configure remote branch into local project and now we need to push all the code to remote by writing git push origin main. And if we do this, it will push all our local code or changes to our remote repository.
 
-29. Difference between git & github?
+29. Difference between git and github?
 A. Git is a version control system that lets you manage and keep track of your source code history. GitHub is a cloud-based hosting service that lets you manage Git repositories.
 
 30. What happens when we do create react app?
 A. When we do create react app what happens is:
 i. It creates a scaffold for us like it gives us a basic react app which is already production ready.
-ii. It automatically also have npm inside it so we don't have to configure it.
+ii. It automatically also have npm inside it so we do not have to configure it.
 iii. It uses webpack bundler and bebel behind the scene to build things up.
 
 31. Suppose if we have to build a fast production ready app can react itself do it as our project is configured to use react so react itself do it?
-A. No, if we want to build a fast production ready app react can't itself do it because there are lot of other packages that are required to make our production ready app. Lot of other libraries & lot of other javascript code that somebody else has written makes our code fast and scalable and production ready not just react. So yes, react is making our fast but to an extent, there are a lot of other things that we need to make our app fast. A lot of other packages that we need to make our app fast.
+A. No, if we want to build a fast production ready app react can not itself do it because there are lot of other packages that are required to make our production ready app. Lot of other libraries and lot of other javascript code that somebody else has written makes our code fast and scalable and production ready not just react. So yes, react is making our fast but to an extent, there are a lot of other things that we need to make our app fast. A lot of other packages that we need to make our app fast.
 
 32. What is npm?
 A. Informal: 
-NPM isn't a node package manager so npm is everything but not node package manager. If we go to npm official website, there are no place where it is written that npm is node package manager. NPM doesn't stand for Node Package Manager. So NPM developers said that it is everything but not node package manager. So basically NPM doesn't have a full form.
+NPM is not a node package manager so npm is everything but not node package manager. If we go to npm official website, there are no place where it is written that npm is node package manager. NPM does not stand for Node Package Manager. So NPM developers said that it is everything but not node package manager. So basically NPM does not have a full form.
 Formal:
-Npm is basically is a standard repository for all the packages. It's one of the biggest package managers. Any package we need to include in our project we can use npm. All the packages are hosted over there. All the libraries we need & all the utility comes from npm. And npm is basically manages that up for us in our project.
+Npm is basically is a standard repository for all the packages. It is one of the biggest package managers. Any package we need to include in our project we can use npm. All the packages are hosted over there. All the libraries we need and all the utility comes from npm. And npm is basically manages that up for us in our project.
 
-33. If NPM isn't a Node Package Manager then what it is?
-A. So basically, npm manages packages right but it doesn't stand for node package manager. NPM behind the scene works as a node package manager but it doesn't stand for node package manager.
+33. If NPM is not a Node Package Manager then what it is?
+A. So basically, npm manages packages right but it does not stand for node package manager. NPM behind the scene works as a node package manager but it does not stand for node package manager.
 
 34. How do we use npm into our project?
-A. So we need to do something known as npm init and there is also npm init -y which will skip lot of thing but we don't want to skip anything so we'll not do npm init -y. So we'll do npm init then it will ask us few below questions before it configure npm for us like:
+A. So we need to do something known as npm init and there is also npm init -y which will skip lot of thing but we do not want to skip anything so we will not do npm init -y. So we will do npm init then it will ask us few below questions before it configure npm for us like:
 i. package name: press enter to go with the default but we can edit it
 ii. version: press enter to go with the default
 iii. description: write any description
-iv. entry point: It will show App.js but our entry point isn't App.js as it is index.html right but we'll keep it whatever is there by default
-v. test command: It will ask us for a test command so just write jest over here. We'll be using jest for testing
+iv. entry point: It will show App.js but our entry point is not App.js as it is index.html right but we will keep it whatever is there by default
+v. test command: It will ask us for a test command so just write jest over here. we will be using jest for testing
 vi. git repository: press enter to go with the default
 vii. keyword: We can give some keywords if we wish to. Let it be like, let's give react, namaste react, etc
 viii. author: Sandeep Rana
 ix. license: press enter to go with the default
 
-Then it will us Is it ok? then press enter to go with the default yes and once we do it we'll get a new package.json file in our local project folder.
+Then it will us Is it ok? then press enter to go with the default yes and once we do it we will get a new package.json file in our local project folder.
 
-34. What is package.json?
+35. What is package.json?
 A. The package.json file is basically a configuration for npm. It is basically all that configuration of our npm whatever data we gave it will come inside it like name, version, description, etc. NPM has created a json file for us. The package.json keeps a approx version of dependencies or it can keep exact version of dependencies or package.
 
-35. Why do we need package.json file?
-A. See npm is package manager right so it will manage all the packages that we'll install in our system and sometimes this packages are also known as dependencies. We know, our project is dependent on lot of packages. Those packages with the project is dependant on are the dependencies and npm manages that. NPM will take care of the version of that package suppose if we're using some other library or some other package then npm will also take care of version of that packages and it will take care of that package in package.json file.
+36. Why do we need package.json file?
+A. See npm is package manager right so it will manage all the packages that we will install in our system and sometimes this packages are also known as dependencies. We know, our project is dependent on lot of packages. Those packages with the project is dependant on are the dependencies and npm manages that. NPM will take care of the version of that package suppose if we are using some other library or some other package then npm will also take care of version of that packages in package.json file.
 
-36. What is the most important package in our project?
+37. What is the most important package in our project?
 A. Bundler is the most important package in our project.
 
-37. What is a bundler? What is the job of bundler?
-A. When we have these normal HTML, CSS and JS file. Our whole code needs to be bundler together, our whole code needs to be minified, our whole code needs to be cached, our whole code needs to be compressed & our whole code needs to cleaned before it can be send to production. So a bundler help us to do all this things. We must have heard of name something known as web pack, parcel, wheat, etc. so these three things are bundlers.
+38. What is a bundler? What is the job of bundler?
+A. When we have these normal HTML, CSS and JS file. Our whole code needs to be bundler together, our whole code needs to be minified, our whole code needs to be cached, our whole code needs to be compressed and our whole code needs to cleaned before it can be send to production. So a bundler help us to do all this things. We must have heard of name something known as web pack, parcel, vite, etc. so these three things are bundlers.
 Bundler basically bundles our app so it packages our app properly so that it can be shipped to production.
 
-38. Define SSH?
+39. Define SSH?
 A. The Secure Shell (SSH) is a network protocol that allows one computer to securely connect to another computer over an unsecured network.
 
-39. How to install parcel?
+40. How to install parcel?
 A. In terminal, write npm install -D parcel.
 
-40. Why we pass -D flag while installing parcel?
+41. Why we pass -D flag while installing parcel?
 A. There are two types of dependency or packages which app can have that we can install:
-i. devDependencies: So when we say a devDependencies it means it is generally require for development phase. When we're developing our app then we require that devDependencies.
+i. devDependencies: So when we say a devDependencies it means it is generally require for development phase. When we are developing our app then we require that devDependencies.
 ii. normal dependencies: Normal dependencies are used in production also.
-Parcel is a bundler so chunking minification is not done on production. We'll do this in our development phase so we'll install as a devDependencies. So this is how we tell npm that we want parcel in our app as a devDependencies but not as a normal dependencies. That is why, we give -D flag while installing parcel.
+Parcel is a bundler so chunking minification is not done on production. we will do this in our development phase so we will install as a devDependencies. So this is how we tell npm that we want parcel in our app as a devDependencies but not as a normal dependencies. That is why, we give -D flag while installing parcel.
 
-41. What is ^ before devDependencies version?
-A. ^ is a caret which we show before devDependencies version, for example, let's say devDependencies parcel version so today it's latest version is 2.8.3 suppose tomorrow a new version 2.8.4 of parcel released what will happen if we have put this caret (^) into our app parcel will automatically be upgraded to this minor version 2.8.4. Parcel will update its version if we have put in caret (^). That is why, we use caret before parcel version.
+42. What is ^ before devDependencies version?
+A. ^ is a caret which we show before devDependencies version, for example, let's say devDependencies parcel version so today It is latest version is 2.8.3 suppose tomorrow a new version 2.8.4 of parcel released what will happen if we have put this caret (^) into our app parcel will automatically be upgraded to this minor version 2.8.4. Parcel will update its version if we have put in caret (^). That is why, we use caret before parcel version.
 
-42. What will happen if we use tilde(~) before devDependencies version?
+43. What will happen if we use tilde(~) before devDependencies version?
 A. If we have put tile(~) before devDependencies version, for example, before parcel version then parcel will install the major version automatically suppose tomorrow 3.0.0 is released and if we have put tilde(~) it will just install the major version automatically.
 
-43. What we need to put before devDependencies version so is it caret(^) or tilde(~)? And why?
-A. Always, it is safe to put in caret before devDependencies version because it's okay to upgrade the minor version but don't upgrade the major version because sometimes you know what happen is when we have a major upgrade a lot of things will break into our app. So please keep caret over there.
+44. What we need to put before devDependencies version so is it caret(^) or tilde(~)? And why?
+A. Always, it is safe to put in caret before devDependencies version because It is okay to upgrade the minor version but do not upgrade the major version because sometimes you know what happen is when we have a major upgrade a lot of things will break into our app. So please keep caret over there.
 
-44. Difference between caret(^) and tilde(~)?
-A. Caret(^) is minor upgrade & tilde(~) is major upgrade.
+45. Difference between caret(^) and tilde(~)?
+A. Caret(^) is minor upgrade and tilde(~) is major upgrade.
 
-45. What is package-lock.json?
-A. The package-lock.json keeps a track of exact version all the transitive dependencies that is being installed & which our project will ever need. Suppose if today there is a 2.8.5 released for parcel our package.json will stay like as it is but package-lock.json kind of locks version install and keeps a record of it. So package-lock.json keeps a record of every exact version of that package or dependency which is installed. So this is what the role of package-lock.json and it is different than package.json.
+46. What is package-lock.json?
+A. The package-lock.json keeps a track of exact version all the transitive dependencies that is being installed and which our project will ever need. Suppose if today there is a 2.8.5 released for parcel our package.json will stay like as it is but package-lock.json kind of locks version install and keeps a record of it. So package-lock.json keeps a record of every exact version of that package or dependency which is installed. So this is what the role of package-lock.json and it is different than package.json.
 
-46. What is integrity inside parcel in package-lock.json file?
+47. What is integrity inside parcel in package-lock.json file?
 A. Integrity is basically a hash i.e. sha512 hash.
 
-47. Why hash i.e. sha512 hash is present in parcel => integrity in package-lock.json file?
-A. Have we heard of that thing that it is working on my local but I don't know how it break on production. So basically to avoid that package-lock.json keeps a hash to verify that whatever is there in our machine is the same version which is being deployed onto the production. That's why, hash i.e sha512 is present in parcel => integrity in package-lock.json file.
+48. Why hash i.e. sha512 hash is present in parcel => integrity in package-lock.json file?
+A. Have we heard of that thing that it is working on my local but I do not know how it break on production. So basically to avoid that package-lock.json keeps a hash to verify that whatever is there in our machine is the same version which is being deployed on to the production. That is why, hash i.e sha512 is present in parcel => integrity in package-lock.json file.
 
-48. What is node_modules? Why node_modules bloats up?
-A. The node_modules contains all the code that we fetched from npm. For example, when we did npm install parcel what happened was it just went to the production & took some time like one minute to install parcel so what it was doing like it was fetching all the code of parcel & putting inside node_modules so if we go inside node_modules then we'll find folder inside it. So node_modules is basically kind of like a database which contains the actual data of that dependencies or packages that our projects needs.
-The node_modules is the collection of dependencies so it's like a dependencies tree so that's why node_modules bloats up.
+49. What is node_modules? Why node_modules bloats up?
+A. The node_modules contains all the code that we fetched from npm. For example, when we did npm install parcel what happened was it just went to the production and took some time like one minute to install parcel so what it was doing like it was fetching all the code of parcel and putting inside node_modules so if we go inside node_modules then we will find folder inside it. So node_modules is basically kind of like a database which contains the actual data of that dependencies or packages that our projects needs.
+The node_modules is the collection of dependencies so It is like a dependencies tree so That is why node_modules bloats up.
 
-49. As we install parcel so there should be only exist parcel in node_modules so why there are so many folders or packages or dependencies inside node_modules?
-A. Because, our project needs parcel so our project has a dependency parcel. Now parcel as a project has its own dependencies and those dependencies can have it's own dependencies, this is known as transitive dependencies. That is why when we install parcel, parcel says that npm please install other packages also. So that is why we have so many folders or packages or dependencies inside node_modules.
+50. As we install parcel so there should be only exist parcel in node_modules so why there are so many folders or packages or dependencies inside node_modules?
+A. Because, our project needs parcel so our project has a dependency parcel. Now parcel as a project has its own dependencies and those dependencies can have It is own dependencies, this is known as transitive dependencies. That is why when we install parcel, parcel says that npm please install other packages also. So that is why we have so many folders or packages or dependencies inside node_modules.
 
-50. How is parcel managing all that thing? How would npm know that parcel has it's dependencies? What are the dependencies of parcel?
+51. How is parcel managing all that thing? How would npm know that parcel has It is dependencies? What are the dependencies of parcel?
 
-51. In our whole project do we have one package.json and package-lock.json files? If no, how many? Define transitive dependencies?
-A. No! We don't have one package.json & package-lock.json files in our whole project. Every dependencies, every project that we see will have it's own package.json so if we go to node_modules => parcel then we find that it has it's own package.json file which contains its own dependencies & devDependencies. This is known as transitive dependencies.
+52. In our whole project do we have one package.json and package-lock.json files? If no, how many? Define transitive dependencies?
+A. No! We do not have one package.json and package-lock.json files in our whole project. Every dependencies, every project that we see will have It is own package.json so if we go to node_modules => parcel then we find that it has It is own package.json file which contains its own dependencies and devDependencies. This is known as transitive dependencies.
 
-52. Should we push node_modules to github or production? If no, where do we put it? And why?
-A. Absolutely No! We don't push node_modules to github or production so the best practice is to put it in gitignore so for this we can create a file .gitignore & write /node_modules file name inside it.
+53. Should we push node_modules to github or production? If no, where do we put it? And why?
+A. Absolutely No! We do not push node_modules to github or production so the best practice is to put it in gitignore so for this we can create a file .gitignore and write /node_modules file name inside it.
 
-53. Define .gitignore file?
+54. Define .gitignore file?
 A. If we want some files to not go to production or git repository so just put it inside .gitignore file.
 
-54. Should we put package.json & package-lock.json onto git repository and if yes, why? We don't want to put node_modules onto git repository why?
-A. Absolutely yes! We can put package.json & package-lock.json onto git repository. We know package.json & package-lock.json maintain a note of what all dependencies. For example, package.json is maintaining that our code need parcel, etc. & package-lock.json is maintaining the exact version of all the parcel dependencies, etc. our project needs so now we understood why this package-lock.json is huge it is basically maintain the lock it is basically maintaining the exact version of each dependencies so it is very very crucial to put package.json & package-lock.json on github repositories.
-But we don't have to put node_modules on github because if we have package.json & package-lock.json we can recreate all our node_modules even if we delete our node_modules so to recreate our node_modules we just have to write npm install on terminal then node_modules will be recreated within our local project folder with all the plethora of code. That is why it is not required to push node_modules on git repository.
+55. Should we put package.json and package-lock.json on to git repository and if yes, why? We do not want to put node_modules on to git repository why?
+A. Absolutely yes! We can put package.json and package-lock.json on to git repository. We know package.json and package-lock.json maintain a note of what all dependencies. For example, package.json is maintaining that our code need parcel, etc. and package-lock.json is maintaining the exact version of all the parcel dependencies, etc. our project needs so now we understood why this package-lock.json is huge it is basically maintain the lock it is basically maintaining the exact version of each dependencies so it is very very crucial to put package.json and package-lock.json on github repositories.
+But we do not have to put node_modules on github because if we have package.json and package-lock.json we can recreate all our node_modules even if we delete our node_modules so to recreate our node_modules we just have to write npm install on terminal then node_modules will be recreated within our local project folder with all the plethora of code. That is why it is not required to push node_modules on git repository.
 
-55. Whatever we can regenerate can we put it on git repository? What should go inside git repository?
+56. Whatever we can regenerate can we put it on git repository? What should go inside git repository?
 A. Absolutely No! We can avoid whatever we can regenerate on git repository.
-Only essential things will go inside git repository like package.json & package-lock.json.
+Only essential things will go inside git repository like package.json and package-lock.json.
 
-56. What is the command to ignite or build our app using parcel?
+57. What is the command to ignite or build our app using parcel?
 A. npx parcel index.html is the command to ignite or build our app using parcel.
 
-57. What is npx parcel index.html command?
-A. Just like we have npm similarly there is something known as npx. When we do npm we're just calling the command npm so npx means executing a package. The npm command are different if we need to install a package we need to write npm install a package to install a package but suppose if we want to execute a package we just write npx parcel and something. So npx any package name it will execute that package. So if we write npx parcel index.html command that means we're executing parcel now. So now basically when do npx parcel index.html basically index.html is the source so what happens is parcel basically goes to the source index.html and build a development build for our app and it host that development build to localhost:1234 and that how we can able to access our app over localhost:1234 on browser.
+58. What is npx parcel index.html command?
+A. So npx means executing a npm package. Suppose if we want to execute a npm package we just write npx parcel and something. So npx any package name it will execute that npm package. So if we write npx parcel index.html command that means we are executing parcel and index.html is the source so what happens is parcel basically goes to the source index.html and build a development build for our app and it host that development build to localhost:1234 and that's how we can able to access our app over localhost:1234 on browser.
 
-58. Do react cdn link is the preferred way to begin react and react dom into our project? If no, why?
-A. Absolutely No! The react cdn link isn't the preferred way to begin react and react dom into our project. First of all, see fetching react from cdn takes a costly operation. If we'll fetch react from cdn, it will make a network called to unpick, unpkg.com and it will get react from unpkg.com. Suppose if we already have react in our node_modules, how easy would it be to use react inside code. So, first thing is that we don't want to make another network call to get react, we'll have it already in our node_modules. That's why we'll install it. The second thing is today react version is react@18 & suppose tomorrow react@19 comes in & tomorrow some other version of react comes in what will happen is we have to keep change react url version isn't it. So it is better to have react inside our package.json as it is easier to manage all our dependencies & it is very easy to manage react also as one of the dependencies inside our package.json.
+59. Do react CDN link is the preferred way to begin react and react DOM into our project? If no, why?
+A. Absolutely No! The react CDN link is not the preferred way to begin react and react DOM into our project. First of all, see fetching react from CDN takes a costly operation. If we will fetch react from CDN, it will make a network called to unpick, unpkg.com and it will get react from unpkg.com. Suppose if we already have react in our node_modules, how easy would it be to use react inside code. So, first thing is that we do not want to make another network call to get react, we will have it already in our node_modules. That is why we will install it. The second thing is today react version is react@18 and suppose tomorrow react@19 comes in and tomorrow some other version of react comes in what will happen is we have to keep change react url version is not it. So it is better to have react inside our package.json as it is easier to manage all our dependencies and it is very easy to manage react also as one of the dependencies inside our package.json.
 
-59. What the short form of the command npm install?
+60. What the short form of the command npm install?
 A. The command npm i is the short form of npm install.
 
-60. After installing react and react-dom how do we use React & ReactDOM in our code?
-A. After installing react and react-dom, we'll use the following:
+61. After installing react and react-DOM how do we use React and ReactDOM in our code?
+A. After installing react and react-DOM, we will use the following:
 - For React use a keyword import React from "react".
-- For ReactDOM use a keyword import ReactDOM form "react-dom".
+- For ReactDOM use a keyword import ReactDOM form "react-DOM".
 
-61. What is "react" and "react-dom" when we import React & ReactDOM from "react" and "react-dom" respectively?
-A. The "react" and "react-dom" is basically referred to the react and react-dom respectively inside our node_modules. So both of them will come from node_modules.
+62. What is "react" and "react-DOM" when we import React and ReactDOM from "react" and "react-DOM" respectively?
+A. The "react" and "react-DOM" is basically referred to the react and react-DOM respectively inside our node_modules. So both of them will come from node_modules.
 
-62. What does it mean that "Browser script cannot have imports or exports" that parcel throws?
-A. "Browser script cannot have imports or exports" means that parcel throws is basically we're injecting App.js using script so parcel treat the script as a browser script or parcel treat that App.js is the normal javascript file. So basically parcel says that it can't understand what is import so parcel is considering the script as a normal javascript and normal javascript doesn't have import in it.
+63. What does it mean that "Browser script cannot have imports or exports" that parcel throws?
+A. "Browser script cannot have imports or exports" means that parcel throws is basically we are injecting App.js using script so parcel treat the script as a browser script or parcel treat that App.js is the normal javascript file. So basically parcel says that it can not understand what is import so parcel is considering the script as a normal javascript and normal javascript does not have import in it.
 
-63. How can we tell to parcel that App.js file which is injected through script isn't a normal javascript file?
-A. So to tell parcel that App.js file which is injected through script isn't a normal javascript file by writing attribute type="module" and pass it to script tag. If we'll write type="module" in App.js file will not be normal browser script so it will be considered as a module.
+64. How can we tell to parcel that App.js file which is injected through script is not a normal javascript file?
+A. So to tell parcel that App.js file which is injected through script is not a normal javascript file by writing attribute type="module" and pass it to script tag. If we will write type="module" in App.js file will not be normal browser script so it will be considered as a module.
 
-64. Explain briefly about the warning which we'll after import ReactDOM from "react-dom"?
-A. Earlier ReactDOM use to be imported from "react-dom" now react says that is the new ReactDOM which they have got in & it is inside "react-dom/client". Then we see the warning will go away in chrome dev tool console.
+65. Explain briefly about the warning which we will after import ReactDOM from "react-DOM"?
+A. Earlier ReactDOM use to be imported from "react-DOM" now react says that is the new ReactDOM which they have got in and it is inside "react-DOM/client". Then we see the warning will go away in chrome dev tool console.
 
-65. After saving the file how browser automatically reload?
+66. After saving the file how browser automatically reload?
 A. After saving the file browser automatically reload because this powerful thing is done by parcel.
 
-66. What does parcel doing for us? Explain briefly.
+67. What does parcel doing for us? Explain briefly.
 A. Parcel are doing the following things for us:
 - Dev build: Parcel create the dev build for us.
 - Local server: Parcel create a local server for us. It host our app to the server.
@@ -248,69 +252,356 @@ A. Parcel are doing the following things for us:
 - Image optimization: Parcel will do images optimization for us.
 - Minification: Suppose if we create a production build parcel will do minification our files also.
 - Bundling: Parcel will do bundling all the files for us.
-- Compress: Parcel will also compress our files. Files need to be compress so that the size is small so that we can ship this smaller version onto the code. It will remove all the wide spaces from your code. It minified or packed all our javascript files and ship it onto production.
+- Compress: Parcel will also compress our files. Files need to be compress so that the size is small so that we can ship this smaller version on to the code. It will remove all the wide spaces from your code. It minified or packed all our javascript files and ship it on to production.
 - Consistent Hashing: Parcel is also doing consistent hashing which is doing lot of things.
 - Code splitting: Parcel will be doing code splitting for us which will splits our files.
 - Differential bundling: Parcel can also do differential bundling to support older browser.
 - Diagnostic: Parcel is doing diagnostic behind the scene of our app.
 - Error Handling: Parcel is also giving us good error handling or error suggestions.
-- HTTPs: Parcel also give us a way to host our app on https. Suppose in our development environment so right now we don't have https but suppose if we want to test something which is works on SSL(Secure Socket Layer) i.e. https parcel give us that feature also.
-- Tree shaking: Parcel is also doing tree shaking so you know tree shaking algorithm what happens is see in our whole code suppose we have hundred of functions code but suppose we're just using four or five functions in our code so what parcel will do it will tree shake our files. Parcel will remove unused code for us.
-- Different dev and production bundles: Parcel have different build for dev. Parcel create different dev & production bundle because production build takes a little more time than building it for dev. Some optimization are more on production build & there are less optimization on dev build.
+- HTTPs: Parcel also give us a way to host our app on https. Suppose in our development environment so right now we do not have https but suppose if we want to test something which is works on SSL(Secure Socket Layer) i.e. https parcel give us that feature also.
+- Tree shaking: Parcel is also doing tree shaking so you know tree shaking algorithm what happens is see in our whole code suppose we have hundred of functions code but suppose we are just using four or five functions in our code so what parcel will do it will tree shake our files. Parcel will remove unused code for us.
+- Different dev and production bundles: Parcel have different build for dev. Parcel create different dev and production bundle because production build takes a little more time than building it for dev. Some optimization are more on production build and there are less optimization on dev build.
 
-67. What does parcel automatically refreshing the page means? How parcel automatically refreshing the page?
-A. Parcel automatically refreshing the page means if we change anything into the file & as soon as we save it then parcel automatically refreshes our page this is happening because parcel is doing something known as HMR(Hot Module Replacement). So parcel is basically reading all the files and it is keeping a track. And parcel uses a file watching algorithm which is written in c++ and it keep an eye on each file as soon as we're developing something or we change anything into our code parcel is keeping a track of every say we do in our project. As soon as we do parcel build it once again.
+68. What does parcel automatically refreshing the page means? How parcel automatically refreshing the page?
+A. Parcel automatically refreshing the page means if we change anything into the file and as soon as we save it then parcel automatically refreshes our page this is happening because parcel is doing something known as HMR(Hot Module Replacement). So parcel is basically reading all the files and it is keeping a track. And parcel uses a file watching algorithm which is written in c++ and it keep an eye on each file as soon as we are developing something or we change anything into our code parcel is keeping a track of every say we do in our project. As soon as we do parcel build it once again.
 
-68. Why parcel reduces or increase the time on terminal whenever it built our app? And how parcel is taking so less time to built our app?
+69. Why parcel reduces or increase the time on terminal whenever it built our app? And how parcel is taking so less time to built our app?
 A. Parcel reduces or increase the time whatever it build our app because parcel is caching things for us which give us faster builds.
 
-69. Where parcel is caching things up?
-A. When we install parcel & we build our project then parcel quickly sneaked into our project and it also took some space as a parcel-cache into our project codebase. So this parcel-cache has those binary files and this parcel-cache is basically caching everything that we do and it is supporting HMR and it watching all those files so that the next built are developed faster.
+70. Where parcel is caching things up?
+A. When we install parcel and we build our project then parcel quickly sneaked into our project and it also took some space as a parcel-cache into our project codebase. So this parcel-cache has those binary files and this parcel-cache is basically caching everything that we do and it is supporting HMR and it watching all those files so that the next built are developed faster.
 
-70. Why our react app is fast? What is making our app optimize? What makes our react app performant? What makes our development experience better?
-A. Yes, react is making our app fast but there are so many more thing that bundlers are doing like parcel, etc. So these things aren't automatically present but it parcel or webpack or wheat or any bundlers that we uses doing it for us so right now parcel is doing all these things for us. Parcel is giving muscle to our skelton and parcel is giving energy to our app so it's not just react. And parcel itself isn't doing everything on it's own, for example, for minification parcel would be using some of the libraries so parcel is the manager of all the libraries. But parcel is such a beast that it is managing everything for us & it is giving so many things for us. Therefore, our react app is so fast.
+71. Why our react app is fast? What is making our app optimize? What makes our react app performant? What makes our development experience better?
+A. Yes, react is making our app fast but there are so many more thing that bundlers are doing like parcel, etc. So these things aren't automatically present but it parcel or webpack or vite or any bundlers that we uses doing it for us so right now parcel is doing all these things for us. Parcel is giving muscle to our skelton and parcel is giving energy to our app so It is not just react. And parcel itself is not doing everything on It is own, for example, for minification parcel would be using some of the libraries so parcel is the manager of all the libraries. But parcel is such a beast that it is managing everything for us and it is giving so many things for us. Therefore, our react app is so fast.
 
-71. What is differential bundling?
-A. Differential bundling means our app can be open on internet explorer or an older version of internet explorer or google chrome or firefox or mobile browser or something so parcel takes care of all that & it will give differential bundling to our app so that our app runs smoothly on older browsers as well. Parcel give us that ability that we'll have a different bundle for different type of apps or older browsers. Parcel will add some extra things that will help us to do all of it.
+72. What is differential bundling?
+A. Differential bundling means our app can be open on internet explorer or an older version of internet explorer or google chrome or firefox or mobile browser or something so parcel takes care of all that and it will give differential bundling to our app so that our app runs smoothly on older browsers as well. Parcel give us that ability that we will have a different bundle for different type of apps or older browsers. Parcel will add some extra things that will help us to do all of it.
 
-72. How can we create a prod build?
+73. How can we create a prod build?
 A. So if we need to create a prod build we need to write npx parcel build index.html.
 
-73. How to fix error when we write npx parcel build index.html?
-A. In package.json file, we don't need "main": "App.js" when we're using parcel. So this "main" basically see it is a way to tell npm it is a entry point of our app but when we using parcel we gave the entry point is index.html so parcel conflicts with "App.js" so we'll get error so remove this "main": "App.js" because npx package is automatically generated for us so remove this line "main": "App.js" from package.json.
+74. How to fix error when we write npx parcel build index.html?
+A. In package.json file, we do not need "main": "App.js" when we are using parcel. So this "main" basically see it is a way to tell npm it is a entry point of our app but when we using parcel we gave the entry point is index.html so parcel conflicts with "App.js" so we will get error so remove this "main": "App.js" because npx package is automatically generated for us so remove this line "main": "App.js" from package.json.
 
-74. When we do npx parcel build index.html where does that build goes up? Explain the production build briefly.
-A. When we do npx build index.html then parcel will bundle, minify, all the crazy staff and it will put all those files inside a new folder called dist but right now those existing files inside dist folder is used for development so dist is containing development builds files. Now when we'll build a production build so parcel will build it inside already existing dist folder so what we'll do is let delete dist folder & this can be automatically be generated. So now we'll generate a production build right which will generate dist folder automatically which will contain main three files like css, js and html so this dist is basically hosted things on browser which is coming from dist. Suppose if we have lot of files right then parcel will compress, minify, tree shaking everything, etc. to those three files and now those three files contains all code that we had written so those three files are the production ready code of our app. Now this production build is highly optimize build which we can pushed onto production and serve this app to the user. It will fast, performant and optimized.
+75. When we do npx parcel build index.html where does that build goes up? Explain the production build briefly.
+A. When we do npx build index.html then parcel will bundle, minify, all the crazy staff and it will put all those files inside a new folder called dist but right now those existing files inside dist folder is used for development so dist is containing development builds files. Now when we will build a production build so parcel will build it inside already existing dist folder so what we will do is let delete dist folder and this can be automatically be generated. So now we will generate a production build right which will generate dist folder automatically which will contain main three files like css, js and HTML so this dist is basically hosted things on browser which is coming from dist. Suppose if we have lot of files right then parcel will compress, minify, tree shaking everything, etc. to those three files and now those three files contains all code that we had written so those three files are the production ready code of our app. Now this production build is highly optimize build which we can pushed on to production and serve this app to the user. It will fast, performant and optimized.
 
-75. What is dist folder?
-A. So what parcel does is when we execute parcel right so when we write npx parcel index.html it generates a development builds for our project & it hosted on localhost:1234 so when it generate a development build it's put it up in dist folder. So the page content we're seeing on browser is coming from dist folder and it isn't coming from outside of dist folder. And when we refresh the page it was using parcel-cache and dist to update the page using that HMR(Hot Module Replacement).
+76. What is dist folder?
+A. So what parcel does is when we execute parcel right so when we write npx parcel index.html it generates a development builds for our project and it hosted on localhost:1234 so when it generate a development build It is put it up in dist folder. So the page content we are seeing on browser is coming from dist folder and it is not coming from outside of dist folder. And when we refresh the page it was using parcel-cache and dist to update the page using that HMR(Hot Module Replacement).
 
-76. What are css.map & js.map files?
-A. The css.map & js.map files are required by parcel so we can ignore them.
+77. What are css.map and js.map files?
+A. The css.map and js.map files are required by parcel so we can ignore them.
 
-75. Do parcel-cache & dist folders can be regenerated? How?
-A. Absolutely yes, these two folders parcel-cache and dist can be regenerated by writing the command npx parcel index.html (development build) & npx parcel build index.html (production build).
+78. Do parcel-cache and dist folders can be regenerated? How?
+A. Absolutely yes, these two folders parcel-cache and dist can be regenerated by writing the command npx parcel index.html (development build) and npx parcel build index.html (production build).
 
-76. Whether we have to put parcel-cache & dist inside gitignore? If yes, why?
-A. Yes! Because we already have sufficient information to regenerated so we'll just write npx parcel index.html on our server these files will be generated once again. See we take our code & hosted upon github now, for example, what will happen is suppose in our local we have a code right now we put this code into our github repository and this code is deployed onto a server. So pushed this code to git and then server fetches this code and the server basically host the app to end user. So what happens is all the commands that we write in our local right like npx parcel build index.html, etc. those commands will run on server also. That is why our code will have it's known package.json and node_modules so we'll push package.json onto git and we'll not put node_modules because we have package.json on git and the server will fetch this package.json and it will do npm install and it will install node_modules again. So server will package.json and package-lock.json and it will do a npm install on the server and we'll get all of node_modules in there. The server will have it's own parcel-cache and dist folders so don't have to push them onto server. So that's why, we'll put parcel-cache & dist inside gitignore.
+79. Whether we have to put parcel-cache and dist inside gitignore? If yes, why?
+A. Yes! Because we already have sufficient information to regenerated so we will just write npx parcel index.html on our server these files will be generated once again. See we take our code and hosted upon github now, for example, what will happen is suppose in our local we have a code right now we put this code into our github repository and this code is deployed on to a server. So pushed this code to git and then server fetches this code and the server basically host the app to end user. So what happens is all the commands that we write in our local right like npx parcel build index.html, etc. those commands will run on server also. That is why our code will have It is known package.json and node_modules so we will push package.json on to git and we will not put node_modules because we have package.json on git and the server will fetch this package.json and it will do npm install and it will install node_modules again. So server will package.json and package-lock.json and it will do a npm install on the server and we will get all of node_modules in there. The server will have It is own parcel-cache and dist folders so do not have to push them on to server. So That is why, we will put parcel-cache and dist inside gitignore.
 
-77. Does our local directly connect to server?
-A. Absolutely no, our local isn't directly connected to server.
+80. Does our local directly connect to server?
+A. Absolutely no, our local is not directly connected to server.
 
-78. Does copy of node_modules on server is same as copy of node_modules on local?
+81. Does copy of node_modules on server is same as copy of node_modules on local?
 A. No! The copy of node_modules on local is different and the copy of node_modules on server is different right.
 
-79. How to make our app compatible with older version of browser?
-A. To make our app compatible with older version of browser we'll use something known as browserslist. So we'll go to node_modules right browserslist is already there. Now we have to tell browserslist that what all browser we do have support our app in so for that we'll give it some configuration. So now we have to tell our project that what all browsers should our app will supported in.
+82. How to make our app compatible with older version of browser?
+A. To make our app compatible with older version of browser we will use something known as browserslist. So we will go to node_modules right browserslist is already there. Now we have to tell browserslist that what all browser we do have support our app in so for that we will give it some configuration. So now we have to tell our project that what all browsers should our app will supported in.
 
-80. What is browserslist? How to configure it?
-A. The browserslist is npm package and it needs some configuration. And we'll configure it inside package.json where we'll add something known as browserslist which will take an array of browsers. Suppose if we have to just support chrome so we can write something like "last 2 Chrome versions" then our app will be compatible for last 2 chrome versions so whatever the latest last 2 chrome versions will there our app will be compatible with all and we can also write "last 10 Chrome versions" and we can also write something like "last 2 Firefox versions". And now our app will work on last 2 Chrome & Firefox versions. Suppose we just say last 2 versions it will supports all the browsers last 2 versions and which will covers 79% of total overall browser or we can give last 10 versions of all the browser then it will cover 93%. So will keep it like last 2 versions which will keep our app lite otherwise parcel will put in random extra code in our system so just don't want to put in for now. So this is how we can configure browserslist to work on older versions of browsers as well because parcel takes care of it along with browserslist.
+83. What is browserslist? How to configure it?
+A. The browserslist is npm package and it needs some configuration. And we will configure it inside package.json where we will add something known as browserslist which will take an array of browsers. Suppose if we have to just support chrome so we can write something like "last 2 Chrome versions" then our app will be compatible for last 2 chrome versions so whatever the latest last 2 chrome versions will there our app will be compatible with all and we can also write "last 10 Chrome versions" and we can also write something like "last 2 Firefox versions". And now our app will work on last 2 Chrome and Firefox versions. Suppose we just say last 2 versions it will supports all the browsers last 2 versions and which will covers 79% of total overall browser or we can give last 10 versions of all the browser then it will cover 93%. So will keep it like last 2 versions which will keep our app lite otherwise parcel will put in ranDOM extra code in our system so just do not want to put in for now. So this is how we can configure browserslist to work on older versions of browsers as well because parcel takes care of it along with browserslist.
 
-81. Does what ever browserslist configuration we'll give inside package.json will our app only work on those given configuration browserslist?
-A. No! When we'll give browserslist configuration right it means that our app will definitely 100% of the times will work on those given browserslist configuration like last 2 Chrome & Firefox versions. It might not work on rest of the browsers but our app will definitely work in whatever configuration we'll give to browserslist.
+84. Does what ever browserslist configuration we will give inside package.json will our app only work on those given configuration browserslist?
+A. No! When we will give browserslist configuration right it means that our app will definitely 100% of the times will work on those given browserslist configuration like last 2 Chrome and Firefox versions. It might not work on rest of the browsers but our app will definitely work in whatever configuration we will give to browserslist.
 
-82. How did we get know what to write inside browserslist configuration?
-A. We'll get to know what to write inside browserslist configuration by going to browserslist.dev website so we can play with it like if we write last 2 Chrome versions then it will shows us last 2 chrome versions.
+85. How did we get know what to write inside browserslist configuration?
+A. we will get to know what to write inside browserslist configuration by going to browserslist.dev website so we can play with it like if we write last 2 Chrome versions then it will shows us last 2 chrome versions.
 
-83. How do we create our own create react app manually? Describe briefly.
-A. Basically with all these parcel, bebel and browserslist we have create our own create react app. This is what it is inside our create react app isn't it.
+86. How do we create our own create react app manually? Describe briefly.
+A. Basically with all these parcel, bebel and browserslist we have create our own create react app. This is what it is inside our create react app is not it.
+
+
+Episode-03 | Laying the foundation:
+
+
+87. How to create a script for development and production build?
+A. So script is an npm script which we need to create that script in package.json where we will find scripts section and we can create a different scripts for built-in development, built inside like start our project in dev mode, build our production ready app, etc. So let's create a script for starting our project in dev mode so we name the script as "start": "parcel index.html" which will run our project in development mode when npm will call this command. So basically we need to write this command "start": "parcel index.html" in package.json that's need to be executed by npm to run this script.
+
+And now let's create script for production build so let's name script as "build": "parcel build index.html" which will basically production build for our project.
+
+Above scripts are the industry standard in all the project like be it react, different libraries or framework or whatever are there right now. Generally, we create the above scripts and it is the standard convention in the industry to use this npm scripts to start and build our project.
+
+88. How do we run our project for development using script?
+A. So basically we won't do npx parcel index.html anymore so we will write npm run and then the name of script that is start so the command will be npm run start which will do same thing so it basically called the script start parcel index.html.
+
+89. How do we build our project for project using script?
+A. Just write npm run build so this will build our project and it will create relevant files like index.html, js file, etc.
+
+90. What the short form of npm run start which npm give us?
+A. Basically npm give us short form so we can write npm start which is exactly same as npm run start.
+
+91. Can we write npm build instead of npm run build?
+A. No.
+
+92. What is the meaning of npm start?
+A. The npm start means npm run start which behind the scene execute the package parcel with a index.html because we have configured this inside package.json file.
+
+93. Do react element is basically a HTML element? If no, then why and how after rendering react element becomes a HTML element on browser?
+A. No! React element is not a HTML element because when we do React.createElement what happens is react will basically creates an object so React.createElement() at the end of the day is an object. Now, when we root.render() the powerful library ReactDOM takes this object and convert to a HTML and push it to the browser. When we say push it we mean ReactDOM will replace everything that is inside the div id "root" with whatever we're rendering from root.render(ReactElement).
+
+94. What is JSX?
+A. JSX is a javascript syntax which is easier to create react element. It is convention where we kind of merge HTML and JS together. JSX is not HTML inside javascript. JSX is different than HTML. JSX is HTML or XML like syntax.
+
+95. Does JSX is part of react?
+A. No! React is different & JSX is different.
+
+96. Can we write react without JSX? If yes, then why should we write JSX in react?
+A. Yes! We can write react without JSX also. We can build all the big application without using JSX also. But JSX makes our developers life easy that is why we use JSX in react.
+
+97. What are the two ways to create react element?
+A. There are two ways to create react element:
+i. Using react core - React.createElement().
+ii. Using JSX which html like syntax, for example, const jsxHeading = <h1>Namaste React using JSX</h1>.
+
+98. If we store JSX inside const variable what does it return on console?
+A. If we store JSX inside const variable then it will return an object on console.
+
+99. In this code const jsxHeading = <h1>Namaste React using JSX</h1> does JSX here is valid javascript? If no, why?
+A. No! It is not a valid javascript as per say and this is not a pure javascript because see javascript does not comes with built-in JSX inside it because our JS engine does not understand JSX. Any javascript code is such that JS engine understands it so JS engine cannot understands the jsx code because JS engine understands ECMAScript like ES6 so this is what is pure javascript that our JS engine understands not just ES6 all the versions of javascript as it is the standard so this is what javascript understand and that is what our browser understand. Therefore, jsx is not a valid or pure javascript.
+
+100. If JS engine not able to read this jsx code const jsxHeading = <h1>Namaste React using JSX</h1> then how this code is working & printed in react?
+A. Parcel is doing the job behind the scenes even before the whole jsx code reaches to the JS engine it is transpiled before it reaches to the JS engine and JS engine received the code that browser or react can understand.
+
+101. What is the meaning of transpile?
+A. Transpile means the let's say jsx code is converted to the code browser or react can understand.
+
+102. Will root.render(jsxHeading) or ReactDOM understand the jsx code which is passed as an argument to render function?
+A. No! The root.render(jsxHeading) or ReactDOM will not understand the jsx code which is passed as an argument to render function.
+
+103. Does parcel is transpiling the JSX code by itself before it reaches to the JS engine? If no, then who is doing the job of transpilation for parcel?
+A. No! Parcel is not transpiling the JSX code by itself before it reaches to the JS engine. Parcel is like a manager for us so it doesn't do lot of things by itself right. Parcel gives the responsibility of transpilation to a package which is known as bebel. As soon as we write something on to JSX code and save it so parcel builds it right so soon as we save it babel is converted the updated JSX code quickly to a code that react will understand. Babel is transpiling our JSX code.
+
+104. What is Babel?
+A. Babel is a javascript compiler or transpiler.
+
+105. Do Babel is created by facebook?
+A. No! Babel isn't created by facebook.
+
+106. How JSX works or whats the job of babel?
+A. When we write JSX so now JSX code is transpiled by babel to React.createElement() behind the scenes and this React.createElement() makes the ReactElement which is JS object and this ReactElement is then render on to the DOM as an HTMLElement by react. So kind of JSX behind the scenes at the end of the day is React.createElement() isn't it.
+
+107. Does babel job is to only convert JSX code to react code? If no, then what the other job of babel?
+A. No! Babel job isn't only to convert JSX code to react code. But it does a lot of other things babel is a transpiler or compiler we know some older browsers don't understand the newer version of javascript like ES6 right so babel transpile that ES6 code that older browser understand. Babel does lot of transpilation so it is a champ in dealing with converting one code to another.
+
+108. What is Babel at the end of the day?
+A. Babel is again some piece of code right or some piece of javascript code. It's a javascript library. It's a node library. It's a npm package which takes a piece of code reads that code and coverts that code to something else so babel jobs is this. And Babel convert different type of code to different type of code.
+
+109. What is the slight difference between HTML and JSX?
+A. In HTML, we write class attribute as class while in JSX we write class attribute as className.
+
+110. In which case we have to write attributes in JSX?
+A. If we have to write attributes in JSX then we have to write in camel case like className, tabIndex, etc.
+
+111. Explore the various attribute of various tags in JSX?
+A. The following are the various attributes of various tags in JSX:
+I. a: href, target, rel, download and type.
+II. abbr: title.
+III. address.
+IV. area: alt, coords, shape, href, target, rel and download.
+V. article.
+VI. aside.
+VII. audio: src, crossOrigin, preload, autoPlay, controls, loop and muted.
+VII. b.
+IX. base: href and target.
+X. bdi: dir.
+XI. bdo: dir.
+XII. blockquote.
+XIII. body.
+XIV. br.
+XV. button: type, value, name, disabled, form, formAction, formEncType, formMethod, formTarget and autoFocus.
+XVI. canvas: width and height.
+XVII. caption.
+XVIII. cite.
+XIX. code.
+XX. col: span and width.
+XXI. colgroup: span.
+XXII. command: type, label, icon, disabled, checked and radioGroup.
+XXIII. data: value.
+XXIV. datalist: id.
+XXV. dd
+XXVI. del: dateTime.
+XXVII. details: open.
+XXVIII. dfn: title.
+XXIX. dialog: open.
+XXX. div.
+XXXI. dl.
+XXXII. dt.
+XXXIII. em.
+XXXIV. embed: src, type, width and height.
+XXXV. fieldset: disabled, form and name.
+XXXVI. figcaption.
+XXXVII. figure.
+XXXVIII. footer.
+XXXIX. form: action, method, target, encType, autoComplete, name and noValidate.
+XL. h1.
+XLI. h2.
+XLII. h3.
+XLIII. h4.
+XLIV. h5.
+XLV. h6.
+XLVI. head.
+XLVII. header.
+XLVIII. hr.
+XLIX. html: manifest
+L. iframe: src, name, sandbox, width, height, seamless and allowFullScreen.
+LI. img: src, alt, crossOrigin, useMap, width and height.
+LII. input: type, name, value, checked, disabled, placeholder, required autoFocus, min, max, maxLength, minLength, pattern, form, accept, alt, autoComplete, multiple and size.
+LIII. ins: dataTime.
+LIV. kbd.
+LV. keygen: autoFocus, disabled, form, keyType and name.
+LVI. label: htmlFor.
+LVII. legend.
+LVIII. li: value.
+LIX. link: href, rel, media, hrefLang, type, sizes and crossOrigin.
+LX. main.
+LXI. map: name. 
+LXII. mark.
+LXIII. menu: type and label.
+LXIV. meta: name, httpEquiv, content and charSet.
+LXV. meter: value, min, max, low, high and optimum.
+LXVI. nav.
+LXVII. noScript.
+LXVIII. object: data, type, width, height, useMap, name, form and classID.
+LXIX. ol: start and type.
+LXX. optgroup: disabled and label.
+LXXI. option: selected, label, disabled, and value.
+LXXII. output: name and form.
+LXXIII. p.
+LXXIV. param: name, value and type.
+LXXV. picture.
+LXXVI. pre.
+LXXVII. progress: value and max.
+LXXVIII. q.
+LXXIX. rp.
+LXXX. rt.
+LXXXI. ruby.
+LXXXII. s.
+LXXXIII. samp.
+LXXXIV.script: src, type, async, defer and crossOrigin.
+LXXXV. section.
+LXXXVI. select: name, multiple, required, autoFocus, disabled, form and size.
+LXXXVII. small.
+LXXXVIII. source: src, type, sizes and media.
+LXXXIX. span.
+XC. strong.
+XCI. style: type, media and scoped.
+XCII. sub.
+XCIII. summary. 
+XCIV. sup.
+XCV. table: cellPadding, cellSpacing, summary and width.
+XCVI. tbody.
+XCVII. td: headers, colSpan and rowSpan.
+XCVIII. textarea.
+XCIX. tfoot.
+C. th.
+CI. thead.
+CII. time.
+CIII. title.
+CIV. tr.
+CV. track.
+CVI. u.
+CVII. ul.
+CVIII. var.
+CIX. video.
+CX. wbr.
+
+112. What is single line and multiple line things in JSX?
+A. When we writing JSX right if our JSX is in single line then this is perfectly valid JSX. But suppose if we want to write in multiple lines right then we have to write the JSX inside parentheses so basically we have to wrap it inside round bracket.
+
+113. Why we have to wrap JSX inside round bracket when we write it on to multiple times?
+A. We wrap JSX inside round bracket when we write it on to multiple lines because babel needs to understand right where is JSX starting and ending so it is required to wrap JSX code inside round bracket if we are writing it in multiple lines. We can wrap single line of JSX code inside round bracket but it isn't mandatory but is mandatory while we write multiple lines of JSX code.
+
+114. What is a React Component?
+A. There are two types of components in react:
+i. Class based component: Class based component is the old way of writing code. Class based component uses javascript classes to create component.
+ii. Functional component: Functional component uses javascript function to create component.
+
+115. What is React Functional Component?
+A. React Functional Component is just a normal javascript function and that's all is React Functional Component which returns JSX code or react element and not just react element it can return a branch of react element. Just remember, whenever we create any react functional component create with a capital letter otherwise we will get an error because it's a react way to understand that this is a component.
+
+116. If suppose we return one liner JSX code then do we need to return it inside curly braces? If no, then why?
+A. No! If we return one liner JSX code then we don't need to return it inside curly braces because it is a perfectly valid functional component.
+
+117. Does JSX code can be nested also inside react functional component while returning it? If yes, then how?
+A. Yes! We can wrap JSX code inside div with an id or class and return it is react functional component and this is a perfectly valid functional component.
+
+118. If suppose we want to render a react functional component as an argument of render function so can we render it? If no, then why?
+A. No! We can't render react functional component as an argument of render function because we render a react element as an argument of render function so react functional component isn't a react element.
+
+119. How do we render react functional component as an argument of render function?
+A. We can render react functional component as an argument of render function by wrapping it inside angular bracket like </> like root.render(<HeadingComponent/>). This is how we will render a functional component on the page. This is the syntax which babel understand.
+
+120. How would babel get to know that an argument we pass to render function by wrapping it inside angular brackets like <HeadingComponent /> is a react functional component?
+A. So when babel sees an angular bracket and see HeadingComponent in it so it understands that there must be some HeadingComponent must be existing there. So babel understand it like this. So that's why, we write an argument of render function by wrapping it inside angular bracket like <HeadingComponent /> so this is how we render a react functional component.
+
+121. How can we render one functional component like Title component inside another component like HeadingComponent?
+A. Just wrap Title component inside angular brackets like <Title /> and put it inside another component that is HeadingComponent so babel will transpile that JSX code return in Title component and react will then at the end transpile to HTMLElement which will then replace that <Title /> component in HeadingComponent.
+
+122. Does browsers cares about what components are there and what components are nested between components? If no, then what does browsers cares about?
+A. No! Browsers doesn't cares about what components are there and what components are nested between components. So browsers needs HTML to render. So root.render() is converting everything to HTMLElement and browsers is rendering it.
+
+123. What is component composition?
+A. When we compose two components one into another it is known as component composition.
+
+124. Can we use a normal function instead of arrow function in react functional component? If yes, then why?
+A. Yes! We can use a normal functional instead of arrow function in react functional component because at the end of the day everything is javascript so react is javascript.
+
+125. Which type of function is the industry standard way to use in react functional component?
+A. Arrow function is the industry standard way to use in react functional component.
+
+126. What is the important amazing super power of JSX?
+A. The important amazing super power of JSX is that anywhere inside parentheses if we write curly braces inside JSX then we can run any piece of javascript expression meaning we can write any javascript code inside curly braces. For example, suppose we have an normal javascript variable let's call it as constant number = 10000 and now we can just write const variable number inside curly brace which is indeed inside JSX code parentheses and then babel will just put 10000 instead of {number} and then ultimately ReactDOM will render 10000 on browser. So we can inject any javascript code like mathematical calculation also inside JSX and it comes down as an HTML.
+
+127. How can we put react element inside react functional component?
+A. So we know react element is javascript object but it is stored inside normal javascript const variable let's say const title = ReactElement so this title is a normal javascript const variable so can just write this title inside curly braces like {title} and now whatever is there inside that title will come in place of {title}.
+
+128. How do we put a react element inside a react element?
+A. The same way like we put react element inside react functional component. so we can compose any react element inside react element.
+
+129. Why did browser throws ReferenceError: Cannot access "HeadingComponent" before initialization?
+A. At the end of the day everything is javascript right so we cannot use a const variable before initializing it in javascript right. Therefore, browser throws ReferenceError: Cannot access "HeadingComponent" before initializing. So that is why we need to maintain the order even in react because ultimately react is javascript at the end of the day.
+
+130. Can we create infinite loop inside JSX code?
+A. Yes! We can create infinite loop inside JSX code.
+
+131. Can we put react functional component inside react element?
+A. Yes! We can put react functional component inside react element.
+
+132. Suppose some data is coming from an API and it's response is stored inside a const variable? Now what if this API send some malicious data and suppose attackers tries to send some code which will get executed? Suppose attackers get access to runs some javascript in our code or browser then what all an attackers can do?
+A. JSX is so amazing that it takes care of this injections attacks from attackers end. Suppose even if API passes some malicious data to our code JSX will escape it some we can assume that JSX is sanitizing the data. So whenever any data is wrap inside curly braces then the JSX or browser won't blindly run it because JSX will sanitize our data and then pass in. So JSX prevents cross-side scripting attack for us. This is how powerful JSX is. No need to know about the response data feel free to use it whatever we wish to write inside curly braces because JSX sanitizes everything we pass inside curly braces. So nobody can do malicious attack into our JSX code using loop holes or curly braces. It's automatically taken care by react.
+
+133. While pointing one react functional component into another react functional component can we write it like this <Title></Title> without <Title />?
+A. Yes! We can point one react functional component into another react functional component like this <Title></Title> without <Title />.
+
+134. Can we write react functional component multiple times inside another react functional component?
+A. Yes! We can write react functional component multiple times inside another react functional component.
+
+135. Does these <Title></Title> and <Title ?> are same? If yes, then why?
+A. Yes! These <Title></Title> and <Title /> are exactly same because its just a conventions.
+
+136. CAn we call react functional component inside of curly braces withing another react functional component? If yes, then why?
+A. Yes! We can call react functional component inside of curly braces within another react functional component because react functional component is just a normal javascript function at the end of the day.
+
+137. Does these three things like {Title()}, <Title /> and <Title></Title> are one and the same things?
+A. Yes! These things like {Title()}, <Title /> and <Title></Title> are one and the same thing.
+
+138. Why we use import keyword in react?
+A. Importing in react is a way to access code that is written in other files. This can be useful for organizing our code and making it more reusable. Therefore, we use import keyword in react.
+
+139. Why we only use const variable to store anything in react?
+A. In react, it is generally recommended to use constant variables whenever possible. This is because constant variables help to improve readability, maintainability and performance or our code. Therefore, we only use const variable to store anything in react.
+
+140. Why we use upper camel case or pascal case naming convention while defining react functional component?
+A. To differentiate react functional component from regular HTMLElement and enhance the readability of the code. That is why, we use upper camel case or pascal case naming convention while defining react functional component.
+
+141. Why arrow function is the preferred way instead of function declaration and function expression in react?
+A. Arrow function provides a numbers of benefits over function declaration and function expression like conciseness, lexical this binding and implicit return which makes our code concise, readable and maintainable. Therefore, arrow function is the preferred way instead of function declaration and function expression in react.
