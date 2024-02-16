@@ -346,7 +346,7 @@ A. No.
 A. The npm start means npm run start which behind the scene execute the package parcel with a index.html because we have configured this inside package.json file.
 
 93. Do react element is basically a HTML element? If no, then why and how after rendering react element becomes a HTML element on browser?
-A. No! React element is not a HTML element because when we do React.createElement what happens is react will basically creates an object so React.createElement() at the end of the day is an object. Now, when we root.render() the powerful library ReactDOM takes this object and convert to a HTML and push it to the browser. When we say push it we mean ReactDOM will replace everything that is inside the div id "root" with whatever we're rendering from root.render(ReactElement).
+A. No! React element is not a HTML element because when we do React.createElement what happens is react will basically creates an object so React.createElement() at the end of the day is an object. Now, when we do root.render() the powerful library ReactDOM takes this object and convert to a HTML and push it to the browser. When we say push it we mean ReactDOM will replace everything that is inside the div id "root" with whatever we're rendering from root.render(ReactElement).
 
 94. What is JSX?
 A. JSX is a javascript syntax which is easier to create react element. It is convention where we kind of merge HTML and JS together. JSX is not HTML inside javascript. JSX is different than HTML. JSX is HTML or XML like syntax.
@@ -387,7 +387,7 @@ A. Babel is a javascript compiler or transpiler.
 A. No! Babel isn't created by facebook.
 
 106. How JSX works or whats the job of babel?
-A. When we write JSX so now JSX code is transpiled by babel to React.createElement() behind the scenes and this React.createElement() makes the ReactElement which is JS object and this ReactElement is then render on to the DOM as an HTMLElement by react. So kind of JSX behind the scenes at the end of the day is React.createElement() isn't it.
+A. When we write JSX so now JSX code is transpiled by babel to React.createElement() behind the scenes and this React.createElement() makes the ReactElement which is JS object and this ReactElement is then render on to the DOM as an HTMLElement by ReactDOM. So kind of JSX behind the scenes at the end of the day is React.createElement() isn't it.
 
 107. Does babel job is to only convert JSX code to react code? If no, then what the other job of babel?
 A. No! Babel job isn't only to convert JSX code to react code. But it does a lot of other things babel is a transpiler or compiler we know some older browsers don't understand the newer version of javascript like ES6 right so babel transpile that ES6 code that older browser understand. Babel does lot of transpilation so it is a champ in dealing with converting one code to another.
@@ -592,7 +592,7 @@ A. Yes! These <Title></Title> and <Title /> are exactly same because its just a 
 A. Yes! We can call react functional component inside of curly braces within another react functional component because react functional component is just a normal javascript function at the end of the day.
 
 137. Does these three things like {Title()}, <Title /> and <Title></Title> are one and the same things?
-A. Yes! These things like {Title()}, <Title /> and <Title></Title> are one and the same thing.
+A. Yes! These three things like {Title()}, <Title /> and <Title></Title> are one and the same thing.
 
 138. Why we use import keyword in react?
 A. Importing in react is a way to access code that is written in other files. This can be useful for organizing our code and making it more reusable. Therefore, we use import keyword in react.
