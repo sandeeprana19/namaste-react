@@ -319,9 +319,7 @@ A. we will get to know what to write inside browserslist configuration by going 
 86. How do we create our own create react app manually? Describe briefly.
 A. Basically with all these parcel, bebel and browserslist we have create our own create react app. This is what it is inside our create react app is not it.
 
-
 Episode-03 | Laying the foundation:
-
 
 87. How to create a script for development and production build?
 A. So script is an npm script which we need to create that script in package.json where we will find scripts section and we can create a different scripts for built-in development, built inside like start our project in dev mode, build our production ready app, etc. So let's create a script for starting our project in dev mode so we name the script as "start": "parcel index.html" which will run our project in development mode when npm will call this command. So basically we need to write this command "start": "parcel index.html" in package.json that's need to be executed by npm to run this script.
@@ -378,7 +376,7 @@ A. Transpile means the let's say jsx code is converted to the code browser or re
 A. No! The root.render(jsxHeading) or ReactDOM will not understand the jsx code which is passed as an argument to render function.
 
 103. Does parcel is transpiling the JSX code by itself before it reaches to the JS engine? If no, then who is doing the job of transpilation for parcel?
-A. No! Parcel is not transpiling the JSX code by itself before it reaches to the JS engine. Parcel is like a manager for us so it doesn't do lot of things by itself right. Parcel gives the responsibility of transpilation to a package which is known as bebel. As soon as we write something on to JSX code and save it so parcel builds it right so soon as we save it babel is converted the updated JSX code quickly to a code that react will understand. Babel is transpiling our JSX code.
+A. No! Parcel is not transpiling the JSX code by itself before it reaches to the JS engine. Parcel is like a manager for us so it doesn't do lot of things by itself right. Parcel gives the responsibility of transpilation to a package which is known as bebel. As soon as we write something on to JSX code and save it so parcel builds it right so as soon as we save it babel converted the updated JSX code quickly to a code that react will understand. Babel is transpiling our JSX code.
 
 104. What is Babel?
 A. Babel is a javascript compiler or transpiler.
@@ -562,7 +560,7 @@ A. Arrow function is the industry standard way to use in react functional compon
 A. The important amazing super power of JSX is that anywhere inside parentheses if we write curly braces inside JSX then we can run any piece of javascript expression meaning we can write any javascript code inside curly braces. For example, suppose we have an normal javascript variable let's call it as constant number = 10000 and now we can just write const variable number inside curly brace which is indeed inside JSX code parentheses and then babel will just put 10000 instead of {number} and then ultimately ReactDOM will render 10000 on browser. So we can inject any javascript code like mathematical calculation also inside JSX and it comes down as an HTML.
 
 127. How can we put react element inside react functional component?
-A. So we know react element is javascript object but it is stored inside normal javascript const variable let's say const title = ReactElement so this title is a normal javascript const variable so can just write this title inside curly braces like {title} and now whatever is there inside that title will come in place of {title}.
+A. So we know react element is javascript object but it is stored inside normal javascript const variable let's say const title = ReactElement so this title is a normal javascript const variable so we can just write this title inside curly braces like {title} and now whatever is there inside that title will come in place of {title}.
 
 128. How do we put a react element inside a react element?
 A. The same way like we put react element inside react functional component. so we can compose any react element inside react element.
@@ -577,7 +575,7 @@ A. Yes! We can create infinite loop inside JSX code.
 A. Yes! We can put react functional component inside react element.
 
 132. Suppose some data is coming from an API and it's response is stored inside a const variable? Now what if this API send some malicious data and suppose attackers tries to send some code which will get executed? Suppose attackers get access to runs some javascript in our code or browser then what all an attackers can do?
-A. JSX is so amazing that it takes care of this injections attacks from attackers end. Suppose even if API passes some malicious data to our code JSX will escape it some we can assume that JSX is sanitizing the data. So whenever any data is wrap inside curly braces then the JSX or browser won't blindly run it because JSX will sanitize our data and then pass in. So JSX prevents cross-side scripting attack for us. This is how powerful JSX is. No need to know about the response data feel free to use it whatever we wish to write inside curly braces because JSX sanitizes everything we pass inside curly braces. So nobody can do malicious attack into our JSX code using loop holes or curly braces. It's automatically taken care by react.
+A. JSX is so amazing that it takes care of this injections attacks from attackers end. Suppose even if API passes some malicious data to our code JSX will escape it so we can assume that JSX is sanitizing the data. So whenever any data is wrap inside curly braces then the JSX or browser won't blindly run it because JSX will sanitize our data and then pass in. So JSX prevents cross-side scripting attack for us. This is how powerful JSX is. No need to know about the response data feel free to use it whatever we wish to write inside curly braces because JSX sanitizes everything we pass inside curly braces. So nobody can do malicious attack into our JSX code using loop holes or curly braces. It's automatically taken care by react.
 
 133. While pointing one react functional component into another react functional component can we write it like this <Title></Title> without <Title />?
 A. Yes! We can point one react functional component into another react functional component like this <Title></Title> without <Title />.
@@ -588,7 +586,7 @@ A. Yes! We can write react functional component multiple times inside another re
 135. Does these <Title></Title> and <Title ?> are same? If yes, then why?
 A. Yes! These <Title></Title> and <Title /> are exactly same because its just a conventions.
 
-136. CAn we call react functional component inside of curly braces withing another react functional component? If yes, then why?
+136. Can we call react functional component inside of curly braces withing another react functional component? If yes, then why?
 A. Yes! We can call react functional component inside of curly braces within another react functional component because react functional component is just a normal javascript function at the end of the day.
 
 137. Does these three things like {Title()}, <Title /> and <Title></Title> are one and the same things?
@@ -605,3 +603,89 @@ A. To differentiate react functional component from regular HTMLElement and enha
 
 141. Why arrow function is the preferred way instead of function declaration and function expression in react?
 A. Arrow function provides a numbers of benefits over function declaration and function expression like conciseness, lexical this binding and implicit return which makes our code concise, readable and maintainable. Therefore, arrow function is the preferred way instead of function declaration and function expression in react.
+
+Episode-04 | Talk is Cheap, Show Me the Code:
+
+142. Whenever we ask to build any app what the first thing we need to do?
+A. Whenever we ask to build any app the first thing we need to do is planning if our planning is good code is very easy to write.
+
+143. What we need to plan while building front-end application?
+A. We need to plan the below following things while building front-end application:
+I. We should exactly know what we're going to build.
+II. What is the process of building it? How it will look? So first of all in the planning comes UI design or layout or wireframe or mock right. So first of all we'll do that planning and then we'll start writing code for it. So don't just blindly start writing code. So we do this planning because once we have visual picture in our head that where things will come up it will be very easy to write code.
+
+144. What components do our app like namaste food app will have?
+A. So once we had seen the wireframe or mockup and once we exactly know what we're going to build then we can discuss about what component can our app have. Suppose we have a big app component or something in that we'll have main major three components like:
+I. HeaderComponent: Our HeaderComponent will have LogoComponent, NavItemsComponent, etc.
+II. BodyComponent: BodyComponent will have SearchComponent, RestaurantContainerComponent and inside we'll have RestaurantCardComponent, etc.
+III. FooterComponent: FooterComponent will have CopyrightComponent, LinksComponent, AddressComponent, ContactComponent, etc.
+
+145. What we need to do whenever we say that we'll repeating lot of code suppose there will be a lot of restro cards?
+A. We need to make our code modular whenever we say that we'll be repeating lot of code suppose there will be a lot of restro cards so let's build a separate component for restro card.
+
+146. What are the ways of writing CSS in react?
+A. The following are the ways of writing CSS in react:
+I. External CSS is the first way to write CSS in react.
+II. Inline CSS in react aren't used like HTML style attribute so style attibute are given using a javascript object as a value in react. So basically this style takes a javascript object. So basically, we have to write const StyledCard variable and store object into it and then this object can have CSS properties suppose we have to give backgroundColor: "gray" and then we have to pass this StyledCard inside curly braces as a value for style attribute in JSX.
+III. We can directly write object which will contain style properties inside curly brace of style attribute in JSX. So basically what we have done in this style attribute takes a javascript object and if we have to give it a javascript object then we have to wrap it inside curly braces.
+IV. There is one more form like MaterialUI, Tailwind CSS, other libraries or framework out there in CSS.
+
+147. Which way isn't the preferred way of writing CSS in react?
+A. Pointing to the style object isn't the preferred way of writing CSS in react.
+
+148. What do you mean by double curly braces in JSX?
+A. The first curly braces means it is telling that there is sme piece of javascript while the second curly braces means it is a javascript object.
+
+149. What is props?
+A. The props is a short form for properties. Properties is something which we can pass to the component. Suppose we want to dynamically pass some data to some component so we can pass it as a props. The props at the end of the day is just normal argument to a function. So basically, when we say we're passing a props to a component it is exactly like saying we're passing some arguments to a function.
+
+150. What react will do with props that are passed to a functional component?
+A. So react will basically take all the props and it will wrap all the props inside an object and pass this object as a props to functional component as a parameter. So this props will be an object.
+
+151. How do we read or use props inside JSX?
+A. The props are javascript object so we can wrap it inside curly braces because we can write any piece of javascript inside curly braces so as props is just a javascript object so we can write something like {props.resName} and it will be replaced with restro name.
+
+152. How can we dynamically pass in some data to a component?
+A. When we dynamically pass in some data to a component we pass in as a props.
+
+153. Can we pass any number of props we wish to ?
+A. Yes! We can pass any number of props we wish to a component tag and react will wrap all of them and pass it to functional component.
+
+154. How many ways are theere to destructure props?
+A. The following are the ways to destructure props:
+I. We can destructure props on the fly after all props is a javascript object so it can be destructure like {resName, cuisine} as a parameter of functional component.
+II. We can destructure props inside functional component block like const {resName, cuisine} = props.
+III. Generally, the data will come from backend to us in the form of JSON so after storing data in const variable we'll pass it as a value of prop like <RestaurantCard resData={resObj} /> and then we can pass to functional component as a props where we can use it the way we like to. For example, we can follow step I or II from above to use it inside component.
+
+155. Do react is doing some magic of destructuring of passed props to a functional component behind the scene? If no, then who is doing it?
+A. No! React isn't doing some magic of destructuring of passed props to a functional component behind the scene. As this is just the plain javascript destructuring of object.
+
+156. How does data come from backend to us?
+A. Data will come from backend to us in form of a JSON (JavaScript Object Notation).
+
+157. Define config driven UI? Explain it?
+A. So when we open any website lets say swiggy we see offers cards carousel and this offers are available in bengaluru then suppose there are other offere in kolkata so these offer card carousel will be different in kolkata and these offere card carousel will be different in mumbai and there might be no offer card carousel in dehradun. So we'll not create different websites for different part of country states because our website is driven by data and this is known as config driven UI. OUr website is driven by config. So basically, controlling our UI using data or config which comes from backend. So config driven UI is that our UI is basically driven by a config. This is the latest practce that every companies follows now. So all the UI is driven by a config which is an API data. Now suppose there is a carousel right so this carousel can have different data for delhi or mumbai or bengaluru or kolkata and suppose thee is no carousel it won't even show carousel. So we have written the UI once and now according to the data which is coming from backend our UI is getting changed. This is known as config driven UI. For example, suppose we want to show a red color background in mumbai and a green color background in kolkata we can do that too so we have to just send our color in API data as a config and this config will drive our UI this is known as config driven UI.
+
+158. Suppose if we have to pass all the data into component so will we keep pass it one by one as a prop? If no, then what we can do?
+A. No! We don't have to pass all the data into component as a prop one by one because our head will be messed up if we do so. So what we'll do is we'll pass lets say resObj variable into which we'll have API data object inside curly braces as a value for resData prop in component like this <RestaurantCard resData={resObj} /> and then we get resData as a props which is a parameter of functional component and in the props we'll get resData and from resData we can use data of resData object.
+
+159. How can we cahnge array to comma separated values?
+A. We can use array property join method and pass ", " as an argument of it and by doing this we can change array to comma separated values.
+
+160. What is cloudinary?
+A. Cloudinary is just a CDN so when we build large scale application we'll put all the images in the cDN.
+
+161. How we have to write component while building production ready app?
+A. We have to write resusable component while building production ready app.
+
+162. Why we create resusable component?
+A. Just because we created reuseable component we can able to pass in dynamic props inside it because we made a resusable component.
+
+163. How can we loop component inside JSX?
+A. We can loop component inside JSX by using map method. So we'll add map method onto array of object.
+
+164. What does unique "key" prop(property) means?
+A. An unique "key" prop(property) means that each of list item should be uniquely represented. So each of item should have a key prop define into item that is component whenever we're looping on anything lets say list we have to give a key prop over component. This "key" is a reserved word so its meant to be like "key" and we need to pass in unique id into it. So for each item we have to pass in an item id or something.
+
+165. Why we need to define key as a prop of component while looping it as a list item?
+A. So when we loop over a lot of thing suppose we have a card container and now we have different children inside it and these children are RestaurantCards. So what happens is react optimize it render cycle. So when there are components at the same level that we looped in so what happen these component need to have unique id suppose we have ID1, ID2, ID3, ID4, etc. so they should be uniquely represented because suppose there is a new restaurant which came in and it came in at the first place so what will happen is our DOM into which react will have to insert a new RestaurantCard component on the first isn't it if we dont' give an id. For example, suppose there are no ids and a new RestaurantCard came in what will react do is react will rerender all the RestaurantCards because react doesn't know right which RestaurantCard is new because react can't uniquely identify those RestaurantCards so react will rerender all those RestaurantCards. If there is one more RestaurantCard added to its parent container so react doesn't know right what place it need to put that RestaurantCard whethere it has to came in at the 1st or 2nd or 3rd place. So what react does is basically react clean the container and rerender all the RestaurantCard components because react doesn't know which is new RestaurantCard added so it will treat all the RestaurantCard as same. But if we give each of the RestaurantCard component an unique id and new RestaurantCard came in with ID: xyz which is uniquer so now react exactly knows that ID1, ID2, ID3 and ID4 will already be there and the new element as come up in the first place as ID: xyz so react will just render one restro over there and it not render all the existed RestaurantCard. This is a huge optimization while we're writing code. Suppose if we're building infinite scroll or suppose if we're building a restro list where there are hundred of restro on the page so think about every time react rerender it will render all the hundred component so its a bad thing right. So we need to uniquely identify each and every loop item or list item. So whenever we are doing something on loop or whenever we're writing a map make a habit to add a key into list item component as a prop and this key should be unique. If we don't give a unique key react will throw warning once again. So key is very important so never ever forget to define it whenever we do a map.
