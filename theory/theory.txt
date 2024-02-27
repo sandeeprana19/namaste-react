@@ -695,3 +695,7 @@ A. Yes! It's takes a big performance hit if we don't define key.
 
 167. Do react itself says never use index as a key value? If yes, then why?
 A. Yes! React itself says never use index as a key value because index as a key is anti-pattern.
+
+Episode - 05 | Lets Get Hooked
+
+199.

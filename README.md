@@ -19,3 +19,15 @@
 - HTTPs
 - Tree shaking - remove unused code.
 - Different dev and prod bundles
+
+Two types of export/import
+
+- Default export/import
+
+export default Component;
+import Component from "path";
+
+- Named export/import
+
+export const Component;
+import {Component} from "path";

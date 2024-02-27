@@ -40,7 +40,7 @@
 .restro-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 32px;
+  gap: 10px;
 }
 
 .restro-card {
