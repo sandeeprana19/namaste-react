@@ -672,7 +672,7 @@ A. No! We don't have to pass all the data into component as a prop one by one be
 159. How can we change array to comma separated values?
 A. We can use array property join method and pass ", " as an argument of it and by doing this we can change array to comma separated values.
 
-160. What is cloudinary?
+160. What is Cloudinary?
 A. Cloudinary is just a CDN so when we build large scale application we'll put all the images in the cDN.
 
 161. How we have to write component while building production ready app?
@@ -698,4 +698,41 @@ A. Yes! React itself says never use index as a key value because index as a key 
 
 Episode - 05 | Lets Get Hooked
 
-199.
+199. How to handle onClick event handler?
+A. To handle onClick even handler we need to pass onClick attribute to button tag and now this onClick takes a callback arrow function so this is the function which will be called after onClick.
+
+200. Do all the events which are there in javascript does all those are also in react as well?
+A. Yes! All the events which are there in javascript are also available in react as well.
+
+201. How are restaurant cards are coming on browser? How to filter out the restaurant card which are having more than 4 rating so how we do it? After filtering, how do we update our UI and how do we create a super powerful react variable?
+A. First of all, let's understand how are these restaurant cards are coming on browser so these are coming from the resList const variable right so the data is in resList isn't it and this resList has some mock data inside it isn't it so what we'll do suppose if we wanted to show three restaurant cards on browser so we should just change this resList and our web page will change isn't it because our UI is config driven right so if our resList will change then everything will change isn't it so this is basic of our dynamism in our react app. Suppose if we didn't have this resList const variable so lets ditch and let's create our own restaurant list so lets call it has listOfRestaurants. And suppose this listOfRestaurants is empty so now instead of resList we'll use listOfRestaurants and lets power our UI by using listOfRestaurants in place of resList and after it we'll see empty restaurant list right because there no restaurant stored in listOfRestaurants const variable right. Suppose if we have one basic restaurant details store inside listOfRestaurants so we'll see one restaurant on browser right and if we add one more restaurant then we'll see two restaurant on browser right. Now, onClick of button we've to do something inside callback function so that we can only filter top rated restaurant which is more than 4 rating. So basically, we have to somehow write a filter logic inside callback arrow function of onClick event handler so onClick of this button we need to filter out something so if our listOfRestaurants have two restaurants our UI will display two restaurants on browser. See whenever we have a react app there is a UI layer and a data layer so the UI layer will display what is being send by data layer right. So in our data layer we have two objects so UI layer will display two cards now suppose somehow our listOfRestaurants modify or filter to one restaurant so the UI will automatically show the one restaurant right. So we have to write something like listOfRestaurants = listOfRestaurants.filter((res) => res.info.avgRating > 4) so this will filter out all the restaurants and update the listOfRestaurants const variable.
+
+So basically, whenever we click button our listOfRestaurants will only contain filtered restaurants but UI isn't updated on browser so basically don't we think that our listOfRestaurants automatically changes or refreshed once we filtered out restaurant how cool it would be instead of writing that logic. This is super power which react has so you know when we say react is fast so react is fast and efficient in DOM manipulation and this is the exact problem what react is solving. Suppose if we want to keep our data and UI layer consistent with each other that is where react comes into picture so if our data change our UI layer changes so this is thing which all the frameworks like React, Angular and Vue are trying to solve by updating the DOM efficiently. So if we click on Top Rated Restaurant button then our listOfRestaurants changes to two restaurants so our UI should update accordingly to the data right as our UI is tight to listOfRestaurants so our UI so automatically change so to do this react gives us super power. So right now this listOfRestaurants is normal javascript let variable but if we give this listOfRestaurants super of power of react then it will become super energetic react variable which is also called it as state variable. So basically it is like a state variable of the component which is a super powerful react variable. For creating super powerful react variable we'll use a react hook which is known as useState() hook.
+
+202. What is react hooks?
+A. React hooks is a normal javascript function which is given to us by react and it is pre-build and the only thing is that the function comes with some super powers. That function had some logic return behind the scenes inside react. That function is utility function given by react to us. So there are multiple functions those are known as react hooks.
+
+203. If react hooks is normal javascript utility functions then who wrote those utility functions? And where it is written?
+A. Facebook developers wrote those normal javascript utility functions which is known as react hooks. They wrote those normal javascript utility functions inside react which we import into file and we got this react inside node_modules after installing react right so after installing it we got all utility functions inside it and then ultimately into our code.
+
+204. How many types of most important react hooks are there?
+A. There are two most important react hooks:
+I. useState().
+II. useEffect().
+
+205. Define useState() hook?
+A. The useState() hook basically give us or generate super powerful state variable in react.
+
+206. How do we use useState() hook? How do we create state variable? How do we use state variable?
+A. First of all, we need to import this useState() by a named import from react like import {useState} from "react" so here we're importing useState hook as a named import because react developer might have named export this useState hook inside react file. So useState is use to create state variable that is why the name is useState.
+So to create state variable we'll call this useState() and then it will give us state variable and then we'll receive the state variable within an array like this const [listOfRestaurants] = useState(). And now this listOfRestaurants state variable is super powerful react variable. So now we'll pass empty array to useState like this const [listOfRestaurants] = useState([]] and now this empty array will become default value of listOfRestaurants state variable so whatever we pass to this useState() as an argument it will become default value of state variable that useState() hook return in this case that is listOfRestaurants.
+We'll use this listOfRestaurants state variable normally because it behave like a normal javascript variable only.
+
+207. Why useState is called state variable?
+A. The useState maintains the state of our component. Therefore, useState is called state variable.
+
+208. What is the scope of local state variable like useState?
+A. The scope of local state variable like useState is inside the scope of functional component where it is defined.
+
+209. How do we modify the state variable?
+A. Suppose if we want to modify listOfRestaurants state variable we can't do something like this listOfRestaurants = [] because this isn't valid we can't modify it like this. So we have to modify listOfRestaurants state variable by a function and the function comes at the second parameter into an array return by useState() hook which is known as setListOfRestaurants. So basically, we can name this setListOfRestaurants modifier function whatever we wish to so we can also write it as setListOfRestaurants but it is a preferred convention in the industry if the state variable name is listOfRestaurants put the modifier name as setListOfRestaurants so basically we apply a set before any state variable name so it isn't a mandatory thing it's just a nomenclature which we follow in the industry. So setListOfRestaurants is use to update listOfRestaurants state variable now suppose onClick of Top Rated Restaurant button we want to update listOfRestaurants state variable so we can't do listOfRestaurants = then applying filter method onto it because it isn't a proper of updating a state variable. So we'll call setListOfRestaurants and pass in new data which we want to push inside listOfRestaurants state variable so basically, for example, we'll create a filteredList into which we'll store filtered listOfRestaurants and now we need to pass this filteredList as a value for listOfRestaurants state variable by passing this filteredList as an argument of setListOfRestaurants. So basically, we're updating the listOfRestaurants state variable with the filteredList.
