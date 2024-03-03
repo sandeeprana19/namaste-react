@@ -612,10 +612,10 @@ A. Whenever we ask to build any app the first thing we need to do is planning if
 143. What we need to plan while building front-end application?
 A. We need to plan the below following things while building front-end application:
 I. We should exactly know what we're going to build.
-II. What is the process of building it? How it will look? So first of all in the planning comes UI design or layout or wireframe or mock right. So first of all we'll do that planning and then we'll start writing code for it. So don't just blindly start writing code. So we do this planning because once we have visual picture in our head that where things will come up it will be very easy to write code.
+II. What is the process of building it? How it will look? So first of all in the planning comes UI design or layout or wire frame or mock right. So first of all we'll do that planning and then we'll start writing code for it. So don't just blindly start writing code. So we do this planning because once we have visual picture in our head that where things will come up it will be very easy to write code.
 
 144. What components do our app like namaste food app will have?
-A. So once we had seen the wireframe or mockup and once we exactly know what we're going to build then we can discuss about what component can our app have. Suppose we have a big app component or something in that we'll have main major three components like:
+A. So once we had seen the wire frame or mockup and once we exactly know what we're going to build then we can discuss about what component can our app have. Suppose we have a big app component or something in that we'll have main major three components like:
 I. HeaderComponent: Our HeaderComponent will have LogoComponent, NavItemsComponent, etc.
 II. BodyComponent: BodyComponent will have SearchComponent, RestaurantContainerComponent and inside we'll have RestaurantCardComponent, etc.
 III. FooterComponent: FooterComponent will have CopyrightComponent, LinksComponent, AddressComponent, ContactComponent, etc.
@@ -698,41 +698,172 @@ A. Yes! React itself says never use index as a key value because index as a key 
 
 Episode - 05 | Lets Get Hooked
 
-199. How to handle onClick event handler?
+168. Can we do everything what react do using normal HTML CSS and JavaScript?
+A. Yes! We can do everything that react do using normal HTML, CSS and JavaScript.
+
+169. If we can do everything using HTML, CSS and JavaScript then why do we use React?
+A. The beauty of using a framework or a library is that it makes our developer experience easy. React makes us write less code and do more on the web page. This is the major job of a framework or a library like react is. So react gives us super power so that we can builds this large scalable production ready performance applications. React makes our coding experience every fast and then also optimizes something on web page so that things happens very fast. Therefor, we use react for everything in spite of knowing teh fact the everything can also be done by using HTML, CSS and JavaScript.
+
+170. Is it good practice to keep such a large file into our App.js file? If no, then what the best practice?
+A. No! It isn't a good practice to keep such a large file into our App.js file. The best practice in the industry is to makes separate file for separate components.
+
+171. Where do we keep all the code in the react library?
+A. Generally, there is very good convention in the industry so all the code or main code in the react library or project we generally keep it in a src folder.
+
+172. Can we build react project without src folder? If yes, then why we need src folder?
+A. Yes! We can build react project without src folder. But as there is very good convention in the industry that all the main code in the react project should be kept inside src folder because it's clean right everybody understand that in the src we'll find the source code files. So therefore, we need src folder.
+
+173. Can we create our whole app inside one single file? If yes, explain briefly?
+A. Yes! We can create our whole app inside one single file. And at the end of the day that is what happens right parcel will take down all our code and merge it into one file and minify or compress it and do all this staff right at the end of day it is happening like that. But remember the code that we write is for human isn't it so for human it is very logical to create separate files for separate components and because we know our app or a real world project will have like thousand of components we can't write all of those components inside one single file like App.js isn't it. So we need to structure our app in a proper way okay thats is how a production ready code looks.
+
+174. What is the best common practice inside react project => src folder?
+A. To create components folder inside src folder is the best common practice inside react project.
+
+175. Is it mandatory to create src folder and then inside it components and then all that staff?
+A. No! It isn't mandatory to create src folder and then inside it components and then all that staff.
+
+176. Can we structure our folders the way we want to?
+A. Yes! We can structure our folder the way we want to.
+
+177. Where do we'll put all the components?
+A. We'll put all the components inside src => components folder.
+
+178. Is there a recommended way to structure a react projects?
+A. No! React doesn't have opinions on how we put files into folders.
+
+179. Do react says avoid too much nesting while creating file structure into react project?
+A. Yes! React says avoid too much nesting while creating file structure into react project.
+
+180. Is it good to follow js instead of jsx file extension while defining file name? If yes, then why?
+A. Yes! It is good to follow js instead of jsx file extension while defining file name because it doesn't matter much so we don't have to over think about it as they are one and the same thing. And it will make a zero difference if we write js or jsx file extension over here. So just keep it simple because simple code is the best code as it is easiest to maintain.
+
+181. Do we need to export component before import form another component where we want to use?
+A. Yes! We need to export component before import from another component where we want to use.
+
+182. How to export component?
+A. We can export component like export default componentName.
+
+183. How to import component?
+A. We can import component like import ComponentName from "component path here".
+
+184. Can we write component file extension like js or jsx while defining import component path? If yes, then is it mandatory to write file extension js or jsx?
+A. Yes! We can write component file extension like js or jsx while defining import component pat but it isn't mandatory to write that file extension because react will treat it has a javascript file by itself. 
+
+185. Can we export and import in any js files?
+A. Yes! We can export and import in any js files.
+
+186. Do we need to keep hard coded data in our component file? If No, then why?
+A. No! We never need to keep hard coded data in our component file because this is the industry standard and also a best practice which is follow in the industry.
+
+187. Where do we keep hard coded data? Explain briefly?
+A. The common or best practice is to keep it inside separate file that is known as generally constant.js or config.js or utils.js or something like that so the standard way is to create a folder utils. So all the utility files right which are common utility we'll put those files inside utils folder right. Some people also like to call or write utils folder like common or config but we write it as utils which means utilities that will be used all across our app and then we'll create a file name constants.js.
+
+188. Why did we write utils file constants.js name starting with first small letter?
+A. The constants.js file isn't a component file. Therefore, we write utils file constants.js name starting with first small letter and it should be a camel case.
+
+189. Which case we need to follow while defining const name in constants.js file?
+A. We need to follow combination of two cases that are uppercase and snake case while defining const name in constants.js file as this is the best practice and industry standard.
+
+190. How many types of export and import are there?
+A. There are two types of export and import:
+I. Default export or import.
+II. Named export or import.
+
+191. When and how to use default export?
+A. When we wants to export one file in a single file then we'll use default export so we need to write export default so we need to write export default ComponentName or constantName.
+
+192. When and how to use named export?
+A. When we wants to export multiple files in a single file then we'll use named export so we need to write export const variable name in front of multiple const variable.
+
+193. Can we write default export multiple times in a single file? If no, then what will happen if we write it?
+A. No! We can't write default export multiple times in a single file and if we try to do so then react will throw an error like "A module conn't have multiple default exports".
+
+194. How do we import named export?
+A. When we'll import there will be a slight difference in importing. So whenever we have the named export we have to write curly braces and then whatever we need to import inside it like this import { namedExport file name } from "file path".
+
+195. How do we import default export?
+A. So whenever we have the default export we don't have to write default export ComponentName or const variable inside curly braces so we can import something like this import CDN_URL from "file path".
+
+196. Can we export a component using named exports?
+A. Yes! We can also export a component using named export.
+
+197. Which type of export is best practice to use for component?
+A. Default export is the best practice to use for component unless we have multiple components in a single file.
+
+198. Can we use default export along with a named export in a single file for the functional component? If yes, then explain briefly?
+A. Yes! We can use default export along with a named export in a single file for the functional component and then it depends on us how we wanna import that functional component right like by using default import or named import and while doing so we doesn't get any error from parcel or browser dev tool console. So that's what proves that we can import component using both ways.
+
+199. Shall the content of our component files in an app needs to exceeds hundred times? If no, then explain briefly?
+A. No! The content of our component files in app shouldn't exceeds hundred times and fi it does that means we're doing something wrong so then we need to break it down to different components and files. So it always a good practice to keep our component small and clean.
+
+200. How to handle onClick event handler?
 A. To handle onClick even handler we need to pass onClick attribute to button tag and now this onClick takes a callback arrow function so this is the function which will be called after onClick.
 
-200. Do all the events which are there in javascript does all those are also in react as well?
+201. Do all the events which are there in javascript does all those are also in react as well?
 A. Yes! All the events which are there in javascript are also available in react as well.
 
-201. How are restaurant cards are coming on browser? How to filter out the restaurant card which are having more than 4 rating so how we do it? After filtering, how do we update our UI and how do we create a super powerful react variable?
+202. How are restaurant cards are coming on browser? How to filter out the restaurant card which are having more than 4 rating so how we do it? After filtering, how do we update our UI and how do we create a super powerful react variable?
 A. First of all, let's understand how are these restaurant cards are coming on browser so these are coming from the resList const variable right so the data is in resList isn't it and this resList has some mock data inside it isn't it so what we'll do suppose if we wanted to show three restaurant cards on browser so we should just change this resList and our web page will change isn't it because our UI is config driven right so if our resList will change then everything will change isn't it so this is basic of our dynamism in our react app. Suppose if we didn't have this resList const variable so lets ditch and let's create our own restaurant list so lets call it has listOfRestaurants. And suppose this listOfRestaurants is empty so now instead of resList we'll use listOfRestaurants and lets power our UI by using listOfRestaurants in place of resList and after it we'll see empty restaurant list right because there no restaurant stored in listOfRestaurants const variable right. Suppose if we have one basic restaurant details store inside listOfRestaurants so we'll see one restaurant on browser right and if we add one more restaurant then we'll see two restaurant on browser right. Now, onClick of button we've to do something inside callback function so that we can only filter top rated restaurant which is more than 4 rating. So basically, we have to somehow write a filter logic inside callback arrow function of onClick event handler so onClick of this button we need to filter out something so if our listOfRestaurants have two restaurants our UI will display two restaurants on browser. See whenever we have a react app there is a UI layer and a data layer so the UI layer will display what is being send by data layer right. So in our data layer we have two objects so UI layer will display two cards now suppose somehow our listOfRestaurants modify or filter to one restaurant so the UI will automatically show the one restaurant right. So we have to write something like listOfRestaurants = listOfRestaurants.filter((res) => res.info.avgRating > 4) so this will filter out all the restaurants and update the listOfRestaurants const variable.
 
 So basically, whenever we click button our listOfRestaurants will only contain filtered restaurants but UI isn't updated on browser so basically don't we think that our listOfRestaurants automatically changes or refreshed once we filtered out restaurant how cool it would be instead of writing that logic. This is super power which react has so you know when we say react is fast so react is fast and efficient in DOM manipulation and this is the exact problem what react is solving. Suppose if we want to keep our data and UI layer consistent with each other that is where react comes into picture so if our data change our UI layer changes so this is thing which all the frameworks like React, Angular and Vue are trying to solve by updating the DOM efficiently. So if we click on Top Rated Restaurant button then our listOfRestaurants changes to two restaurants so our UI should update accordingly to the data right as our UI is tight to listOfRestaurants so our UI will automatically change so to do this react gives us super power. So right now this listOfRestaurants is normal javascript let variable but if we give this listOfRestaurants super of power of react then it will become super energetic react variable which is also called it as state variable. So basically it is like a state variable of the component which is a super powerful react variable. For creating super powerful react variable we'll use a react hook which is known as useState() hook.
 
-202. What is react hooks?
+203. What is react hooks?
 A. React hooks is a normal javascript function which is given to us by react and it is pre-build and the only thing is that the function comes with some super powers. That function had some logic return behind the scenes inside react. That function is utility function given by react to us. So there are multiple functions those are known as react hooks.
 
-203. If react hooks is normal javascript utility functions then who wrote those utility functions? And where it is written?
+204. If react hooks is normal javascript utility functions then who wrote those utility functions? And where it is written?
 A. Facebook developers wrote those normal javascript utility functions which is known as react hooks. They wrote those normal javascript utility functions inside react which we import into file and we got this react inside node_modules after installing react right so after installing it we got all utility functions inside it and then ultimately into our code.
 
-204. How many types of most important react hooks are there?
+205. How many types of most important react hooks are there?
 A. There are two most important react hooks:
 I. useState().
 II. useEffect().
 
-205. Define useState() hook?
+206. Define useState() hook?
 A. The useState() hook basically give us or generate super powerful state variable in react.
 
-206. How do we use useState() hook? How do we create state variable? How do we use state variable?
+207. How do we use useState() hook? How do we create state variable? How do we use state variable?
 A. First of all, we need to import this useState() by a named import from react like import {useState} from "react" so here we're importing useState hook as a named import because react developer might have named export this useState hook inside react file. So useState is use to create state variable that is why the name is useState.
 So to create state variable we'll call this useState() and then it will give us state variable and then we'll receive the state variable within an array like this const [listOfRestaurants] = useState(). And now this listOfRestaurants state variable is super powerful react variable. So now we'll pass empty array to useState like this const [listOfRestaurants] = useState([]] and now this empty array will become default value of listOfRestaurants state variable so whatever we pass to this useState() as an argument it will become default value of state variable that useState() hook return in this case that is listOfRestaurants.
 We'll use this listOfRestaurants state variable normally because it behave like a normal javascript variable only.
 
-207. Why useState is called state variable?
+208. Why useState is called state variable?
 A. The useState maintains the state of our component. Therefore, useState is called state variable.
 
-208. What is the scope of local state variable like useState?
+209. What is the scope of local state variable like useState?
 A. The scope of local state variable like useState is inside the scope of functional component where it is defined.
 
-209. How do we modify the state variable?
+210. How do we modify the state variable?
 A. Suppose if we want to modify listOfRestaurants state variable we can't do something like this listOfRestaurants = [] because this isn't valid we can't modify it like this. So we have to modify listOfRestaurants state variable by a function and the function comes at the second parameter into an array return by useState() hook which is known as setListOfRestaurants. So basically, we can name this setListOfRestaurants modifier function whatever we wish to so we can also write it as setListOfRestaurants but it is a preferred convention in the industry if the state variable name is listOfRestaurants put the modifier name as setListOfRestaurants so basically we apply a set before any state variable name so it isn't a mandatory thing it's just a nomenclature which we follow in the industry. So setListOfRestaurants is use to update listOfRestaurants state variable now suppose onClick of Top Rated Restaurant button we want to update listOfRestaurants state variable so we can't do listOfRestaurants = then applying filter method onto it because it isn't a proper of updating a state variable. So we'll call setListOfRestaurants and pass in new data which we want to push inside listOfRestaurants state variable so basically, for example, we'll create a filteredList into which we'll store filtered listOfRestaurants and now we need to pass this filteredList as a value for listOfRestaurants state variable by passing this filteredList as an argument of setListOfRestaurants. So basically, we're updating the listOfRestaurants state variable with the filteredList.
+
+211. Define render?
+A. Informal definition:
+So basically, the super power variable keeps the UI in sync with the data layer. If listOfRestaurants was a normal variable right . So if we'll update it our UI doesn't update but if we have a super power react variable it will keep the UI in sync with that variable. As soon as our listOfRestaurants changes it will automatically refresh our component and this is known as render.
+Formal definition:
+Whenever a state variable updates react rerenders the components and this is known as render.
+
+212. What is the meaning of rerender?
+A. The meaning of rerender is suppose if we're clicking the Top Rated Restaurants button we're changing the state variable and the react is rendering our component. So basically, react behind the scene what it is doing is as soon as the listOfRestaurants state variable or super power react variable updates from anywhere meaning setListOfRestaurants is being called react will remove this Body component and update it properly an it will quickly do that. So it will very quickly update out UI.
+
+213. What the only thing react is good?
+A. React is only good at DOM operations or manipulation. This is the core logic of React right. So this is the only thing react is good.
+
+214. What is Reconciliation Algorithm?
+A. On the UI suppose we have a DOM right. DOM is like a tree right those tags are like tree. Suppose we have a resContainer and these resContainer has 7 restroCards now suppose our UI changes to filtering this sever restroCards to three filter restroCards. Whenever we have seven restroCards UI right react creates a virtual DOM of it.
+
+215. Define virtual DOM?
+A. Virtual DOM isn't an actual DOM. So virtual DOM is the representation of actual DOM. So virtual DOM is basically those react element and this react element is an object so similarly whenever we have a big structure it is all an object. So object is basically a react virtual DOM.
+
+216. What is diff algorithm?
+A. Diff algorithm basically finds out the difference between two virtual DOM that are updated virtual and previous virtual DOM. Suppose we have a restroContainer which ahs a severn restro cards now we clicked Top Rated Restaurants button and filter out top rated restaurants as per set condition.
+
+217. What is react filter?
+A. The whole algorithm like reconciliation algorithm, virtual DOM and diff algorithm is known as React Fiber. This React Fiber is a new algorithm which came up in React 16. After React 16, this algorithm is known as React Fiber and then React Fiber is a new way of finding diff and updating the DOM.
+
+218. Does react touch actual DOM a lot?
+A. No! React doesn't touch actual DOM a lot.
+
+219. Why react is fast?
+A. React is doing efficient DOM manipulation because it has a virtual DOM which is javascript object representation of actual DOM. Virtual DOM concept exists from a long time in software engineering so react took that and builds its core algorithm over that virtual DOM. So React efficiently finds out the difference between virtual DOM and update the UI and this in core of react algorithm. Therefore, react is fast.
+
+220. What does an useState() hook returns? And what we do with it?
+A. An useState() hook returns an array which we destructure on the fly that contains state variable and state variable modifier function. For example, like this [listOfRestaurants, setListOfRestaurants].
