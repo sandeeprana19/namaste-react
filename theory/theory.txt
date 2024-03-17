@@ -1,6 +1,6 @@
 Episode-01 | Inception
 
-1. Define Emmet?
+1. Define an Emmet?
 A. An Emmet basically generate code for us inside vs code. For example, if we write HTML:5 then it will give us basic HTML skelton.
 
 2. What is CDN? Why do we use CDN?
@@ -833,7 +833,7 @@ A. The useState maintains the state of our component. Therefore, useState is cal
 A. The scope of local state variable like useState is inside the scope of functional component where it is defined.
 
 210. How do we modify the state variable?
-A. Suppose if we want to modify listOfRestaurants state variable we can't do something like this listOfRestaurants = [] because this isn't valid we can't modify it like this. So we have to modify listOfRestaurants state variable by a function and the function comes at the second parameter into an array return by useState() hook which is known as setListOfRestaurants. So basically, we can name this setListOfRestaurants modifier function whatever we wish to so we can also write it as setListOfRestaurants but it is a preferred convention in the industry if the state variable name is listOfRestaurants put the modifier name as setListOfRestaurants so basically we apply a set before any state variable name so it isn't a mandatory thing it's just a nomenclature which we follow in the industry. So setListOfRestaurants is use to update listOfRestaurants state variable now suppose onClick of Top Rated Restaurant button we want to update listOfRestaurants state variable so we can't do listOfRestaurants = then applying filter method onto it because it isn't a proper of updating a state variable. So we'll call setListOfRestaurants and pass in new data which we want to push inside listOfRestaurants state variable so basically, for example, we'll create a filteredList into which we'll store filtered listOfRestaurants and now we need to pass this filteredList as a value for listOfRestaurants state variable by passing this filteredList as an argument of setListOfRestaurants. So basically, we're updating the listOfRestaurants state variable with the filteredList.
+A. Suppose if we want to modify listOfRestaurants state variable we can't do something like this listOfRestaurants = [] because this isn't valid we can't modify it like this. So we have to modify listOfRestaurants state variable by a function and the function comes at the second parameter into an array return by useState() hook which is known as setListOfRestaurants. So basically, we can name this setListOfRestaurants modifier function whatever we wish to so we can also write it as setListOfRestaurants but it is a preferred convention in the industry if the state variable name is listOfRestaurants put the modifier name as setListOfRestaurants so basically we apply a set before any state variable name so it isn't a mandatory thing it's just a nomenclature which we follow in the industry. So setListOfRestaurants is use to update listOfRestaurants state variable now suppose onClick of Top Rated Restaurant button we want to update listOfRestaurants state variable so we can't do listOfRestaurants = then applying filter method onto it because it isn't a proper way of updating a state variable. So we'll call setListOfRestaurants and pass in new data which we want to push inside listOfRestaurants state variable so basically, for example, we'll create a filteredList into which we'll store filtered listOfRestaurants and now we need to pass this filteredList as a value for listOfRestaurants state variable by passing this filteredList as an argument of setListOfRestaurants. So basically, we're updating the listOfRestaurants state variable with the filteredList.
 
 211. Define render?
 A. Informal definition:
@@ -863,7 +863,116 @@ A. The whole algorithm like reconciliation algorithm, virtual DOM and diff algor
 A. No! React doesn't touch actual DOM a lot.
 
 219. Why react is fast?
-A. React is doing efficient DOM manipulation because it has a virtual DOM which is javascript object representation of actual DOM. Virtual DOM concept exists from a long time in software engineering so react took that and builds its core algorithm over that virtual DOM. So React efficiently finds out the difference between virtual DOM and update the UI and this in core of react algorithm. Therefore, react is fast.
+A. React is doing efficient DOM manipulation because it has a virtual DOM which is javascript object representation of actual DOM. Virtual DOM concept exists from a long time in software engineering so react took that and builds its core algorithm over that virtual DOM. So React efficiently finds out the difference between old virtual DOM and new virtual DOM and update the real DOM and UI and this is in the core of react algorithm. Therefore, react is fast.
 
 220. What does an useState() hook returns? And what we do with it?
 A. An useState() hook returns an array which we destructure on the fly that contains state variable and state variable modifier function. For example, like this [listOfRestaurants, setListOfRestaurants].
+
+Episode-06 | Exploring the world
+
+221. Define Monolith Architecture? Describe it?
+A. So traditionally, you know when the app or web app was developed so they are all developed using a monolith architecture. So early, we have a huge big projects right and suppose we're building an application in this huge big project we use to have a samll pieces right so this project itself have codee of APIs which are developed by us. We also have UI codee inside the same project. We have authentication code inside the same project. We have database connective code inside the same project. We can have notification so sending SMS code inside this project. So in this whole application we have APIs, we have backend written, we have frontend written, we have authentication written, we have connection to DB written, we have notification written, so all the code are there in the same service. And in this whole project you know even if we have to make a single change suppose if I have to change the color of a button right so what we have do we have to build this whole project and we have to deploy this whole project which is the big bulky project. So this is called Monolith Architecture.
+
+222. What is Microservices Architecture? Describe it?
+A. In the microservices architecture, we have different services for different jobs. So we have a service which is like backend service, we have a UI service, we have a authentication service, we have a maybe like a service which connects to DB which maintains a database right, we have a service for our SMS sending, we have a service for maybe like lets say email notification. So there are different services and you know there all microservices are known as microservices or small services. And all these services combine together forms a big app. And all these microsevices talk to each other depending upon the use cases right. We had separate UI project, we have a separate backend project, we have a separate notification project, we have separate database thing and for each and every small thing we had a different project right. And this is know as separation of concern and single responsibility principle. So microservices architecture follows a single responsibility principle where each and every service has its own job and nobody is intering with it. Now with microservice architecture all of teams work on their own independant service like a backend teams is different maintaining their backend project and they have their own deployment cycle and everything is separate. So this is what is microservice architecture.
+
+223. How do microservices interacts with each other?
+A. These microservices needs to interacts with each other to make the whole application work like so the Ui services needs to talk to backend service to fetch the data and show it on UI, the backend service needs to talk to DB service isn't it, the backend service needs to talk to the auth service right. So there are different type of connections between this services right the backend service needs to talk to the notification service. So all these services talk to each other right.
+
+224. How are microservices are deployed? And how can we access this services?
+A. So suppose we have our own microservices architecture so we can assume that our react project that we're making is a UI microservice and this UI microservice is written in react. And you know one more advantage of microservice is we can have different tech stack for different things. Suppose in monolith we had a one big project a java application then we have to do everthing in java but UI service written in react, we can have bankend written in java, we can have DB written in python, we can have SMS service written in golan. So we can write our microservice in any architecture we want to.
+
+225. Is it standard to develop all the UI projects based on react or angular or vue in the microservices architecture?
+A. No! It isn't standard to develop all the UI projects based one particular teach like react or angular or vue but in the microservices architecture one service can be in react, one service in vue and whatever tech stack we want to.
+
+226. How microservices are connected?
+A. So just like our UI service right was developed on port :1234 ( from localhost: 1234) similarly all the microservices run on their own specific ports right. So suppose on port number :1234 we can have our UI service, suppose on part :1000 we can have our backend service, on port :3000 we can have our SMS service, etc. So on different port we can deploy our different services and at the end of the day all these ports can map to domain day all these ports can map to domain name. Suppose the backend is map to /api whatever our domain name is suppose we have a domain name namastedev.com/api and all these api's are deployed onto the same url. Similarly we can have sms on /sms so send a sms we just have to call this service /sms. Or we can deploy on just / right so no url ahead of / right so on the / as soon as it hit the main domain its just redirects to port :1234. So suppose if UI service wants to connect to backend service so they will make a call to /api or will call to different port lets say :1000. So thats how these microservices are connected and thats how they interact with each other.
+
+227. How UI application fetch the data from backend?
+A. There are two approaches that can be followed to fetch the data from backend tin the UI application:
+I. Suppose our app loads right so as soon as our app load one thing we can do is we can just make an api call to fetch the data right and when we get the data then we can render it onto the UI. Suppose api call takes 500 ms so what will happen the page will load & our page will wait for 500 ms and after 500 ms it will render the UI. So what will happen is we have seen right when we open the web page we suddenly don't see anything and suddenly as soon as the api response it quickly show lot of staff on the screen.
+II. The second approach is as soon as the page loads right then we'll just render our UI. Now what we will do after we had quickly render now we will make an API call and as soon as we get the result from API we will now populate or rerender our application with the new data. In react, we will always be using the second approach.
+
+228. Why we will use the second approach to fetch data from backend and why this approach is better?
+A. The second approach give us a bettere UX because in the initial approach till 500 ms our page is kind of like frozen for which we don't see anthing onto page and after 500 ms we suddenly see everything right so thats a poor ux right. Instead in the second approach what we will do we load the page and then render whatever we can like rendering the skeleton and then later on slowly the website load once data is fetch. So its a better use experience and the use don't see lot of lack and all that random staff or jitteriness when we had the page. So therefore, we ill always use second approach to fetch data from backend in react.
+
+229. What is useEffect hook? Describe it?
+A. An useEffect has its own specific function. So first of all, this useEffect comes from react library and it will be imported as a named import. So useEffect is again a function right so we will called it like a function and useEffect will take two arguments so the first argument is arrow function. This arrow function is a callback function. So the first argumetn is a callback function and the second argumetn is a dependency array.
+
+230. When will useEffect callback function will be called?
+A. An useEffect callback function will be called after component renders. For example, when the body component will load right it will render the component as soon as the render cycle is finished it call the callback function which we have passed into useEffect. So this is how this useEffect works.
+
+231. How Body component code is executed?
+A. As soon as this Body component is rendered right, so it renders line by line so it just executes all the code and as soon as it sees useEffect right it will just keep the callback function so it will save this callback function to call it after render right and it moves ahead right nad then it execute other code below useEffect adn then it render jsx code. Adn then what will happen is once it is render properly then it call the callback function and it just execute whatever we define insdie useEffect callback function. So this is how this useEffect works.
+
+232. Do useEffect will be helpful when we have to implement the second approach to fetch data from backend?
+A. Yes! An useEffect will be helpful when we have to implement the second approach to fetch data from backend.
+
+233. How do we fetch the data from an api in react?
+A. The logic of fetching the data from an api in react is exact the same as we used to do in javascript right there is nothing different. So fetching the data we will use a super power method or function fetch().
+
+234. What is fetch()?
+A. The fetch () is a super power method or function that is given to use by browsers so its a super ppwer which a js engine has right. So this fetch() will fetch data from an API.
+
+235. What does fetch() return?
+A. The fetch() will return a promise.
+
+236. How do we resolve a promise? Describe briefly?
+A. Either we can use the traditional way of using a dot then and then resolving the promise using dot then right. And then catch and handling errors and all. Instead what we will do is we will follow a newer approach of async & await which is the standard practice in the industry. So we write async keyword before arrow function to make it async and then we will write wait before fetch() which will await for data to come. So this will resolve the promise. So once we have data right we have to convert this data to JSON isn't it. So we will again await this promise to resolve and we will convert this data to JSON.
+
+237. What is CORS policy?
+A. So basically, calling swiggy api from localhost has been blocked due to CORS policy. So basically, our browser chrome isn't allowing us to call swiggy api from localhost so from one origin to another origin so if there is a origin mismatch the browser blocks that API call. This is known as CORS policy.
+
+238. Meanwhile API is taking time to load how can we improve the experience?
+A. So what we can do is either we do one important thing so as soon as we load the page we can show a spinning loader.
+
+239. How will we show a spining loader?
+A. So what we will do we will write a condition that if our listOfRestaurant is empty suppose we don't have any data so instead of rendering all return jsx code we'll render a loading screen isn't it.
+
+240. Does showing a spinner is a good way? If no, why?
+A. No! Showing a spinner isn't a good way because in the industry or UI worl there is a concept know as shimmer UI which in a much better use experience.
+
+241. What is a shimmer UI?
+A. A shimmer UI resembles the page's actual UI so that the user understand how quickly the web or mobile app will load even before the content has shows up. So it in kind of like we load fake page or skeleton until we get the actual data from the API. So this is standard practice and if we're building then definately we should use a shimmer UI to make a better user experience.
+
+242. What is conditional rendering?
+A. Rendering the component or jsx on the basis of condition so this concept is known as conditional rendering.
+
+243. Why we use useState() local state variable instead of normal javascript variable?
+A. If we use normal javascript variable instead of useState() local state varable then whenever its value gets updated then there aren't any way that the component gets refreshed or rerendered. So this is why normal javascript variable doesn't work in such cases. If we want to make our component dynamic we use local state variable here is where useState() state variable comes into picture. This is why, we use useState() local state variable instead of normal javascript variable.
+
+244. Suppose after updating the button text using udating functin provided by useState() hook and which is inside header component do react is rerendering the whole header component or it is just rerendering to modify only the button text?
+A. Yes! React is rerenderig the whole header component it modify only the button text.
+
+245. Why react uses state updating function to update the value of state variable?
+A. So the thought process is see when we have just normal variable lets say btnName so there is no way for react to track whether this btnName got updated or not isn't it if we change this btnName from onClick. But because state variable lets say btnNameReact is a specical state variable so whenbever we update it rgiht by using state updating function lets say setBtnNameReact then react will trigger the render process once again. So basically, whenever this state variable will be change using this setBtnNameReact react will rerender component lets say header. React will kind of refresh this header component and all the updated values will be there because react trigger the reconciliation cycle. Therfore, react uses state udating function to update the value of state variable.
+
+246. Is react is rerendering the whole header component again when state variable is updated or react will just rerendering the button text so what is happening?
+A. Yes! React rerender the whole header component again when state variable is updated. So what happen was as soon as we click on Login button then the callback function was called then setBtnNameReact was called so react was keep a track of btnNameReact state variable and react will update this btnNameReact state variable and then react will call or rerender the header component once again but now this time we have updated value for  state variable that is btnNameReact.
+
+247. If state variable and state updating function are const variable then how these constant gets updated with the new value so isn't it defeating the javascript principle?
+A. Whenever we updated the value using setBtnNameReact basically react is updating this betNameReact and it is calling or rerender this header component or function once again but this time when we invoke this header function this btnNameReact is a new variable then it was before this is the beauty of react. React is keeping a track of everything that on the initial time btnNameReact state variable value was "Login" but as soon as we do setBtnNameReact("Logout") react will call or rerender this header function once again then react will create a new instance of btnnameReact and this btnNameReact is different then that older btnNameReact which was been printed. And now when this new btnNamereact was created so it isn't created with the default value but it is created with the updated value from setBtnNameReact and all this is happening behind the scene.
+
+248. Whenever we update the state variable then what all is happening behind the scene?
+A. As soon as we call this setBtnNameReact("Logout") then react will update the btnNameReact value or reference and the react will rerender the header component once again. React will find the diff between the older version and new version and react will see that in that diff only the button is getting updated and there aren't changes on othere place within jsx code then nothing will change but only this button will be change. So this is happening with the diff algorithm and this is the reconciliation process in react. This is why react is fast because when we click on login button and if header is getting refreshed then only the login button gets refreshed and other elements will be intact nothing else will be refreshed. so that is why we need state variables.
+
+249. How can we get the data from input box?
+A. To get the data from input box we need to add value attribute to input tag to get the value of input box. And we have to bind this input box to the local state variable. So basically, to track the value of input box like whatever user is typing in so to get that value we've to bind this value with a local state variable of react.
+
+250. Why input box isn't workig in the first place after binding it with state variable?
+A. We have given the value attribute to input box and bind this value to searchText state variable and this searchText over here is bind to input box that means whatever is there inside searchText state variable will be there inside the value of an input box. Now, when we change the value of input box then the value of input box is still tied to this searchText state variable so our searchText isn't getting updated but we're to trying to modify our input box so it can't happened because as the value is bind to this searchText and this searchText default value is empty so this input box will not change unless we change the value of searchText. So that is why to fix this what we'll do is we'll write a onChange handler onver here in input tag. So as soon as our input changes what will happen our onChange callback functin will also change searchText value. And we'll updat the searchText with a new value so we'll get it from the callback method and that e which is normal callback method and which is actually an event and what we'll do is we'll setSearchText and the value we'll give inside this is e.target.value.
+
+251. Suppose when we typing something input box then what is happening behind the scene?
+A. Whenever we're typing something onto an input box then we're changing the local state variable on every key press and react rerender the whole body cmponent on every key press. So whenever state variable changes, react trigger a reconciliation cycle meaning rerender the body component.
+
+252. Do virtual DOM is making react fast? If no, then why react is fast?
+A. No! Virtual DOM isn't making react fast so react fiber which is the new reconciliation algorithm which finds out the difference between the two virtual DOM and update the DOM only when require and the portion of DOM which only that portion is require. That is why, react is fast.
+
+. What is conditional rendering?
+A. Rendering the component or jsx on the basis of condition so this concept is known as conditional rendering.
+
+. Suppose after updating the button text using updating function provided by useState() hook and which is inside header component do react isn't rerendering the whole header component or it is just rerendering to modify only the button text?
+A. Yes! React is rerendering the whole header component to modify only the button text.
+
+. If state variable is define as constant variable then how it is being updated by state updating function?
+A. Whenever state updating function update the state variable value basically react is updating this state variable and it is calling or rendering the component once again. But this time we invoke this functional component this state variable is new a state variable with the update value then it was before rerendering of functional component so this is beauty of react as it keeping a track of everything and all of this is happening behind the scene.

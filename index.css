@@ -64,6 +64,8 @@
 
 .restro-logo {
   width: 100%;
+  height: 150px;
+  object-fit: cover;
 }
 
 .filter-btn {
@@ -82,4 +84,13 @@
   width: 200px;
   height: 400px;
   background-color: #f2f2ff;
+}
+
+.login {
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.filter {
+  display: flex;
 }
