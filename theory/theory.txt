@@ -770,7 +770,7 @@ I. Default export or import.
 II. Named export or import.
 
 191. When and how to use default export?
-A. When we wants to export one file in a single file then we'll use default export so we need to write export default so we need to write export default ComponentName or constantName.
+A. When we wants to export one file in a single file then we'll use default export so we need to write export default ComponentName or constantName.
 
 192. When and how to use named export?
 A. When we wants to export multiple files in a single file then we'll use named export so we need to write export const variable name in front of multiple const variable.
