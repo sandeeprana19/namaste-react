@@ -20,7 +20,7 @@ A. The following are the two ways to inject react into the project:
 2. By using npm install react.
 
 4. Define cross-origin attribute which we see in script tag of react CDN?
-A. Cross-Origin Resource Sharing(CORS) is an http feature that allows a web application to access resources from another DOMain.
+A. Cross-Origin Resource Sharing(CORS) is an http feature that allows a web application to access resources from another domain.
 
 5. What is React?
 A. Definitions:
@@ -967,3 +967,21 @@ A. Whenever we're typing something onto an input box then we're changing the loc
 
 252. Do virtual DOM is making react fast? If no, then why react is fast?
 A. No! Virtual DOM isn't making react fast so react fiber which is the new reconciliation algorithm which finds out the difference between the two virtual DOM and update the DOM only when require and the portion of DOM which only that portion is require. That is why, react is fast.
+
+Episode - 6.1 | Swiggy API Issue Resolved
+
+253. Define Fetch/XHR filter?
+A. The Fetch/XHR full form is Fetch/XMLHttpRequest which is the place from where it will give use all the API calls so we select this filter on the chrome dev tools => Network tab => Fetch/XHR.
+
+254. Define All filter?
+A. An All filter is the place where it will give the result of all the urls that hs been fetch for a page. For example, the photos, the javascripts files, the css files, etc. So all of them will be present in the Network tab of chrome dev tools.
+
+255. What are the the steps we follow to get or copy API request URL?
+A. The following are the steps we can follow to get or copy API request URL:
+I. Open chrome dev tools.
+II. Click on Network tab.
+III. Click on Fetch/XHR.
+Iv. Click on Headers tab => Copy Request URL or right click on API call names list => copy => copy link address.
+
+256. How can we extract data from an API?
+A. So when we'll make an API call we'll get the results into dev tools => Network tab => Fetch/XHR => Preview and then we have to study the data that we're getting in JSON format. And then find the data we need and suppose if it is nested inside an objects then extract them using optional chaining and object dot notation.
