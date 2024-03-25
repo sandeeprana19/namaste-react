@@ -38,3 +38,8 @@ import {Component} from "path";
 
 - useState()
 - useEffect()
+
+# 2 types of routing in web app
+
+- Client Side Routing
+- Server Side Routing
