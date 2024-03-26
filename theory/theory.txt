@@ -1020,3 +1020,19 @@ A. We can install react router library into our code by writing command npm in r
 264. How do we use react router library?
 A. For creating routing we have to go to app.js and over here we've to create routing configuration so whenever we've to develp routes we've to create routing configuration. And so to create routing configuration we have to import {createBrowserRouter} from 'react-router-dom'. So we're going to use createBrowserRouter and this createBrowserRouter will create routing configuration. So basically, we'll create routing configuration inside createBrowserRouter(). Adn this configuration means that some information that will define what will happen on a specific route. An information that will tell the createBrowserRouter that will happen on a specific path so suppose if we're calling about what should happen if we call that url or route. So this createBrowserRouter that list of path which is nothing but an object and an object will contain two things that are path and element. So if path is "/" then what should happen and path is "/about" then what should happen. So if our path is "/" then load an element that is home page which is <AppLayout />. But if our path is "/about" then load the element that is about compoent or page. So this how we give the configuration to createBrowserRouter. But just creating the configuration won't work so we'll have to provide this configuration to render it onto the page. So for this, we've one more important component that we can import from react-route-dom as it has a functionality by giving us a component which is known as RouterProvider. So this RouterProvider will provide the routing configuration to our app like early we're rendering the <AppLayout /> directly and now instead of this we'll provide it our router configuration. So the <RouterProvider /> is a component and we'll provide the appRouter configuartion as a value of router prop of RouterProvider component.
 
+
+
+- Home works: Build restaurant all categories including veg switch button from episode-07.
+
+- How do we read dynamic path let's say ":resId" from our component?
+A. Again we have a super power which is given to us by react router dom which will give us what is there as a param. So that super power is a hook which is basically known as useParams and it comes from react-router-dom.
+
+- How to use useParams hook?
+A. So basically, we'll extract resId from our useParams hook because useParams returns an object with resId s that is why we need to destructure that return object on the fly. And now this resId will contain an dynamic path id and we'll pass this resId in the fetch url.
+
+- What is Link behind the scene?
+A. Link is a component which is given to us by react router dom and which is a special component and behind the link is using anchor tag.
+
+- If Link is an anchor tag then what the difference between Link and anchor tag?
+A. React router dom give us Link and it is a wrapper over anchor tag so when we wrap any text as Link right now react router dom will keep a track that text is a Link and it don't have to refresh a page. It a special type of Link and behind the scene html or browser doesn't understand Link right so react router dom making it a anchor tag behind the scene and also keeping a track of it.
+
