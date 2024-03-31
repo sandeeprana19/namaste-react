@@ -848,7 +848,7 @@ A. The meaning of rerender is suppose if we're clicking the Top Rated Restaurant
 A. React is only good at DOM operations or manipulation. This is the core logic of React right. So this is the only thing react is good.
 
 214. What is Reconciliation Algorithm?
-A. On the UI suppose we have a DOM right. DOM is like a tree right those tags are like tree. Suppose we have a resContainer and these resContainer has 7 restroCards now suppose our UI changes to filtering this sever restroCards to three filter restroCards. Whenever we have seven restroCards UI right react creates a virtual DOM of it.
+A. On the UI suppose we have a DOM right. DOM is like a tree right those tags are like tree. Suppose we have a resContainer and these resContainer has 7 restroCards now suppose our UI changes to filtering this seven restroCards to three filter restroCards. Whenever we have seven restroCards UI right react creates a virtual DOM of it.
 
 215. Define virtual DOM?
 A. Virtual DOM isn't an actual DOM. So virtual DOM is the representation of actual DOM. So virtual DOM is basically those react element and this react element is an object so similarly whenever we have a big structure it is all an object. So object is basically a react virtual DOM.
@@ -1036,3 +1036,40 @@ A. Link is a component which is given to us by react router dom and which is a s
 - If Link is an anchor tag then what the difference between Link and anchor tag?
 A. React router dom give us Link and it is a wrapper over anchor tag so when we wrap any text as Link right now react router dom will keep a track that text is a Link and it don't have to refresh a page. It a special type of Link and behind the scene html or browser doesn't understand Link right so react router dom making it a anchor tag behind the scene and also keeping a track of it.
 
+Episode-07 | Let's Get Classy
+
+28/03/2024:
+- So this is a way to create class based component. So similarly just like functional component we'll also export default UserClass.
+
+- What we do inside class based component?
+A. We'll have a render() method and it will return a piece of jsx which will be displayed onto the UI. And the jsx will converted into html and rendered on to the web page.
+
+- What is the difference between functional component and class based component? Describe briefly.
+A. Functional compnent is a function that return some piece of jsx while class based component is a class which extends React.Component and which has a render method which return some piece of jsx.
+
+- What is React.Component?
+A. React.Component is basically a class which is given to us by react and UserClass is inheriting some properties from React.Component.
+
+- From where React.Component will come from?
+A. Basically, React.Component will come React so we need to import React from 'react'.
+
+- How we can use class based component let say 'UserClass' into functional component lets say 'About'?
+A. In 'About' functional component, we'll just import our 'UserClass' class based component like import UserClass from './UserClass.js'. So importing component & exporting component are exactly the same between functional component and class based functional there isn't any difference between both of them.
+
+29/03/2024:
+- How can we pass props inside class based component?
+A. Similar like functional component we can pass a prop as name = {"Sandeep Rana (Class)}" inside class based component let's say "<UserClass />".
+
+- How can we receive props inside class based component?
+A. In the class we'll create a constructor and this constructor will now receive the props and we'll also write super(props).
+
+- Why do we always have to write super(props) inside constructor function of class based component?
+A. In React, when we create a class-based component, we typically use the constructor method to initialize the component's state and bind event handlers. If we define a constructor in our component, we must call super(props) as the first statement in the constructor.
+
+Here's why:
+1. Accessing this before super(props): In JavaScript, this is uninitialized until super() is called. This means that if we try to access this.props or this.state before calling super(props), we will get an error because this is not yet initialized.
+2. Passing Props to the Parent Constructor: The super(props) call passes the props parameter to the constructor of the parent class (i.e., React.Component). This allows React to set up the component with the provided props and enables us to access this.props within the constructor and other methods of our component.
+3. Class Inheritance: In JavaScript, when we extend a class using extends, the super() function is used to call the constructor of the parent class. By calling super(props), we ensure that the constructor of the parent class (React.Component) is properly initialized before we customize our own component.
+
+- Suppose once we received props let's say name inside constructor function then how do we use the name inside render function?
+A. Inside render function, we've do something like {this.props.name} so we'll always have to use a this keyword inside class so that this props can be access from anywhere inside class.
