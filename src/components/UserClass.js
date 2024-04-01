@@ -5,35 +5,42 @@ class UserClass extends React.Component {
     super(props);
 
     this.state = {
-      count: 0,
+      userInfo: {
+        name: "Dummy",
+        location: "Default",
+      },
     };
 
     console.log(this.props.name + "Child constructor");
   }
 
-  componentDidMount() {
-    console.log(this.props.name + "Child component did mount");
+  async componentDidMount() {
+    // console.log(this.props.name + "Child componentDidMount");
+
+    const data = await fetch("https://api.github.com/users/sandeeprana19");
+    const json = await data.json();
+
+    this.setState({
+      userInfo: json,
+    });
+  }
+
+  componentDidUpdate() {
+    console.log("componentDidUpdate");
+  }
+
+  componentWillUnmount() {
+    console.log("componentWillUnmount");
   }
 
   render() {
-    const { name, location } = this.props;
-    const { count } = this.state;
-
     console.log(this.props.name + "Child render");
+
+    const { name, location, avatar_url } = this.state.userInfo;
 
     return (
       <div className="user-card">
-        <h1>Count: {count}</h1>
-        <button
-          onClick={() => {
-            // NEVER UPDATE STATE VARIABLE DIRECTLY
-            this.setState({
-              count: this.state.count + 1,
-            });
-          }}
-        >
-          Count Increase
-        </button>
+        <img src={avatar_url} alt="Avatar url" />
         <h2>Name: {name}</h2>
         <h3>Location: {location}</h3>
         <h4>Contact: @swe_sandeep</h4>
@@ -41,5 +48,26 @@ class UserClass extends React.Component {
     );
   }
 }
+
+/**
+ * MOUNTING CYCLE START
+ *
+ * Constructor(dummy)
+ * Render(dummy)
+ * <HTML(dummy) />
+ *
+ * ComponentDidMount
+ *    API call
+ *    this.setState => state variable is updated
+ *
+ * UPDATING CYCLE START
+ *
+ * Render(API data)
+ * <HTML (new API data) />
+ * componentDidUpdate
+ *
+ *
+ *
+ */
 
 export default UserClass;

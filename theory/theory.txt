@@ -1000,12 +1000,12 @@ A. Basically, we've to just copy the https://corsproxy.io/? and paste it before 
 Episode - 07 | Finding the path
 
 260. Do Dependency array changes the behaviour of useEffect render?
-A. Yes! Dependency array changes the behaviour of useEffect render. So if we don't put dependency array as it not mandator by the way but only the callback function is mandatory inside the useEffect. So when we call a useEffect without a dependency array it will render every time the component render. If the dependency array is empty so then useEffect will be call on only initial render and just once when the component is render for the first time. So the basic nature or the default behaviour of useEffect is to be call after each render but if we give it a dependecy array then it is just call once. And if we put something the dependency array then useEffect will only be called when the dependency changes.
+A. Yes! Dependency array changes the behaviour of useEffect render. So if we don't put dependency array as it not mandator by the way but only the callback function is mandatory inside the useEffect. So when we call a useEffect without a dependency array it will render every time the component render. If the dependency array is empty so then useEffect will be call on only initial render and just once when the component is render for the first time. So the basic nature or the default behaviour of useEffect is to be call after each render but if we give it a dependency array then it is just call once. And if we put something the dependency array then useEffect will only be called when the dependency changes.
 
 261. What are the best practices of useState() hook?
 A. The following are the best practices of useState() hook:
-I. Never create state variable using useState outtside of component because it doesn't make any sense. But if we do then react will throw an error like TypeError: Cannot read properties of null (reading 'useState'). So always call useState() hook inside component. And we know, useState has specific purpose it is use to create local state variable inside functional component so always call it inside functional component.
-II. And try to call useState() hoo on the top means when the function start so that we'll not have lot of inconsistencies in our code right because javascript is a synchronous single threading language meaning the code will run line by line. So when we start from the top the first thing we should do is to create our state variable and tehn react also understand it properly right it doesn't create any inconsistencies when it runs our code.
+I. Never create state variable using useState outside of component because it doesn't make any sense. But if we do then react will throw an error like TypeError: Cannot read properties of null (reading 'useState'). So always call useState() hook inside component. And we know, useState has specific purpose it is use to create local state variable inside functional component so always call it inside functional component.
+II. And try to call useState() hoo on the top means when the function start so that we'll not have lot of inconsistencies in our code right because javascript is a synchronous single threading language meaning the code will run line by line. So when we start from the top the first thing we should do is to create our state variable and then react also understand it properly right it doesn't create any inconsistencies when it runs our code.
 III. Never use useState() hook or create state variable inside a if else. Yeah, it is a perfectly valid code because javascript allow us to do it but don't do it because it can create inconsistencies in our program. See if we mashup with react then react will mashup with our code or application. So try to use how react tells us to use right. Even the react documentation says that don't use the state like useState() hook inside a condition so never do it.
 IV. Never create useState() hook inside for loop so never do it.
 V. Never crate useState() hook inside function.
@@ -1018,7 +1018,7 @@ A. We can create different routes inside react application by using npm ;javascr
 A. We can install react router library into our code by writing command npm in react-router-dom into the terminal.
 
 264. How do we use react router library?
-A. For creating routing we have to go to app.js and over here we've to create routing configuration so whenever we've to develp routes we've to create routing configuration. And so to create routing configuration we have to import {createBrowserRouter} from 'react-router-dom'. So we're going to use createBrowserRouter and this createBrowserRouter will create routing configuration. So basically, we'll create routing configuration inside createBrowserRouter(). Adn this configuration means that some information that will define what will happen on a specific route. An information that will tell the createBrowserRouter that will happen on a specific path so suppose if we're calling about what should happen if we call that url or route. So this createBrowserRouter that list of path which is nothing but an object and an object will contain two things that are path and element. So if path is "/" then what should happen and path is "/about" then what should happen. So if our path is "/" then load an element that is home page which is <AppLayout />. But if our path is "/about" then load the element that is about compoent or page. So this how we give the configuration to createBrowserRouter. But just creating the configuration won't work so we'll have to provide this configuration to render it onto the page. So for this, we've one more important component that we can import from react-route-dom as it has a functionality by giving us a component which is known as RouterProvider. So this RouterProvider will provide the routing configuration to our app like early we're rendering the <AppLayout /> directly and now instead of this we'll provide it our router configuration. So the <RouterProvider /> is a component and we'll provide the appRouter configuartion as a value of router prop of RouterProvider component.
+A. For creating routing we have to go to app.js and over here we've to create routing configuration so whenever we've to develop routes we've to create routing configuration. And so to create routing configuration we have to import {createBrowserRouter} from 'react-router-dom'. So we're going to use createBrowserRouter and this createBrowserRouter will create routing configuration. So basically, we'll create routing configuration inside createBrowserRouter(). Adn this configuration means that some information that will define what will happen on a specific route. An information that will tell the createBrowserRouter that will happen on a specific path so suppose if we're calling about what should happen if we call that url or route. So this createBrowserRouter that list of path which is nothing but an object and an object will contain two things that are path and element. So if path is "/" then what should happen and path is "/about" then what should happen. So if our path is "/" then load an element that is home page which is <AppLayout />. But if our path is "/about" then load the element that is about component or page. So this how we give the configuration to createBrowserRouter. But just creating the configuration won't work so we'll have to provide this configuration to render it onto the page. So for this, we've one more important component that we can import from react-route-dom as it has a functionality by giving us a component which is known as RouterProvider. So this RouterProvider will provide the routing configuration to our app like early we're rendering the <AppLayout /> directly and now instead of this we'll provide it our router configuration. So the <RouterProvider /> is a component and we'll provide the appRouter configuration as a value of router prop of RouterProvider component.
 
 
 
@@ -1045,7 +1045,7 @@ Episode-07 | Let's Get Classy
 A. We'll have a render() method and it will return a piece of jsx which will be displayed onto the UI. And the jsx will converted into html and rendered on to the web page.
 
 - What is the difference between functional component and class based component? Describe briefly.
-A. Functional compnent is a function that return some piece of jsx while class based component is a class which extends React.Component and which has a render method which return some piece of jsx.
+A. Functional component is a function that return some piece of jsx while class based component is a class which extends React.Component and which has a render method which return some piece of jsx.
 
 - What is React.Component?
 A. React.Component is basically a class which is given to us by react and UserClass is inheriting some properties from React.Component.
@@ -1073,3 +1073,47 @@ Here's why:
 
 - Suppose once we received props let's say name inside constructor function then how do we use the name inside render function?
 A. Inside render function, we've do something like {this.props.name} so we'll always have to use a this keyword inside class so that this props can be access from anywhere inside class.
+
+01/04/2024:
+- Why the lifecycle methods work like the way it work whenever we've two child class-based component inside parent class-based component?
+A. There is something known as React Lifecycle Diagram where if we focus on mounting phase then now when the component is mounted it is mounted in two phases that are render phase and commit phase. When the component is mounting, first of all constructor is called then the render is called so this is the render phase. And then the react updates the DOM and then componentDidMount is called so this is the commit phase. And this mounting phase happens for every child, every parent and every component in the react goes through the lifecycle methods of mounting phase.
+  
+So first of all, an about component will start the mounting phase so the parent constructor will be called then the parent render will happen then now react sees that there is a turn for first child UserClass so react goes to the first child and start the life cycle methods of first child so react will call the constructor of first child and it will call the render of first child. Now because there are two children over here in parent render method so react will optimizes this so react will not call the componentDidMount method of the first child first but it will batch the render phase of those two child then commit phase will happen together because this is an optimization of react. So what will happens is the first child constructor will be call then first child render will be call. And then once the render phase is finished react will start the render phase of the second child so react will call the second child constructor then the second child render. And now the commit phase will be batch together. So this render phase will be batch and the commit phase will be batch. That is why, the output will be like below order:
+Parent constructor
+Parent render
+
+  CHILD RENDER - IN A SINGLE BATCH
+
+  First child constructor
+  First child render
+
+  Second child constructor
+  Second child render
+
+  DOM UPDATED - IN A SINGLE BATCH
+
+  First child componentDidMount
+  Second child componentDidMount
+
+Parent componentDidMount
+
+- Why react is doing the render phase and then commit phase like the order mentioned in react lifecycle diagram?
+A. So what React is doing that react is batching up the render phase for multiple children because when the commit phase starts react tries to update the DOM and DOM manipulation is the most expensive thing when we're updating a component. So when the react is rendering right in the render phase react is basically triggering the reconciliation and in this reconciliation there is an objects and then it finds the diff between this virtual DOMs so everything is happening in render phase inside virtual DOM right and then what happens is when it tries to update the DOM it says that okay let me find out all the children and batch the render phase because render phase is very fast but commit phase takes time that is why it just batches the render phase and all the child components are rendered then the commit phase is happens then the DOM later on happens because you know manipulating or updating the DOM is an expensive tasks so react tries to batch up that tasks. So react tries to batches up render and updating the DOM in a single batch right. So react tries to batches things up for all the children and that is why react is fast. So react will optimize the performance of react app. So react first of all doing the render phase and then commit phase for both the children. Therefore, react is doing the render phase and then commit phase like the order mentioned in react lifecycle diagram.
+
+- How we can make API call inside class-based component?
+A. In class-based component we can make componentDidMount function as async and then we can do something like const data = await fetch("API url") and then we'll get this data and then we'll convert this data to json like const json = await data.json().
+
+- How do we update json data onto our web page inside class-based component?
+A. Now we'll create a state variable and update the state which will just get our data over jsx we're returning from render method. For that we'll using local state variable and put the data into that and then we'll create a state variable useInfo:{} and then this useInfo will contain some dummy data meaning initial state like below:
+this.state = {
+  userInfo: {
+    name: 'Dummy',
+    location: 'Default'
+  }
+}
+We'll now update our state variable after we got the data from an API call by using this.setState() and now this setState will have an object userInfo and now we'll put in our json inside this userInfo so we're updating our state like below:
+this.setState({
+  userInfo: json
+})
+
+- How the whole lifecycle works in case of how data was fetch and how the component was updated?
