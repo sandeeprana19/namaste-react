@@ -1005,7 +1005,7 @@ A. Yes! Dependency array changes the behaviour of useEffect render. So if we don
 261. What are the best practices of useState() hook?
 A. The following are the best practices of useState() hook:
 I. Never create state variable using useState outside of component because it doesn't make any sense. But if we do then react will throw an error like TypeError: Cannot read properties of null (reading 'useState'). So always call useState() hook inside component. And we know, useState has specific purpose it is use to create local state variable inside functional component so always call it inside functional component.
-II. And try to call useState() hoo on the top means when the function start so that we'll not have lot of inconsistencies in our code right because javascript is a synchronous single threading language meaning the code will run line by line. So when we start from the top the first thing we should do is to create our state variable and then react also understand it properly right it doesn't create any inconsistencies when it runs our code.
+II. And try to call useState() hook on the top means when the function start so that we'll not have lot of inconsistencies in our code right because javascript is a synchronous single threading language meaning the code will run line by line. So when we start from the top the first thing we should do is to create our state variable and then react also understand it properly right it doesn't create any inconsistencies when it runs our code.
 III. Never use useState() hook or create state variable inside a if else. Yeah, it is a perfectly valid code because javascript allow us to do it but don't do it because it can create inconsistencies in our program. See if we mashup with react then react will mashup with our code or application. So try to use how react tells us to use right. Even the react documentation says that don't use the state like useState() hook inside a condition so never do it.
 IV. Never create useState() hook inside for loop so never do it.
 V. Never crate useState() hook inside function.
@@ -1117,3 +1117,52 @@ this.setState({
 })
 
 - How the whole lifecycle works in case of how data was fetch and how the component was updated?
+
+02/04/2024:
+
+- What is the disclaimer of react lifecycle methods of class-based component?
+A. Never ever compare react lifecycle methods of class-based component to functional component.
+
+- Do useEffect and componentDidMount are equal?
+A. No! An useEffect and componentDidMount aren't equal and it's completely different and it's a new way altogether so never ever compare both of them.
+
+- Which lifecycle method of class-based component is called after every update?
+A. The componentDidUpdate is the lifecycle method of class-based component is called after every update.
+
+- Before what the pain of doing useEffect functionality in class-based component?
+A. Suppose the count and count2 value change so we need run something after the both state variable value changes so what we used to do early was we used to write code like below:
+
+componentDidUpdate(prevProps,prevState){
+  if(this.state.count !== this.prevState.count || this.state.count2 !== this.prevState.count2){
+    And we write our code here
+  }
+}
+
+So it was so much painful so the people who are write in old version of react would know this pain. So above what it is doing is if current state isn't equal to previous state then do what we inside the if statement but in useEffect react say that just pass array of dependency we'll take care of everything.
+
+- Why array of dependency is an array in useEffect?
+A. An array of dependency is an array in useEffect because early we use to write different conditions inside if statement so react developer says that okay let's make this conditions as an array because there can be multiple state variables where our if else might want to do.
+
+- Suppose we want to do something when count changes and we want to do something else when our count2 changes. So how we can write this in functional component and class-based component?
+A. In functional component, we use two useEffect so suppose we want to do something when we change count and something else in if we change count2.
+In class-based component, we use to write two if else conditions so one for count and one for count2 because early we don't have any ways to do it so that's why do it like this.
+
+- What we'll do when componentWillUnmount? And what is the use case of componentWillUnmount?
+A. The componentWillUnmount is called when we're leaving the page see when we go from home to about page or about page to home page so what is happening is we're changing the page eventually in the concept of page we're changing but it is a single page in itself right. So there are lots of things we need to clear when we're leaving the page so suppose if we've a setInterval inside componentDidMount like below:
+setInterval(() => {
+  console.log('NAMASTE REACT Open')
+},1000)
+We'll see that it start printing above console log after each second so when load about component in componentDidMount it started calling 'NAMASTE REACT OP' after each second right it is just calling it. Now the issue with single page application is if we move to home page it will still calling setInterval because its a single page application. One more amazing thing suppose if we went to about page once again now we'll see that setInterval callback will be called twice because it started two intervals so this is a problem because when we're changing our pages right it isn't reloading our page it is just changing the components, it is just rendering and the react is reconciling. It is the power of SPA but it is a bad thing about single page application also. So every time we're coming to the about page it is creating a new setInterval. What if there is a setTimeout then this setTimeout will just hanging in the browser so after a while this will blowup our app. Suppose if we left our code something like this and there is a user right and user often goes from one page to another so think of it how much performance lose we're doing. So we can't make a scalable application by avoid this setInterval small issue so we need to take care of every single line of code we write. So to fix setInterval issue we need to clear setInterval inside componentWillUnmount method like clearInterval(this.timer)
+
+- How will we reference setInterval in componentDidMount to clear it from componentWillUnmount?
+A. We can reference setInterval in componentDidMount to clear it from componentWillUnmount by using variable like this.timer.
+
+- What if we add setInterval inside useEffect method of functional component so will setInterval will stop when we go to another page? If no, then why?
+A. No! If we add setInterval inside useEffect method into functional component then the setInterval will won't stop if we go to another page because we aren't clearing the interval inside useEffect method of functional component.
+
+- How will we destroy setInterval in our functional component?
+A. So there is something known as return a function from useEffect and this function is basically called when we're unmounting the functional component. So we'll create const timer and store setInterval inside it in useEffect callback function and then add clearInterval(timer) inside the return function. So once we leave the page then clearInterval(timer) will be call to clear the timer.
+
+- Why we can't use async before useEffect callback? And if we add async before useEffect callback why react throws an error?
+A. We cannot use async before useEffect inside the callback because the useEffect hook expects its effect function to return either a cleanup function or nothing at all. This is due to the useEffect() hook's callback function's asynchronous execution and lack of blocking.
+When we add async before useEffect callback, React throws an error because an async function always returns a promise, and according to the rules of hooks, the cleanup function should return nothing or a cleanup function.
