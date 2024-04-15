@@ -13,12 +13,12 @@ export const Header = () => {
   useEffect(() => {}, [btnNameReact]);
 
   return (
-    <div className="header">
-      <div className="logo-container">
-        <img src={LOGO_URL} alt="Logo" className="logo" />
+    <div className="flex items-center bg-pink-100 justify-between pr-8 shadow-lg sm:bg-yellow-50 lg:bg-green-50">
+      <div className="w-24 flex items-center justify-center overflow-hidden">
+        <img src={LOGO_URL} alt="Logo" className="w-full h-auto" />
       </div>
-      <div className="nav-items">
-        <ul>
+      <div>
+        <ul className="flex items-center space-x-4">
           <li>Online status: {onlineStatus ? "✅" : "🔴"}</li>
           <li>
             <Link to="/">Home</Link>
