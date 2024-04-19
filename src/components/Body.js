@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { WithAggregatedDiscountInfoV3 } from "./RestaurantCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
@@ -9,9 +9,11 @@ const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
   const [searchText, setSearchText] = useState("");
+  const RestaurantCardWithAggregatedDiscountInfoV3 =
+    WithAggregatedDiscountInfoV3(RestaurantCard);
 
   // Whenever the state variable change, react trigger the reconciliation cycle(rerender the component)
-  console.log("Body rendered");
+  console.log("Body rendered", listOfRestaurants);
 
   useEffect(() => {
     fetchData();
@@ -91,7 +93,13 @@ const Body = () => {
             to={`/restaurants/${restaurant.info.id}`}
             key={restaurant.info.id}
           >
-            <RestaurantCard resData={restaurant} />
+            {restaurant.info.aggregatedInfoV3 ? (
+              <RestaurantCardWithAggregatedDiscountInfoV3
+                resData={restaurant}
+              />
+            ) : (
+              <RestaurantCard resData={restaurant} />
+            )}
           </Link>
         ))}
       </div>
