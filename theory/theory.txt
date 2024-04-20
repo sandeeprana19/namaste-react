@@ -1000,7 +1000,7 @@ A. Basically, we've to just copy the https://corsproxy.io/? and paste it before 
 Episode - 07 | Finding the path
 
 260. Do Dependency array changes the behaviour of useEffect render?
-A. Yes! Dependency array changes the behaviour of useEffect render. So if we don't put dependency array as it not mandator by the way but only the callback function is mandatory inside the useEffect. So when we call a useEffect without a dependency array it will render every time the component render. If the dependency array is empty so then useEffect will be call on only initial render and just once when the component is render for the first time. So the basic nature or the default behaviour of useEffect is to be call after each render but if we give it a dependency array then it is just call once. And if we put something the dependency array then useEffect will only be called when the dependency changes.
+A. Yes! Dependency array changes the behaviour of useEffect render. So if we don't put dependency array as it not mandator by the way but only the callback function is mandatory inside the useEffect. So when we call a useEffect without a dependency array it will render every time the component render. If the dependency array is empty so then useEffect will be call on only initial render and just once when the component is render for the first time. So the basic nature or the default behaviour of useEffect is to be call after each render but if we give it a dependency array then it is just call once. And if we put something in the dependency array then useEffect will only be called when the dependency changes.
 
 261. What are the best practices of useState() hook?
 A. The following are the best practices of useState() hook:
