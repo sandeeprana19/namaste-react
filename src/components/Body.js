@@ -1,4 +1,4 @@
-import RestaurantCard, { WithAggregatedDiscountInfoV3 } from "./RestaurantCard";
+import RestaurantCard, { WithDiscount } from "./RestaurantCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
@@ -9,11 +9,10 @@ const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
   const [searchText, setSearchText] = useState("");
-  const RestaurantCardWithAggregatedDiscountInfoV3 =
-    WithAggregatedDiscountInfoV3(RestaurantCard);
+  const RestaurantCardWithDiscount = WithDiscount(RestaurantCard);
 
   // Whenever the state variable change, react trigger the reconciliation cycle(rerender the component)
-  console.log("Body rendered", listOfRestaurants);
+  // console.log("Body rendered", listOfRestaurants);
 
   useEffect(() => {
     fetchData();
@@ -21,7 +20,7 @@ const Body = () => {
 
   const fetchData = async () => {
     const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+      "https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
 
     const json = await data.json();
@@ -93,10 +92,9 @@ const Body = () => {
             to={`/restaurants/${restaurant.info.id}`}
             key={restaurant.info.id}
           >
-            {restaurant.info.aggregatedInfoV3 ? (
-              <RestaurantCardWithAggregatedDiscountInfoV3
-                resData={restaurant}
-              />
+            {restaurant?.info?.aggregatedDiscountInfoV3?.header ===
+            "50% OFF" ? (
+              <RestaurantCardWithDiscount resData={restaurant} />
             ) : (
               <RestaurantCard resData={restaurant} />
             )}

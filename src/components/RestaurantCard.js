@@ -21,12 +21,13 @@ const RestaurantCard = (props) => {
   );
 };
 
-export const WithAggregatedDiscountInfoV3 = (RestaurantCard) => {
+export const WithDiscount = (RestaurantCard) => {
   return (props) => {
-    const { header } = props.resData.info.aggregatedDiscountInfoV3;
+    const { header, subHeader } = props.resData.info.aggregatedDiscountInfoV3;
+
     return (
-      <div>
-        <label>{header}</label>
+      <div className="relative">
+        <label className="absolute top-4 start-[1.5625rem] z-50 text-xl font-extrabold text-white">{`${header} ${subHeader}`}</label>
         <RestaurantCard {...props} />
       </div>
     );
