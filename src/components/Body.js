@@ -92,8 +92,9 @@ const Body = () => {
             to={`/restaurants/${restaurant.info.id}`}
             key={restaurant.info.id}
           >
-            {restaurant?.info?.aggregatedDiscountInfoV3?.header ===
-            "50% OFF" ? (
+            {restaurant?.info?.aggregatedDiscountInfoV3?.header.includes(
+              "OFF"
+            ) ? (
               <RestaurantCardWithDiscount resData={restaurant} />
             ) : (
               <RestaurantCard resData={restaurant} />
