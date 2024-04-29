@@ -1,8 +1,9 @@
 import RestaurantCard, { WithDiscount } from "./RestaurantCard";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Body = () => {
   // Local State Variable - Super powerful variable
@@ -10,9 +11,7 @@ const Body = () => {
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
   const [searchText, setSearchText] = useState("");
   const RestaurantCardWithDiscount = WithDiscount(RestaurantCard);
-
-  // Whenever the state variable change, react trigger the reconciliation cycle(rerender the component)
-  // console.log("Body rendered", listOfRestaurants);
+  const { loggedInUser, setUserName } = useContext(UserContext);
 
   useEffect(() => {
     fetchData();
@@ -25,7 +24,6 @@ const Body = () => {
 
     const json = await data.json();
 
-    // Optional chaining
     setListOfRestaurants(
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
@@ -84,6 +82,15 @@ const Body = () => {
           >
             Top Rated Restaurant
           </button>
+        </div>
+        <div>
+          <label>Username:</label>
+          <input
+            type="text"
+            className="p-2 border border-black ms-2"
+            value={loggedInUser}
+            onChange={(e) => setUserName(e.target.value)}
+          />
         </div>
       </div>
       <div className="flex gap-8 flex-wrap mx-4 my-8">

@@ -1,4 +1,5 @@
 import React from "react";
+import UserContext from "../utils/UserContext";
 
 class UserClass extends React.Component {
   constructor(props) {
@@ -11,7 +12,7 @@ class UserClass extends React.Component {
       },
     };
 
-    console.log(this.props.name + "Child constructor");
+    // console.log(this.props.name + "Child constructor");
   }
 
   async componentDidMount() {
@@ -25,21 +26,21 @@ class UserClass extends React.Component {
     });
 
     this.timer = setInterval(() => {
-      console.log("NAMASTE REACT OP");
+      // console.log("NAMASTE REACT OP");
     }, 1000);
   }
 
   componentDidUpdate() {
-    console.log("componentDidUpdate");
+    // console.log("componentDidUpdate");
   }
 
   componentWillUnmount() {
-    console.log("componentWillUnmount");
+    // console.log("componentWillUnmount");
     clearInterval(this.timer);
   }
 
   render() {
-    console.log(this.props.name + "Child render");
+    // console.log(this.props.name + "Child render");
 
     const { name, location, avatar_url } = this.state.userInfo;
 
@@ -47,6 +48,14 @@ class UserClass extends React.Component {
       <div className="user-card">
         <img src={avatar_url} alt="Avatar url" />
         <h2>Name: {name}</h2>
+        <div>
+          LoggedInUser:
+          <UserContext.Consumer>
+            {({ loggedInUser }) => (
+              <h2 className="font-bold text-xl">{loggedInUser}</h2>
+            )}
+          </UserContext.Consumer>
+        </div>
         <h3>Location: {location}</h3>
         <h4>Contact: @swe_sandeep</h4>
       </div>
