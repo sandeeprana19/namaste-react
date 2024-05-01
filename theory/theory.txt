@@ -1166,3 +1166,42 @@ A. So there is something known as return a function from useEffect and this func
 - Why we can't use async before useEffect callback? And if we add async before useEffect callback why react throws an error?
 A. We cannot use async before useEffect inside the callback because the useEffect hook expects its effect function to return either a cleanup function or nothing at all. This is due to the useEffect() hook's callback function's asynchronous execution and lack of blocking.
 When we add async before useEffect callback, React throws an error because an async function always returns a promise, and according to the rules of hooks, the cleanup function should return nothing or a cleanup function.
+
+Episode-12 | Let's Build Our Store
+
+- What are the advantages of using redux?
+A. The following are the advantages of using redux:
+I. When we're building large application redux offers us a great solution for it like handling data, managing our store, etc.
+II. When we use redux right our application becomes easier to debug.
+
+- What is Redux?
+A. Redux is a predictable state container for JS app.
+
+- How many libraries does redux team offers?
+A. There are two libraries that redux team offers:
+I. React-Redux library.
+II. Redux-Toolkit library.
+
+- What is React-Redux library?
+A. React-Redux library is kind of bridge between react and redux.
+
+- Do Redux-Toolkit is the standard way of writing redux?
+A. Yes! Redux-Toolkit is the standard way of writing redux in the industry now.
+
+- What is redux store?
+A. Redux store is nothing but a big whole javascript object and it is kept in a central global place.
+
+- Is it good practice to keep whole data inside big whole object?
+A. Yes! Its good practice to keep whole data inside big whole object.
+
+- What we've inside redux store that prevent it to become very big or clumsy?
+A. To prevent redux store to become very big or clumsy we've something known as slice inside redux store.
+
+- Why do we need slices? What are these slices?
+A. Slices are small portion inside redux store. To keep data separate we make logical partition and these logical partition are slices. So assume, if we want to add a cart data into our redux store we'll create a separate slice for a cart data. Suppose we want to keep our logged in user info inside redux store so we'll create a user slice kind of thing right. And we can keep information like something like dark theme and light theme. So whatever we need to create right we'll create logical separation and we'll make small slices inside our redux store. Therefore, we need slices.
+
+- Can we directly modify our cart slice inside redux store?
+A. No! Redux says that we can't directly modify our cart slice inside redux store.
+
+- What is the way to modify our cart slice inside redux store?
+A. Suppose if we click on add button we'll have to dispatch an action and this action will calls a function and this function will internally modifies the cart slice inside redux store.
