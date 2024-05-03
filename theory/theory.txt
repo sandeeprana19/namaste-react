@@ -1205,3 +1205,47 @@ A. No! Redux says that we can't directly modify our cart slice inside redux stor
 
 - What is the way to modify our cart slice inside redux store?
 A. Suppose if we click on add button we'll have to dispatch an action and this action will calls a function and this function will internally modifies the cart slice inside redux store.
+
+02/05/2024
+- Redux Toolkit
+A. Below:
+I. First of all, we'll install two libraries like @reduxjs/toolkit and react-redux so we'll need these two libraries to work with redux.
+II. Then we'll build our own store.
+III. Then we'll connect our store to our app.
+IV. We'll create a slice (cartSlice) to add item to the cart.
+V. Then we'll basically dispatch an action when we click on add button.
+VI. And then also we'll read the data using selector.
+
+- Define configureStore function?
+A. ConfigureStore function is a function which is use to create our own store and this configureStore will come from our @reduxjs/toolkit. And this configureStore will give us a store of our react application and then we'll add slice to it.
+
+- How we'll provide the create store to our application?
+A. First, go to app.js and then our root of application is where we return jsx from AppLayout component right so we need to provide our store to our application so we'll need something known as Provider and this we'll be importing from react-redux.
+
+- What the difference between @reduxjs/toolkit and react-redux libraries?
+A. The @reduxjs/toolkit or RTK library has things to do with redux so creating a store is a redux thing right that is why the configureStore comes from @reduxjs/toolkit.
+Now, we'll have to provide the store to react application so Provider kind of bridge between react application and redux so that is why the Provider comes from react-redux.
+
+- Why configureStore is coming from @reduxjs/toolkit and Provider is coming from react-redux?
+A. The configuring store is a redux job therefore configureStore is comming from @reduxjs/toolkit. Providing the configureStore to react application is the react-redux job, therefore, Provider is coming from react-redux.
+
+- How do we provide Provider to our app?
+A. So basically, we'll wrap whole our application meaning the jsx we're returning from AppLayout component inside Provider and then we'll provide the store as prop to Provider and store will take appStore as a value. Now, we've have provided the appStore to our react application right.
+
+- Suppose if we don't want our whole app to have redux and suppose if we want to use small portion of our app to use redux so we provide redux to that specific portion of our app?
+A. Yes! We can provide redux to the specific portion of our app instead of our whole app. So wherever we need to use store we have to wrap everything inside the Provider just like our <UserContext.Provider>.
+
+- How we do we create a cartSlice?
+A. First, create a const cartSlice and this cartSlice will created by a function which is known as createSlice function.The createSlice function is a function which again comes from a @reduxjs/toolkit because something is related to redux and this cartSlice is now a function which takes a configuration to create a slice like the following:
+I. The first thing we have to give it is the name of the slice so lets give it a name is known as 'cart'.
+II. The second configuration is takes is initial state meaning what basically initially the cartSlice state will be so basically what will be the cart items. So lets give the initial state as items and this items will be an empty array.
+III. And then we've something known as reducers and here we'll write those reducer functions corresponding to those actions so we'll create actions and reducers over here.
+
+- What can be different type of actions inside a cart?
+A. The following are the different types of actions inside a cart:
+I. We can add a item.
+II. We can remove a item.
+III. We can clear the cart.
+
+- Define actions inside a reducer function of cartSlice?
+A. Actions are basically we think it like a small API to communicate with redux store.
