@@ -1227,7 +1227,7 @@ A. The @reduxjs/toolkit or RTK library has things to do with redux so creating a
 Now, we'll have to provide the store to react application so Provider kind of bridge between react application and redux so that is why the Provider comes from react-redux.
 
 - Why configureStore is coming from @reduxjs/toolkit and Provider is coming from react-redux?
-A. The configuring store is a redux job therefore configureStore is comming from @reduxjs/toolkit. Providing the configureStore to react application is the react-redux job, therefore, Provider is coming from react-redux.
+A. The configuring store is a redux job therefore configureStore is coming from @reduxjs/toolkit. Providing the configureStore to react application is the react-redux job, therefore, Provider is coming from react-redux.
 
 - How do we provide Provider to our app?
 A. So basically, we'll wrap whole our application meaning the jsx we're returning from AppLayout component inside Provider and then we'll provide the store as prop to Provider and store will take appStore as a value. Now, we've have provided the appStore to our react application right.
@@ -1238,7 +1238,7 @@ A. Yes! We can provide redux to the specific portion of our app instead of our w
 - How we do we create a cartSlice?
 A. First, create a const cartSlice and this cartSlice will created by a function which is known as createSlice function.The createSlice function is a function which again comes from a @reduxjs/toolkit because something is related to redux and this cartSlice is now a function which takes a configuration to create a slice like the following:
 I. The first thing we have to give it is the name of the slice so lets give it a name is known as 'cart'.
-II. The second configuration is takes is initial state meaning what basically initially the cartSlice state will be so basically what will be the cart items. So lets give the initial state as items and this items will be an empty array.
+II. The second configuration is takes is initialState meaning what basically initially the cartSlice state will be so basically what will be the cart items. So lets give the initial state as items and this items will be an empty array.
 III. And then we've something known as reducers and here we'll write those reducer functions corresponding to those actions so we'll create actions and reducers over here.
 
 - What can be different type of actions inside a cart?
@@ -1247,5 +1247,93 @@ I. We can add a item.
 II. We can remove a item.
 III. We can clear the cart.
 
-- Define actions inside a reducer function of cartSlice?
-A. Actions are basically we think it like a small API to communicate with redux store.
+- Define actions inside a reducers object of cartSlice?
+A. An actions inside a reducers object of cartSlice are basically we think it like a small API to communicate with redux store.
+
+- Define reducer function inside reducers object of cartSlice?
+A. The reducer function which is map to action inside reducers object of cartSlice and this reducer function basically actually modifies the data inside slice i.e. the cartSlice of the store.
+
+- How do we modify the slice of the store?
+A. So basically reducer function gets access to state and action as a parameter. And now, it modifies our state based on the action. This state is basically the initialState i.e. mainly items so we get access to this state of our store so we do something like:
+I. For addItem: state.items.push(action.payload).
+II. For removeItem: state.items.pop().
+III. For clearCart: state.items.length = 0.
+
+- After creating slice i.e. the cartSlice what we need to do?
+A. Now, we export following two things from cartSlice after creating it:
+I. We'll export our actions like export const { addItem, removeItem, clearCart } = cartSlice.actions
+II. We'll export our reducer like export default cartSlice.reducer;
+
+- What will happen behind the scene after creating cartSlice?
+A. When we'll do a createSlice right so this createSlice function will return an object in the cartSlice. And this cartSlice object will look something like:
+{
+  actions: {
+    addItem
+  },
+  reducer
+}
+
+So cartSlice will be big object which will have actions and reducer. So we're doing export default cartSlice.reducer so we're giving this reducer from cartSlice big object. And we're doing cartSlice.actions and we're taking actions like addItem, removeItem and clearCart individually and exporting it.
+
+- How do we add cartSlice to our appStore?
+A. So basically, we'll pass an config object as an argument of configureStore functions and create a reducer because if we modify a big store it also as a reducer for itself and reducer combine the reducers of their slices so this reducer is basically responsible to modify the appStore. So this reducer is the combination of different small store so for each slice we'll have different reducer. So that is why we'll basically import our reducer i.e. the cartReducer from cartSlice and now we'll do like:
+reducer: {
+  cart: cartReducer
+}
+
+So basically, the above reducer is our app big reducer and it consist of small reducer from different slices. Suppose we had multiple slices so suppose we'll had a userSlice also so we'll have added it inside app big reducer like:
+reducer: {
+  cart: cartReducer,
+  user: userReducer
+}
+
+- How do we read the data from our appStore?
+A. So basically, we'll use a selector which is nothing but a hook inside react so we'll have a selector and that is known as useSelector hook and this useSelector hook comes from react-redux library. So basically, this useSelector hook gives us access to the store so now we're subscribing to the store using a selector but we'll now tell them what portion of your store we need access to so suppose we need access to cart > items so we'll write store.cart.items. So this selector basically helps us identify what portion of our store we need to subscribe to. So when we write like:
+const cartItems = (store) => store.cart.items;
+
+So the above cartItems variable will get access to items data so whenever our items will be modify our cartItems will be modify. And now we'll use this cartItems variable wherever we wish to use it. So this is how we read items from appStore.
+
+- How do we add item to cartSlice of appStore by dispatching an action?
+A. So onClick of the add button we want to dispatch an action so as soon somebody click on add button we want add item meaning we want to dispatch an action. So we need access to something known as dispatch and this dispatch is a function that we get from a hook which is known as useDispatch. And this useDispatch hook is again given to us by react-redux so just like we've useSelector for reading and for dispatching we've useDispatch hook. So to dispatch an action remember we exported some actions from cartSlice like addItem, removeItem and clearItem. So we need to dispatch addItem action basically. So first of all, we'll import that addItem action from our cartSlice and now we'll dispatch addItem like dispatch(addItem()) and now whatever we pass inside addItem callback function as an argument so that is our action.payload. So basically, whenever we click on add button an action is dispatch which call a reducer function which update the slice of store and because our header is subscribed to the store using a selector the cart counter is increasing after adding an item to the cart so everything is working seamlessly. So this is how we add item to cartSlice of appStore by dispatching an action.
+
+- Differences among onClick={handleAddItem}, onClick={()=>handleAddItem(item)} and onClick={handleAddItem(item)}?
+A. The differences among onClick={handleAddItem}, onClick={()=>handleAddItem(item)}, and onClick={handleAddItem(item)} lie in how they handle the event and pass parameters:
+I. onClick={handleAddItem}: This passes a reference to the handleAddItem function. It means that when the click event occurs, handleAddItem will be called without any parameters. This is useful if the function does not require any additional parameters.
+II. onClick={()=>handleAddItem(item)}: Here, an arrow function is used to create an inline anonymous function. When the click event occurs, this function is called, which then immediately calls handleAddItem(item) with the item parameter. This is useful when we want to pass parameters to the event handler function.
+III. onClick={handleAddItem(item)}: This one is incorrect. In JSX, when we write onClick={handleAddItem(item)}, we're not passing a reference to the handleAddItem function; instead, we are calling the handleAddItem function immediately and assigning its return value (if any) to the onClick event, which is usually not what we intend to do. It would cause the handleAddItem function to be invoked whenever the component renders, not when the click event happens.
+
+The second option, onClick={()=>handleAddItem(item)}, is typically used when we want to pass additional parameters to the event handler function. The first option, onClick={handleAddItem}, is sufficient when no additional parameters are needed.
+
+- Whenever we use useSelector to subscribe to the store what we need to make sure?
+A. Whenever we use useSelector to subscribe to the store we need to make sure that we're subscribing to right portion of the store otherwise it will a big performance loss.
+
+- Why there will be a performance loss if we don't subscribe to the right portion of the store?
+A. See we can subscribe to the store like below as well:
+const store = useSelector((store) => store);
+const cartItems = store.cart.items;
+
+So we can access to our whole store and we can extract our cartItems from store.cart.items.
+
+But early we were subscribing like:
+const cartItems = useSelector((store) => store.cart.items);
+
+So earlier, we were just subscribing to the small portion of the store.
+
+Now, we're subscribing to the whole store and store it inside const store variable above and then we're extracting our carItems and it will work like this perfectly fine but it very less efficient. So what happens is when we write something like:
+const store = useSelector((store) => store);
+
+So basically the above store variable is subscribed to the redux store and whenever anything changes inside the store our cart component will get to know. So basically, our above store variable will get updated whenever anything changes in the whole store. So we don't want to subscribe to update of whole store right see suppose something is happening in another slice right suppose the user logged in so it has nothing to do with cart right so why the above store variable subscribed to that whole store. When our application grow huge our store becomes very big so anything random changes in our store we don't the cart component to be affected by it so we don't to subscribe to our whole store as it is foolish. A better performance way is to only subscribe to a specific portion of the store. So never ever subscribe to whole store like above and always subscribe to small portion of the store it is very much efficient.
+
+- Why the name is selector?
+A. The name is selector because we're selecting a portion of the store that's why it is selector. So we're subscribing to the selected portion of the store.
+
+- Clarification between reducer and reducers?
+A. When we're creating our appStore right so there the keyword is reducer because it is one big reducer for our appStore and this reducer can have multiple small reducers. And when we're export it we're exporting just one reducer from it so cartSlice.reducer is the combination of small reducer functions inside reducers object.
+
+But when we creating a slice right so there are multiple small reducer functions so that word is reducers.
+
+- What is reducer at the end of the day?
+A. Reducer is nothing but a combination of different small reducers.
+
+- What the history of redux?
+A. Early, when we used to write vanilla redux the older version of redux there was a big problem with state. When we used to write reducer function like addItem in vanilla redux you know redux use to shout in their website and it used to give us clear warning that "DON'T MUTATE THE STATE" so we shouldn't mutate the state in vanilla(Older) redux. So basically, we use create a copy of state variable like cons newState = [...state]; and then we use to modify this newState like newState.items.push(action.payload) and then we use return newState so this is how we use to do earlier because redux used to say "DON'T MUTATE THE STATE"
