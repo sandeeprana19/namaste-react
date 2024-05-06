@@ -52,3 +52,16 @@ import {Component} from "path";
 - Slice (cartSlice)
 - dispatch(action)
 - selector
+
+# Types of testing (developer)
+
+- Unit testing
+- Integration testing
+- End to end testing - e2e testing
+
+# Setting up testing in our app
+
+- Installed react testing library
+- Installed jest
+- Installed babel dependencies
+- Configure babel
