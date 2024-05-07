@@ -65,3 +65,8 @@ import {Component} from "path";
 - Installed jest
 - Installed babel dependencies
 - Configure babel
+- Configure parcel config file to disable default babel transpilation
+- Jest - npx jest --init
+- Install jsdom library
+- Install @babel/preset-react - to make JSX work in test cases
+- Include @babel/preset-react inside my babel config

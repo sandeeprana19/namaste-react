@@ -1337,3 +1337,64 @@ A. Reducer is nothing but a combination of different small reducers.
 
 - What the history of redux?
 A. Early, when we used to write vanilla redux the older version of redux there was a big problem with state. When we used to write reducer function like addItem in vanilla redux you know redux use to shout in their website and it used to give us clear warning that "DON'T MUTATE THE STATE" so we shouldn't mutate the state in vanilla(Older) redux. So basically, we use create a copy of state variable like cons newState = [...state]; and then we use to modify this newState like newState.items.push(action.payload) and then we use return newState so this is how we use to do earlier because redux used to say "DON'T MUTATE THE STATE"
+
+Episode - 13 | Time for Test
+06/05/2024: 
+
+- How can we run test cases?
+A. The command for running test cases is npm run test which we had set earlier in package.json file > script block like "test": jest so basically this "test" command will use jest right.
+
+- When we see "No tests found" on terminal after running the command npm run test then what does it means?
+A. When we see "No tests found on terminal after running the command npm run test then it means that we've setup our following project configuration to work for test cases:
+I. React testing library.
+II. Jest.
+III. Babel.
+Iv. Parcel.
+
+- How we'll write a jest configuration?
+A. We'll write the command npx jest --init on terminal so basically it will initialize the jest and it will create a new configuration file for jest that is jest.config.js but before that it will ask us the following few questions:
+I. Would you like to use Typescript for the configuration file?: No as we aren't using typescript so type n.
+II. Choose the test environment that will be used for testing?: Select the second one that is jsdom (browser-like) not the node as we'll using jsdom (browser-like).
+III. Do you want to add coverage report?: Yes! So it will show us the coverage that how much we had covered right.
+IV. Which provider should be used to instrument code for coverage?: Select babel.
+V. Automatically clear mock calls, instances, contexts and results before every test?: So basically, its kind of like a garbage collection thing right so it will clear mock calls and all that staff before every test so do yes over there.
+
+Then after answering all of the above questions it will create jest.config.js file into the root of our project.
+
+- what is jsdom (browser-like)?
+A. When we run test cases right so there is no server running right and there is no browser as this test cases doesn't run on browser like google chrome so they will need an environment to run right or runtime where these testing code will be executed right so for that we use jsdom. So basically, jsdom is a library which parses and interacts with assembled HTMl just like a browser. So it's not a browser as it's just like a browser which will give us the feature of browser.
+
+- Do we need to install library needed for jsdom? If yes, then which library we need to install?
+A. Yes! We need to install library that is needed for jsdom so to install it go to react testing library website > frameworks > React Testing Library > Setup > click on Jest28 from right hand side list and it says that "If you're using Jest28 or later, jest-environment-jsdom package now must be installed separately" so below it copy the command and run it on terminal to install jest-environment-jsdom.
+
+- Where do we write test cases?
+A. Firstly, try to run the command "npm run jest" and if we run this it already gives us hint already like it tries to say that "No tests found" right so jest tried to find out all our files and it didn't find any test cases when it searched for files mentioned in the form of regex which is stored as a value of testMatch so it tried to search for mentioned files which basically are files present in a folder which is known as "__tests__" so whatever files are present inside "__tests__" folder jest will track them. So create a folder "__tests__" inside components folder and if we'll see the regex of testMatch then we'll get to know that jest is trying to match all the files which are inside the "__tests__" and they have an extension of ".js" or ".ts". So if we create any files with ".js" or ".ts" it will consider those files as test files. So basically, if we'll create the folder "__tests__" anywhere in our folder structure so that "**/" initial into regex of testMatch means this only and any js or ts files inside "__tests__" will be considered as our test files. Otherwise, if we don't want to use files extension ".js" or ".ts" then we can create any files with name that match the pattern mentioned in regex of testMatch like ".test.js" or ".test.ts" and ".spec.js" or ".spec.ts" so all these files will be considered as testing files.
+
+- What is the meaning of "__" at begin and end of "__tests__"?
+A. Dunder is the meaning of "__" at begin and end of "__tests__".
+
+- Why do we use dunder?
+A. So we basically use dunder as a reserved word so that nobody accidentally create the folder with the name "__tests__" so jest basically uses this to track a testing files. Therefore, we use dunder.
+
+- How do we write our test cases?
+A. We write a function which is known as "test" and this "test" function basically takes two arguments so the first argument is string and second is a callback function like "test("", () => {})" got it. So this is how we write our test cases. So basically, the first argument we'll give the description of the test and in the second argument we'll actually write the implementation or code for the test cases to test so first of all we'll call the "sum" function with two arguments and this "sum" function comes from "sum.js" which we'll need to import it first to use it and now if we give it two arguments suppose we want to calculate the sum of 3 and 4 then we'll do it like "sum(3, 4)" and store it's return sum value in const result and now we'll test whether the result is 7 or not so for this we'll write "expect(result).toBe(7)" so this is syntax and it is known as assertion. So this is how we write our test cases.
+
+- When the test cases passed and failed?
+A. If our expected result is similar to received result then in that cases the test cases will be passed and if our expected result isn't similar to received result then in that cases the test cases will be failed.
+
+- Do most of the time we've assertion in our test cases? If yes, then do we need to have it mandatory?
+A. Yes! Most of the time we always have assertion in our test cases. But it doesn't mean we mandatory need to have assertion in our test cases so suppose if we don't have any assertion in our test cases and run "npm run test" then it will passed and it will always passed because we aren't expecting anything right so it isn't a mandatory thing to write expect in our test cases even if we write empty test cases it will still pass because there is nothing to test. But as a best practice we always have a expect statement and this assertion is important right so without assertion there is no test right so we should have some expectation.
+
+- How do we write our unit test cases in react?
+A. So basically, we'll be testing whether contact component is loading or not loading so we'll create test cases file name "contact.test.js" and now we'll write "test("Should load contact us component", () => {})" and now we'll see whether contact component is loaded onto the dom or not right. First of all, whenever we're testing UI component inside react we'll have to render that component on to the jsdom first of all so we'll use "render()" and this render method comes from "@testing-library/react". And now, this render method will take a component which is going to be render and now we'll be going to render contact component like "render(<Contact />)" right and now we've tried to render it onto the jsdom. Now, we'll test whether the "Contact Us Page" heading is loaded or not by using screen which is an object and we'll import it from "@testing-library/react" so whatever we'll render we'll get it's access through screen and now we'll do something like "screen." and whenever we do "." then we'll find some information like whatever has been render right so suppose our contact component was render that means contact us page whole return jsx will be render like heading, form, input boxes, buttons, etc. onto a page isn't it. So similar, suppose if we want to find our "Contact Us Page" heading so we can do something like "screen.getByRole" and we'll write role of a heading like "screen.getByRole("heading")" and whatever we'll get we'll just get it inside our const heading and now we'll accept something for which we'll write assertion like "expect(heading).toBeInTheDocument()" an now this function "toBeInTheDocument" will basically find whether our "heading" was inside that document or not.
+
+- How do we enable jsx for our test cases in react application?
+A. So when our test cases failed right then terminal throws an error which contain details which says that we have to add @babel/preset-react library so will add this library to enable jsx for our test cases in react application because our jsx isn't working during test cases. So to install this library we'll run the command "npm i -D @babel/preset-react" on terminal right so that it helps to make JSX work in test cases. And now we'll have to include "@babel/preset-react" inside our babel config so just like we have "@babel/preset-env" similar we'll have to add one more configuration that is "@babel/preset-react" in babel.config.js file like:
+module.exports = {
+  presets: [
+    ["@babel/preset-env", { targets: { node: "current" } }],
+    ["@babel/preset-react", { runtime: "automatic" }]
+  ],
+};
+
+So basically, we passed { runtime: "automatic" } so that it will automatically pick the runtime and if we not do this then this will throw an error as it will take some default value and it will show us error in our code.
