@@ -5,12 +5,12 @@ const Contact = () => {
       <form>
         <input
           type="text"
-          placeholder="Name"
+          placeholder="name"
           className="border border-black m-2 p-2"
         />
         <input
           type="text"
-          placeholder="Message"
+          placeholder="message"
           className="border border-black m-2 p-2"
         />
         <button className="border border-black m-2 p-2 bg-gray-100 rounded-lg">
