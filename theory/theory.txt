@@ -1424,7 +1424,7 @@ A. So basically, we can write something like describe and this describe basicall
 A. Yes! We can have multiple describe function block.
 
 - Can we've a nesting of describe function block also? If yes, then how?
-A. Yes! We can have a nesting describe function block also. So suppose there four test cases inside main describe function block and if we want to add last two text cases inside another describe function block so then we can nest it within main describe function block. So this is how we can have nesting of describe function block also.
+A. Yes! We can have a nesting describe function block also. So suppose there are four test cases inside main describe function block and if we want to add last two text cases inside another describe function block so then we can nest it within parent describe function block. So this is how we can have nesting of describe function block also.
 
 - When we write the text cases right so the test() is the name of function right so jest says that we can write its name as test() so what the alternative name that jest allow?
 A. When we write the text cases right so the test() is the name of function right so jest says that we can write its name as test() and we can also write this name as it() also.
@@ -1436,7 +1436,7 @@ A. There is no difference it() is just alias of test(). So we can use it() or te
 A. Yes! We can have mix of both it() and test() while writing test cases but the recommended way is to use anyone of it so either it() or test().
 
 - From where does the random files come into git source control pending changes?
-A. So the random files has come into git source control pending changes because of the coverage so when we do npm run test it shows the coverage table on terminal right so basically to process this coverage it has created the coverage folder which contain that random files but we don't have to push the coverage onto git so we'll add it onto .gitignore so that it make our repository history clean right. So we'll go to .gitignore and write /coverage then we'll see the decrease in the changes counter.
+A. So the random files has come into git source control pending changes because of the coverage so when we do npm run test it shows the coverage table on terminal right so basically to process this coverage it has created the coverage folder which contain that random files but we don't have to push the coverage onto git so we'll add it onto .gitignore so that it make our repository history clean right. So we'll go to .gitignore and write /coverage then we'll see the decrease in the changes counter badge.
 
 - Suppose we want to do a unit testing of header component to check whether it contain login button or not so for that we'll test case and once we render(<Header />) and then run npm run test then it will failed by throwing the following errors:
 I. "could not find react redux context value...".
