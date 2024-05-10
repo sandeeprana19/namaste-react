@@ -49,7 +49,7 @@ it("Should render Header Component with cart item", () => {
   expect(cartItems).toBeInTheDocument();
 });
 
-it("Should change Login Button to Logout on click", () => {
+it("Should change login button to logout on click", () => {
   render(
     <BrowserRouter>
       <Provider store={appStore}>
