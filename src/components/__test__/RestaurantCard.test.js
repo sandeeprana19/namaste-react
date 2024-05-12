@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import RestaurantCard, { WithDiscount } from "../RestaurantCard";
-import MOCK_DATA from "../mocks/restaurantCardMock.json";
+import MOCK_DATA from "../mocks/mockRestaurantCard.json";
 import "@testing-library/jest-dom";
 
 it("Should render RestaurantCard component with prop data", () => {
