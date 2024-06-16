@@ -136,7 +136,7 @@ vii. keyword: We can give some keywords if we wish to. Let it be like, let's giv
 viii. author: Sandeep Rana
 ix. license: press enter to go with the default
 
-Then it will us Is it ok? then press enter to go with the default yes and once we do it we will get a new package.json file in our local project folder.
+Then it will us Is it ok? then press enter to go with the default yes and once we do it. It will get a new package.json file in our local project folder.
 
 35. What is package.json?
 A. The package.json file is basically a configuration for npm. It is basically all that configuration of our npm whatever data we gave it will come inside it like name, version, description, etc. NPM has created a json file for us. The package.json keeps a approx version of dependencies or it can keep exact version of dependencies or package.
@@ -1018,7 +1018,45 @@ A. We can create different routes inside react application by using npm ;javascr
 A. We can install react router library into our code by writing command npm in react-router-dom into the terminal.
 
 264. How do we use react router library?
-A. For creating routing we have to go to app.js and over here we've to create routing configuration so whenever we've to develop routes we've to create routing configuration. And so to create routing configuration we have to import {createBrowserRouter} from 'react-router-dom'. So we're going to use createBrowserRouter and this createBrowserRouter will create routing configuration. So basically, we'll create routing configuration inside createBrowserRouter(). Adn this configuration means that some information that will define what will happen on a specific route. An information that will tell the createBrowserRouter that will happen on a specific path so suppose if we're calling about what should happen if we call that url or route. So this createBrowserRouter that list of path which is nothing but an object and an object will contain two things that are path and element. So if path is "/" then what should happen and path is "/about" then what should happen. So if our path is "/" then load an element that is home page which is <AppLayout />. But if our path is "/about" then load the element that is about component or page. So this how we give the configuration to createBrowserRouter. But just creating the configuration won't work so we'll have to provide this configuration to render it onto the page. So for this, we've one more important component that we can import from react-route-dom as it has a functionality by giving us a component which is known as RouterProvider. So this RouterProvider will provide the routing configuration to our app like early we're rendering the <AppLayout /> directly and now instead of this we'll provide it our router configuration. So the <RouterProvider /> is a component and we'll provide the appRouter configuration as a value of router prop of RouterProvider component.
+A. For creating routing we have to go to app.js and over here we've to create routing configuration so whenever we've to develop routes we've to create routing configuration. And so to create routing configuration we have to import {createBrowserRouter} from 'react-router-dom'. So we're going to use createBrowserRouter and this createBrowserRouter will create routing configuration. So basically, we'll create routing configuration inside createBrowserRouter(). And this configuration means that some information that will define what will happen on a specific route. An information that will tell the createBrowserRouter that will happen on a specific path so suppose if we're calling about what should happen if we call that url or route. So this createBrowserRouter that list of path which is nothing but an object and an object will contain two things that are path and element. So if path is "/" then what should happen and path is "/about" then what should happen. So if our path is "/" then load an element that is home page which is <AppLayout />. But if our path is "/about" then load the element that is about component or page. So this how we give the configuration to createBrowserRouter. But just creating the configuration won't work so we'll have to provide this configuration to render it onto the page. So for this, we've one more important component that we can import from react-route-dom as it has a functionality by giving us a component which is known as RouterProvider. So this RouterProvider will provide the routing configuration to our app like early we're rendering the <AppLayout /> directly and now instead of this we'll provide it our router configuration. So the <RouterProvider /> is a component and we'll provide the appRouter configuration as a value of router prop of RouterProvider component.
+
+265. What the shortcut to create and export a component in vs code?
+A. A rafce is the shortcut to create and export a component in vs code.
+
+266. What will happen if we go to random url?
+A. React router will throw an Unexpected Application Error! whenever we go to random url.
+
+267. Who is giving the information of "Unexpected Application Error!" whenever we try to go to random url?
+A. All of these are handle by react router dom so it has created a error page for ourself for giving us the information of Unexpected Application Error!" whenever we try to go to random urls.
+
+268. How can we create our own error page or How can we handle error?
+A. So if we've path and element inside createBrowserRouter configuration object so we can also do something like errorElement so if the path is "/" show the  element <AppLayout /> and if there is an error then load an error component like <Error /> so we'll show this error page whenever we've error right and then react router will take care of everything.
+
+269. What is the one more cool feature that react router give to us in terms of error?
+A. React router dom give us an access to an important hook and that hook is useRouteError right so this is hook which is given to us by react-route-dom.
+
+270. How do we know whether useRouteError is a hook?
+A. Whenever we see a function starting with use like useRouteError that means it's a hook and its the common convention use in the react industry.
+
+271. What is use of an useRouteError?
+A. So by using an useRouteError hook it gives us more information about the error. So instead of displaying custom error page like Oop!!! Something went wrong!! we should also tell some more detail or a better message on our page. So it can be a route failed error, it can be a network error and there can be a multiple type of error also right. So we can read the message using this useRouteError hook and we can show specific detail to an user right so that is why we use this useRouteError hook and we can show specific detail to an user right so that is why we use this useRouteError hook. So basically, we have const err and we can call useRouteError hook as a value of err. And now it will give us all the errors in our path right so all the errors which are thrown react router will catch and give it to us as a form object to const err variable. So this is better way of handling errors and we can have our own customize error page now.
+
+272. How can we create children routes inside our app?
+A. We can create children route by passing children property into parent route object. And then we'll pass some configuration to children routes. And then this children is again a list of children path so cut and paste the same other pages route configuration as children configuration. So on the rout of our route, we're just creating a children and now '<About /> and '<contact />' are children of <AppLayout />.
+
+273. How can we load children component according to path?
+A. React router gives us something like OUtlet which is a component and then just use it below <Header /> component. So now, whenever there is a change in the path so this <Outlet /> will be filled with the chldren according to the path. So whenever we'll be on "/" our <Body /> will be filled in place of <Outlet />, etc. So this is how we can load children components according to path.
+
+274. Will we see <Outlet /> into HTML? If no, why?
+A. No! We'll not see <Outlet /> into HTML because this <Outlet /> component will be replaced by the children component. So suppose if we're on about route so this <About /> will replace <Outlet /> according to the path.
+
+275. Shall we can use anchor tag for routing to other page? If no, why?
+A. When we using react and we want to route to some other page never ever use a anchor tag because whenever we'll route to some other page using an anchor tag then whole page will get refreshed.
+
+276. How can we navigate to page without reloading page?
+A. So instead of anchor tag href we'll use something known as Link.
+
+277. Wh
 
 
 
@@ -1486,3 +1524,112 @@ A. The jest give us beforeAll function if we want to do something before every t
 
 - What is beforeAll function?
 A. The beforeAll takes a callback function and whatever we pass inside callback function right it will log the function before all the test.
+
+Bonus 03 - Resume, Interview & Salary Negotiation
+
+- For whom shall I make resume for?
+A. There are 3 people for whom I'll make our resume for:
+I. The Bots or Applicants Tracking System [ATS] or Parsers or Machines or Code which is reviewing my resume.
+II. The HRs or Recruiters.
+III. The interviews which can be tech + managers who will take my actual interview or technical rounds.
+
+- Do I need to make my resume as ATS friendly to impress bots?
+A. Yes.
+
+- Who to make my resume ATS friendly?
+A. First thing come is keywords so I need to keep the following sections in my resume:
+I. Skills section which will have Keywords in it like the following:
+  a. ReactJs.
+  b. Redux.
+  c. JavaScript.
+  d. Web Development.
+  e. Front-End.
+  f. HTML.
+  g. CSS.
+  h. SCSS.
+  i. TailwindCSS.
+II. Proper headings like Skills so try to stick to basic words so keep it like simple and sweat.
+
+- What sections in my resume the recruiters is bother about?
+A. The following are the sections:
+- Skills.
+- College graduation year.
+- Work experience.
+- Contact information like phone number, email id and linkedin profile id.
+
+- If I'm looking out for the role of react developer then the first thing in the skill section would be mention would be?
+A. ReactJs.
+
+- Do I need to make my resume like currently what I'm?
+A. No! I need to make my resume like what I want to be.
+
+- Should I write number of experience in my resume? If no, then how they calculate it?
+A. No! It not required. They are generally looking out for graduation year or if they don't find that then they see what is my last experience meaning when did I start working for the first company.
+
+- Shall I need to write GPA greater than 7.5 in my resume?
+A. Yes! I can write it down but its not mandatory.
+
+- What are the thing I don't need to put in my resume?
+A. The following are the thing I don't need to put in my resume:
+I. Profile picture.
+II. Address.
+III. DOB and TOB.
+IV. Marital status.
+V. Gender.
+VI. Hobbies.
+VII. Random achievements.
+VIII. Declaration.
+IX. Objective.
+
+- What does technical interviewers is concerned about?
+A. So generally, the technical interviewers are concerned about my following things:
+I. Projects:
+  a. Recent project.
+  b. Challenging project.
+II. Good technical keywords like large scalable fast react application that loads within 200 ms, performant, fast loading, video streaming platform, implemented debouncing in search, highly optimize responsive design, caching using redux store, etc.
+III. Link along with each project:
+  a. Github link.
+  b. Working demo link.
+IV. Skills.
+
+- What keyword I shall write for manager in my resume?
+A. The following are the keyword I shall write for manager in my resume:
+I. I've developed a large scale production ready react application from scratch.
+II. I've taken ownership of project.
+
+- What else I need to put in my resume?
+A. Extra stuff:
+I. Certification.
+II. Achievements.
+III. Github links.
+IV. Live project Links.
+V. Highly mandatory single page resume.
+
+- What all sections will be there in my resume and what order?
+A. The following all sections will be there in my resume with following order:
+I. Name, phone number, email id and linkedin.
+II. Work experience:
+  a. Companies names:
+    1. Projects.
+III. Education qualification.
+IV. Skills.
+V. Achievements or Certifications.
+
+- What are the interview questions?
+A. The following are the interview questions:
+I. Introduction - prepare for it:
+  a. Top down approach: Start describing high level detail about you and projects like for example, I'm currently working as a software engineer at CN and I'm working as a part of finance engineering team where I'm leading few or 3 or 4 UI projects. And if interviewers isn't interrupting me then continue saying that this project where build using react, node, fusion js, tailwindCSS, scss or whatever. And again if the interview isn't interrupting me then talk about the namaste react projects that I've learned so it's like drill down like prob drilling so keep digging down about the project I'm currently working on and also about project which I've did during learning simultaneously until the interviewers stopped you. So basically, top down approach means say about company, team and projects.
+  b. Recent project.
+  c. Challenging parts of project.
+II. Technical rounds.
+III. Towards the end:
+  a. Ask good questions but don't ask about feedback.
+  b. Use this time to more about team/company like:
+    1. What do you in your team?
+    2. What are the recent projects you're working on?
+    3. What is the tech stack which is been used?
+    4. Do you use any testing framework in your company?
+    5. Are the code review practices which is being used?
+    6. Do you do system design?
+    7. Do you redux or something else to manage data?
+    8. How your deployment cycle's works in?
