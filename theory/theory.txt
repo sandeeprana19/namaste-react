@@ -848,15 +848,19 @@ A. The meaning of rerender is suppose if we're clicking the Top Rated Restaurant
 A. React is only good at DOM operations or manipulation. This is the core logic of React right. So this is the only thing react is good.
 
 214. What is Reconciliation Algorithm?
-A. On the UI suppose we have a DOM right. DOM is like a tree right those tags are like tree. Suppose we have a resContainer and these resContainer has 7 restroCards now suppose our UI changes to filtering this seven restroCards to three filter restroCards. Whenever we have seven restroCards UI right react creates a virtual DOM of it.
+A. The Reconciliation Algorithm, which became known as React Fiber with the release of React 16. And it is a process that optimizes how user interfaces are updated in response to changes in an application's state. When you create a JSX structure, such as a container holding multiple restaurant cards, this JSX code needs to be transpiled into a format that React can understand. This is achieved through a process where the bundler like Parcel works with Babel to transpile the JSX into React.createElement calls. These calls generate React elements, which are JavaScript objects representing the virtual DOM.
+
+Initially, React stores this virtual DOM in memory before it renders it onto the browser. When there is a state change—like filtering the number of restaurant cards from seven to three—the JSX is transpiled again, creating a new virtual DOM. To efficiently update the UI, React employs a diffing algorithm to compare the old and new virtual DOMs. This algorithm detects the differences between the two representations.
+
+Once the differences are identified, React rerender the whole component to updates only the parts of the actual DOM that have changed, rather than re-rendering the entire UI. This ensures that the update process is efficient and fast, as only the necessary parts of the DOM are modified. This entire procedure of updating the virtual DOM and synchronizing it with the actual DOM to reflect the current state is known as the Reconciliation Algorithm.
 
 215. Define virtual DOM?
 A. Virtual DOM isn't an actual DOM. So virtual DOM is the representation of actual DOM. So virtual DOM is basically those react element and this react element is an object so similarly whenever we have a big structure it is all an object. So object is basically a react virtual DOM.
 
 216. What is diff algorithm?
-A. Diff algorithm basically finds out the difference between two virtual DOM that are updated virtual and previous virtual DOM. Suppose we have a restroContainer which ahs a severn restro cards now we clicked Top Rated Restaurants button and filter out top rated restaurants as per set condition.
+A. Diff algorithm basically finds out the difference between two virtual DOM that are updated virtual and previous virtual DOM.
 
-217. What is react filter?
+217. What is react Fiber?
 A. The whole algorithm like reconciliation algorithm, virtual DOM and diff algorithm is known as React Fiber. This React Fiber is a new algorithm which came up in React 16. After React 16, this algorithm is known as React Fiber and then React Fiber is a new way of finding diff and updating the DOM.
 
 218. Does react touch actual DOM a lot?
@@ -889,7 +893,7 @@ A. No! It isn't standard to develop all the UI projects based one particular tea
 A. So just like our UI service right was developed on port :1234 ( from localhost: 1234) similarly all the microservices run on their own specific ports right. So suppose on port number :1234 we can have our UI service, suppose on part :1000 we can have our backend service, on port :3000 we can have our SMS service, etc. So on different port we can deploy our different services and at the end of the day all these ports can map to domain day all these ports can map to domain name. Suppose the backend is map to /api whatever our domain name is suppose we have a domain name namastedev.com/api and all these api's are deployed onto the same url. Similarly we can have sms on /sms so send a sms we just have to call this service /sms. Or we can deploy on just / right so no url ahead of / right so on the / as soon as it hit the main domain its just redirects to port :1234. So suppose if UI service wants to connect to backend service so they will make a call to /api or will call to different port lets say :1000. So thats how these microservices are connected and thats how they interact with each other.
 
 227. How UI application fetch the data from backend?
-A. There are two approaches that can be followed to fetch the data from backend tin the UI application:
+A. There are two approaches that can be followed to fetch the data from backend in the UI application:
 I. Suppose our app loads right so as soon as our app load one thing we can do is we can just make an api call to fetch the data right and when we get the data then we can render it onto the UI. Suppose api call takes 500 ms so what will happen the page will load & our page will wait for 500 ms and after 500 ms it will render the UI. So what will happen is we have seen right when we open the web page we suddenly don't see anything and suddenly as soon as the api response it quickly show lot of staff on the screen.
 II. The second approach is as soon as the page loads right then we'll just render our UI. Now what we will do after we had quickly render now we will make an API call and as soon as we get the result from API we will now populate or rerender our application with the new data. In react, we will always be using the second approach.
 
@@ -1633,3 +1637,6 @@ III. Towards the end:
     6. Do you do system design?
     7. Do you redux or something else to manage data?
     8. How your deployment cycle's works in?
+
+- Introduction:
+  I'm currently working as a software engineer at Capital Numbers Infotech Pvt. Ltd. and I'm working as a part of react projects engineering team having 3 developers where I had led 2 out of 3 react projects. One of them was Arkos global advisors which provides comprehensive wealth management solutions. And another project was Gymdash which provides cost-effective member management system for independent gyms. And at last but not least is the Rize.gg project which empowers passionate gamers through a thriving community. And all these projects where build using react, react-redux, javascript, tailwindCSS, MaterialUI, SCSS, etc. And personally, I had also build netflix type of react application known as netflix-gpt which is a movies video streaming platform and which loads within 200ms and where I had implemented major cool features like I had implemented gpt search features and made it so performant that user can search any zoner movies and it will show up the list of movies related to it, I had implemented cool feature like to show various types of movies lists like now playing, trending, upcoming, etc. by using TMDB API data which I had store into the app store so that data flows efficiently across the netflix-gpt react application, I had implemented another cool like authentication using firebase.
