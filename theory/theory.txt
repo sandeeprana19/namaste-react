@@ -1060,52 +1060,81 @@ A. When we using react and we want to route to some other page never ever use a 
 276. How can we navigate to page without reloading page?
 A. So instead of anchor tag href we'll use something known as Link.
 
-277. Wh
+277. What is Link?
+A. Link is imported from react-router-dom and its again a super power given to us by react router dom.
 
+278. How to use Link component?
+A. The Link component works exactly the same as anchor tag. And the only difference between link and anchor tag is in anchor tag we've href attribute while in link we write to prop and pass "/about" path where we want to redirect to.
 
+279. Define single page application(SPA)?
+A. React is whole single page or component that is App component and all the routing and new pages are just interchanging themself. Everything are component in react. This is why we call this a Single Page Application (SPA). If we go to new route also react just changing the component and its not reloading a new page. So basically, if we navigate to different page then browser will not refresh the page so our website will not reload so our browser will not reload our website and browser will also not make external call or something. So this is known as single page application.
+
+280. How many types of routing can we have in our web application?
+A. There are two types of routing we can have in our web application:
+I. Client side routing.
+II. Server side routing.
+
+281. What are the difference between client side routing and server side routing?
+A. So server side routing means suppose we have a index.html, about.html & contact-us.html and if we click on anchor tag having link to "/about" then browser reload the whole page and it sends a network call to about-us.html and fetches that html from server and renders it onto the web page so thats how our website use to work right and this is known as server side routing.
+Client side routing means we aren't make any network call while we're moving towards the page because all the components are already loaded into our app right. When we load an app for the first time react already has the code for about us so when we go to about us page react just load that about component and it doesn't make any network calls. The only network call is made when we make a network in the api right so we aren't fetching a new page so thats why it is known as client side routing.
+
+282. What does dynamic routing means?
+A. Dynamic routing means lets take an example from swiggy.com so when we have swiggy.com right over here if we go back to the home page and if we go to any restaurant details page and see the route it will be "/restaurant/restaurant name" so this is different route for restaurant details page. And if we go back and if we click on another restaurant so we will have "/restaurant/restaurant name". So we have a dynamic route for every restaurants that we have. So this is the dynamic route. And on clicking on this dynamic route there is an api call that is made to fetch the restaurant detail page data like menu page.
+
+283. How do we write dynamic path?
+A. We can write dynamic path by writing ":resId" like "/restaurants/:resId" and now this ":resId" means that it is dynamic so it can be change according to the id of the restaurants. So every restaurants has its own id that uniquely identifies it . So our routes will be unique whenever we've a new restaurant. So whenever we have dynamic path load any component as we wish to lets say <RestaurantMenu/>. So now, if we go to "/restaurants/123" then browser will load <RestaurantMenu/> component and this "/123" is a dynamic id so it will change according to the restaurant. So "/123" can be a different restaurant and every time this dynamic path changes then our <RestaurantMenu/> component data should also change.
 
 - Home works: Build restaurant all categories including veg switch button from episode-07.
 
-- How do we read dynamic path let's say ":resId" from our component?
+284. How do we read dynamic path let's say ":resId" from our component?
 A. Again we have a super power which is given to us by react router dom which will give us what is there as a param. So that super power is a hook which is basically known as useParams and it comes from react-router-dom.
 
-- How to use useParams hook?
+285. How to use useParams hook?
 A. So basically, we'll extract resId from our useParams hook because useParams returns an object with resId s that is why we need to destructure that return object on the fly. And now this resId will contain an dynamic path id and we'll pass this resId in the fetch url.
 
-- What is Link behind the scene?
+286. What is Link behind the scene?
 A. Link is a component which is given to us by react router dom and which is a special component and behind the link is using anchor tag.
 
-- If Link is an anchor tag then what the difference between Link and anchor tag?
+287. If Link is an anchor tag then what the difference between Link and anchor tag?
 A. React router dom give us Link and it is a wrapper over anchor tag so when we wrap any text as Link right now react router dom will keep a track that text is a Link and it don't have to refresh a page. It a special type of Link and behind the scene html or browser doesn't understand Link right so react router dom making it a anchor tag behind the scene and also keeping a track of it.
 
-Episode-07 | Let's Get Classy
+Episode-08 | Let's Get Classy
 
-28/03/2024:
-- So this is a way to create class based component. So similarly just like functional component we'll also export default UserClass.
+288. What is the older and newer way of writing component in react?
+A. Class based component is the older way of creating component in react.
+Functional component is the newer way of creating component in react.
 
-- What we do inside class based component?
+289. Do we need to use class based component if we're building a project today? If no, then why it is still exist and need to know about it?
+A. No! We don't need to use class based component if we're building a project today. But class-based component are very important to know because lots of companies are working on older project which are already using class based component and they aren't using the latest of react. And it is amazing, it will exactly tell us that how reat life cycle works, how react components are rendered onto the web page and then what is the beauty of react component and it is more on deeper level.
+
+290. What is class based component?
+A. Class based component is a normal javascript class.
+
+291. How do we create class based component? what is class component?
+A. When we say class then we write class keyword and the name of the component lets say UserCard and to make this a component we will "extents React.Component" so this is way for react to tell that this is a class based component. So this is a way to create class based component. So similarly just like functional component we'll also export default UserClass.
+
+292. What we do inside class based component?
 A. We'll have a render() method and it will return a piece of jsx which will be displayed onto the UI. And the jsx will converted into html and rendered on to the web page.
 
-- What is the difference between functional component and class based component? Describe briefly.
+293. What is the difference between functional component and class based component? Describe briefly.
 A. Functional component is a function that return some piece of jsx while class based component is a class which extends React.Component and which has a render method which return some piece of jsx.
 
-- What is React.Component?
+294. What is React.Component?
 A. React.Component is basically a class which is given to us by react and UserClass is inheriting some properties from React.Component.
 
-- From where React.Component will come from?
+295. From where React.Component will come from?
 A. Basically, React.Component will come React so we need to import React from 'react'.
 
-- How we can use class based component let say 'UserClass' into functional component lets say 'About'?
+296. How we can use class based component let say 'UserClass' into functional component lets say 'About'?
 A. In 'About' functional component, we'll just import our 'UserClass' class based component like import UserClass from './UserClass.js'. So importing component & exporting component are exactly the same between functional component and class based functional there isn't any difference between both of them.
 
-29/03/2024:
-- How can we pass props inside class based component?
+297. How can we pass props inside class based component?
 A. Similar like functional component we can pass a prop as name = {"Sandeep Rana (Class)}" inside class based component let's say "<UserClass />".
 
-- How can we receive props inside class based component?
+298. How can we receive props inside class based component?
 A. In the class we'll create a constructor and this constructor will now receive the props and we'll also write super(props).
 
-- Why do we always have to write super(props) inside constructor function of class based component?
+299. Why do we always have to write super(props) inside constructor function of class based component?
 A. In React, when we create a class-based component, we typically use the constructor method to initialize the component's state and bind event handlers. If we define a constructor in our component, we must call super(props) as the first statement in the constructor.
 
 Here's why:
@@ -1113,8 +1142,31 @@ Here's why:
 2. Passing Props to the Parent Constructor: The super(props) call passes the props parameter to the constructor of the parent class (i.e., React.Component). This allows React to set up the component with the provided props and enables us to access this.props within the constructor and other methods of our component.
 3. Class Inheritance: In JavaScript, when we extend a class using extends, the super() function is used to call the constructor of the parent class. By calling super(props), we ensure that the constructor of the parent class (React.Component) is properly initialized before we customize our own component.
 
-- Suppose once we received props let's say name inside constructor function then how do we use the name inside render function?
+300. Suppose once we received props let's say name inside constructor function then how do we use the name inside render function?
 A. Inside render function, we've do something like {this.props.name} so we'll always have to use a this keyword inside class so that this props can be access from anywhere inside class.
+
+301. How we can create state variable inside class based component?
+A. So state was created whenever class instance was created. When we say we're loading a class-based component on our web page that means we're creating an instance of that class and giving it some props right. So whenever we create an instance of class the constructor is called and this is the best place to receive props and this is the best place to create state variables. So there was a way to create state variable and that is using something known as this.state and this state is a reserve word here and this state is basically a big whole object which contain state variables lets say count: 0.
+
+302. How do we use state variable lets say count = 0 inside render function?
+A. We use state variable lets say count : 0 inside render function by writing like this {this.state.count} and then this print count value 0 onto the web page.
+
+303. How do we define multiple state variable inside class-based component?
+A. In our class-based component we've state object right so we can't copy and paste state object because it will be a wrong way to do. This state variable is a big object which contains all the state variables that we'll create. So if we have to create state variable lets say count2 : 2 then we create it inside this.state object.
+
+304. How react is storing state variable which are created using useState() hook behind the scene?
+A. React stored all state variables which are created using useState() hook inside one big object behind the scene.
+
+305. How ca we update state variable inside class-based component?
+A. React gives us access to important function which is known as this.setState() and we use this setState() anywhere in our class. And over here in this.setState() we'll pass an object and this object will contain the updated value of state variables like this:
+this.setState({
+  count : this.state.count + 1
+})
+
+And whenever the state variable will update the count react will rerender the component and update the count value and react will only update the count value portion and nothing else. So this is how we update our state variables.
+
+306. How can we update state variable inside class-based component?
+A. React gives us access to important function which is known as this.setState() and we use this 
 
 01/04/2024:
 - Why the lifecycle methods work like the way it work whenever we've two child class-based component inside parent class-based component?
@@ -1532,7 +1584,7 @@ A. The beforeAll takes a callback function and whatever we pass inside callback 
 Bonus 03 - Resume, Interview & Salary Negotiation
 
 - For whom shall I make resume for?
-A. There are 3 people for whom I'll make our resume for:
+A. There are 3 people for whom I'll make my resume for:
 I. The Bots or Applicants Tracking System [ATS] or Parsers or Machines or Code which is reviewing my resume.
 II. The HRs or Recruiters.
 III. The interviews which can be tech + managers who will take my actual interview or technical rounds.
@@ -1637,6 +1689,3 @@ III. Towards the end:
     6. Do you do system design?
     7. Do you redux or something else to manage data?
     8. How your deployment cycle's works in?
-
-- Introduction:
-  I'm currently working as a software engineer at Capital Numbers Infotech Pvt. Ltd. and I'm working as a part of react projects engineering team having 3 developers where I had led 2 out of 3 react projects. One of them was Arkos global advisors which provides comprehensive wealth management solutions. And another project was Gymdash which provides cost-effective member management system for independent gyms. And at last but not least is the Rize.gg project which empowers passionate gamers through a thriving community. And all these projects where build using react, react-redux, javascript, tailwindCSS, MaterialUI, SCSS, etc. And personally, I had also build netflix type of react application known as netflix-gpt which is a movies video streaming platform and which loads within 200ms and where I had implemented major cool features like I had implemented gpt search features and made it so performant that user can search any zoner movies and it will show up the list of movies related to it, I had implemented cool feature like to show various types of movies lists like now playing, trending, upcoming, etc. by using TMDB API data which I had store into the app store so that data flows efficiently across the netflix-gpt react application, I had implemented another cool like authentication using firebase.

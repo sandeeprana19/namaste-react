@@ -22,6 +22,17 @@ const AppLayout = () => {
     };
 
     setUserName(data.name);
+
+    const arr = [1, 2, 4, 5, 6, 7, 8, 10];
+    let missingNumbers = [];
+
+    for (let i = 1; i <= 10; i++) {
+      if (!arr.includes(i)) {
+        missingNumbers.push(i);
+      }
+    }
+
+    console.log(missingNumbers);
   }, []);
 
   return (
